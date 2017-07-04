@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MAIN</name>
+    <events>
+        <include>Characters</include>
+        <event-block sid="429564107174159">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="338160121730599" type="System" />
+            </conditions>
+            <actions>
+                <action id="18" name="Maximize" sid="670712770142169" type="NWjs" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
