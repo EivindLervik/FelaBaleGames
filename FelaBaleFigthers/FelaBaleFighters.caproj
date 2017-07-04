@@ -204,7 +204,7 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="JumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="718094917835736" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\StillJump.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJump.png">
                         <collision-poly>
                             <point x="0.3125" y="0" />
                             <point x="0.6875" y="0" />
@@ -226,17 +226,17 @@
                 <animation framecount="1" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="704485128729986" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl.png">
                         <collision-poly>
-                            <point x="0.5" y="0.5" />
-                            <point x="0.875" y="0.5" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.3125" y="0" />
+                            <point x="0.6875" y="0" />
+                            <point x="0.6875" y="1" />
+                            <point x="0.3125" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Crawl" pingpong="0" repeatcount="1" repeatto="0" sid="402459141019352" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="1">
                         <collision-poly>
-                            <point x="0.5" y="0.5" />
+                            <point x="0.53125" y="0.5" />
                             <point x="0.875" y="0.5" />
                             <point x="0.875" y="1" />
                             <point x="0" y="1" />
@@ -244,7 +244,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl2.png">
                         <collision-poly>
-                            <point x="0.5" y="0.5" />
+                            <point x="0.53125" y="0.5" />
                             <point x="0.875" y="0.5" />
                             <point x="0.875" y="1" />
                             <point x="0" y="1" />
@@ -252,7 +252,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1">
                         <collision-poly>
-                            <point x="0.5" y="0.5" />
+                            <point x="0.53125" y="0.5" />
                             <point x="0.875" y="0.5" />
                             <point x="0.875" y="1" />
                             <point x="0" y="1" />
@@ -260,10 +260,30 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl3.png">
                         <collision-poly>
-                            <point x="0.5" y="0.5" />
+                            <point x="0.53125" y="0.5" />
                             <point x="0.875" y="0.5" />
                             <point x="0.875" y="1" />
                             <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="DoubleJumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="108223382866993" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJumpDobbel.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0" />
+                            <point x="0.6875" y="0" />
+                            <point x="0.6875" y="1" />
+                            <point x="0.3125" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="DoubleJumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="707328854951146" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJumpDobbel.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0" />
+                            <point x="0.6875" y="0" />
+                            <point x="0.6875" y="1" />
+                            <point x="0.3125" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -288,6 +308,7 @@
             <instance-variables>
                 <instance-variable name="Crouching" sid="699390722124981" type="boolean" />
                 <instance-variable name="CrouchSpeed" sid="240274882997474" type="number" />
+                <instance-variable name="DoubleJumping" sid="456803982591975" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="898824907492133">

@@ -99,6 +99,20 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="361857329413881">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="707295847922438" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="184664227796644" type="Fighters" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="788581322591336" type="Fighters">
+                            <param id="0" name="Instance variable">DoubleJumping</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="418974656097675">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="476103719032570" type="Fighters" />
@@ -238,12 +252,33 @@
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="549274205875026" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="534811646738523" type="Fighters">
-                                            <param id="0" name="Animation">&quot;JumpRun&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="240581373321735">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="766397528522963" type="Fighters">
+                                                    <param id="0" name="Instance variable">DoubleJumping</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="806532821992667" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="384753680379232">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="161980557773591" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="291422276173383" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;JumpRun&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -253,7 +288,12 @@
                     <conditions>
                         <condition behavior="Platform" id="9" name="On landed" sid="427834876782074" type="Fighters" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="635279251709146" type="Fighters">
+                            <param id="0" name="Instance variable">DoubleJumping</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="734933835354925">
                             <conditions>
@@ -304,12 +344,33 @@
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="961461936578787" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="545893078070420" type="Fighters">
-                                            <param id="0" name="Animation">&quot;JumpStraight&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="706444722954678">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="508451936093277" type="Fighters">
+                                                    <param id="0" name="Instance variable">DoubleJumping</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="434994793465611" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;DoubleJumpStraight&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="473266633964856">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="465555663336201" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="545893078070420" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;JumpStraight&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -327,12 +388,33 @@
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="411957236669883" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="968919016738757" type="Fighters">
-                                            <param id="0" name="Animation">&quot;JumpRun&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="703102794326735">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="359123955715388" type="Fighters">
+                                                    <param id="0" name="Instance variable">DoubleJumping</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="849546311401533" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="901989250217777">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="372058232096491" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="968919016738757" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;JumpRun&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

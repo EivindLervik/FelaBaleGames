@@ -581,6 +581,7 @@
                     <instance-variables>
                         <Crouching>false</Crouching>
                         <CrouchSpeed>50</CrouchSpeed>
+                        <DoubleJumping>false</DoubleJumping>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
