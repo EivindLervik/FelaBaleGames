@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>FelaBaleFighters</name>
-    <description></description>
+    <description>A fighting-game to promote our band</description>
     <version>1.0</version>
-    <author></author>
-    <author-email></author-email>
-    <author-website></author-website>
-    <app-id></app-id>
+    <author>Eivind Lervik, Stian Lervik, Henrik Kleveland</author>
+    <author-email>eivind.lervik@outlook.com</author-email>
+    <author-website>eivindlervik.github.io/FelaBale/</author-website>
+    <app-id>no.felabale.fighters</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
     <saved-with-version>24500</saved-with-version>
     <used-plugins>
