@@ -5,420 +5,712 @@
     <events>
         <event-group description="" sid="712122722258706" title="General">
             <sub-events>
-                <event-block sid="570834805832653">
+                <event-block sid="661914396101226">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="480872537695214" type="Fighters">
-                            <param id="0" name="Instance variable">Crouching</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="247008000716747" type="Fighters">
+                            <param id="0" name="Instance variable">CanControl</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="201912473890932">
+                        <event-block sid="570168979268279">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="475599148096793" type="System">
-                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">Fighters.CrouchSpeed</param>
+                                <condition id="2" name="Key is down" sid="582481973595822" type="Keyboard">
+                                    <param id="0" name="Key">65</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="337705486759517" type="Fighters">
-                                    <param id="0" name="Vector X">Fighters.CrouchSpeed</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="186963762537731" type="Fighters">
-                                    <param id="0" name="Animation">&quot;Crawl&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="243548456344503" type="Fighters">
+                                    <param id="0" name="Control">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="443078176317411">
+                        <event-block sid="276341983789041">
                             <conditions>
-                                <condition id="-22" name="Else" sid="897645467589662" type="System" />
-                                <condition id="-8" name="Compare two values" sid="495604017524878" type="System">
-                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">-Fighters.CrouchSpeed</param>
+                                <condition id="2" name="Key is down" sid="890337925677367" type="Keyboard">
+                                    <param id="0" name="Key">68</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="729421271514679" type="Fighters">
-                                    <param id="0" name="Vector X">-Fighters.CrouchSpeed</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="722941785261871" type="Fighters">
-                                    <param id="0" name="Animation">&quot;Crawl&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="133061416867323" type="Fighters">
+                                    <param id="0" name="Control">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="997916771596052">
+                        <event-block sid="864704451565719">
                             <conditions>
-                                <condition id="-22" name="Else" sid="629317318642470" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="159616417881651" type="Fighters">
-                                    <param id="0" name="Animation">&quot;Duck&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="570168979268279">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="582481973595822" type="Keyboard">
-                            <param id="0" name="Key">65</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="243548456344503" type="Fighters">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="276341983789041">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="890337925677367" type="Keyboard">
-                            <param id="0" name="Key">68</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="133061416867323" type="Fighters">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="864704451565719">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="934681910415324" type="Keyboard">
-                            <param id="0" name="Key">87</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="335103943925418" type="Fighters">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="361857329413881">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="707295847922438" type="Keyboard">
-                            <param id="0" name="Key">87</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="184664227796644" type="Fighters" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="788581322591336" type="Fighters">
-                            <param id="0" name="Instance variable">DoubleJumping</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="418974656097675">
-                    <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="476103719032570" type="Fighters" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="179856504247941">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="350869610397659" type="Keyboard">
-                                    <param id="0" name="Key">83</param>
+                                <condition id="2" name="Key is down" sid="934681910415324" type="Keyboard">
+                                    <param id="0" name="Key">71</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="837511739003499" type="Fighters">
-                                    <param id="0" name="Instance variable">Crouching</param>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="335103943925418" type="Fighters">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="861333940592420">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="870048357965644" type="Keyboard">
+                                    <param id="0" name="Key">70</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="305928591725613">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="648167258278528" type="Keyboard">
+                                            <param id="0" name="Key">87</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="650379473593182" type="Fighters">
+                                            <param id="0" name="Instance variable">Can_UpB</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="215011166150032" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="383955841193548" type="Fighters">
+                                            <param id="0" name="Vector Y">-Fighters.Platform.JumpStrength</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="808368708646486" type="Fighters">
+                                            <param id="0" name="Instance variable">Can_UpB</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="872065697160425" type="Fighters">
+                                            <param id="0" name="Instance variable">DoubleJumping</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="271714393241661" type="Fighters">
+                                            <param id="0" name="Animation">&quot;UpB&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="688940299519839">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="388157904403882" type="System" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="963437266133341" type="Fighters">
+                                            <param id="0" name="Instance variable">Can_B</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="125084632613211" type="Fighters">
+                                            <param id="0" name="Animation">&quot;B&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="361857329413881">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="707295847922438" type="Keyboard">
+                                    <param id="0" name="Key">71</param>
+                                </condition>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="184664227796644" type="Fighters" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="788581322591336" type="Fighters">
+                                    <param id="0" name="Instance variable">DoubleJumping</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="523381477506225">
+                        <event-block sid="570834805832653">
                             <conditions>
-                                <condition id="-22" name="Else" sid="273280871169080" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="480872537695214" type="Fighters">
+                                    <param id="0" name="Instance variable">Crouching</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="201912473890932">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="475599148096793" type="System">
+                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Fighters.CrouchSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="337705486759517" type="Fighters">
+                                            <param id="0" name="Vector X">Fighters.CrouchSpeed</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="186963762537731" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Crawl&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="443078176317411">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="897645467589662" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="495604017524878" type="System">
+                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">-Fighters.CrouchSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="729421271514679" type="Fighters">
+                                            <param id="0" name="Vector X">-Fighters.CrouchSpeed</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="722941785261871" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Crawl&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="997916771596052">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="629317318642470" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="159616417881651" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Duck&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="272159294587867">
+                            <conditions>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="587148659969289" type="Fighters" />
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="272128933521847" type="Fighters">
+                                <action id="-13" name="Set boolean" sid="171558235296493" type="Fighters">
                                     <param id="0" name="Instance variable">Crouching</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="616989571563334">
+                                <event-block sid="966760344405249">
                                     <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="379227283778897" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="482915587778866" type="System">
+                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="450212191196502">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="549274205875026" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="240581373321735">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="766397528522963" type="Fighters">
+                                                            <param id="0" name="Instance variable">DoubleJumping</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="806532821992667" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="384753680379232">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="161980557773591" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="291422276173383" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;JumpRun&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="418974656097675">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="476103719032570" type="Fighters" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="127447600366709" type="Fighters">
+                                    <param id="0" name="Instance variable">Can_UpB</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="179856504247941">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="350869610397659" type="Keyboard">
+                                            <param id="0" name="Key">83</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="798823543920436" type="Fighters">
+                                        <action id="-13" name="Set boolean" sid="837511739003499" type="Fighters">
+                                            <param id="0" name="Instance variable">Crouching</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="523381477506225">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="273280871169080" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="272128933521847" type="Fighters">
+                                            <param id="0" name="Instance variable">Crouching</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="616989571563334">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="379227283778897" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="798823543920436" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="669714309348937">
+                                                    <conditions>
+                                                        <condition behavior="Platform" id="0" name="Is moving" sid="983174781247431" type="Fighters" />
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="532401427423064">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="906800412231234" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="411246357169235" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="671643403548000">
+                                    <conditions>
+                                        <condition behavior="Platform" id="8" name="On moved" sid="565965306869635" type="Fighters" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="536213820825380" type="Fighters">
                                             <param id="0" name="Animation">&quot;Run&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="883916294166506">
+                                    <conditions>
+                                        <condition behavior="Platform" id="7" name="On stopped" sid="501174509632978" type="Fighters" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="675582706482354" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="454149713870500">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="628906220119887" type="System">
+                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="992486675934513" type="Fighters">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="813534158092551">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="579945751342440" type="System">
+                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="800331981831505" type="Fighters">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="766701637881691">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="427834876782074" type="Fighters" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="635279251709146" type="Fighters">
+                                    <param id="0" name="Instance variable">DoubleJumping</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="734933835354925">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" name="Is moving" sid="613448528185674" type="Fighters" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="891028526215167" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="358085069569327">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="431835787403727" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="934143443602822" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="206767656743824">
+                            <conditions>
+                                <condition behavior="Platform" id="5" name="On jump" sid="577636466357055" type="Fighters" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="913177309079083" type="Fighters">
+                                    <param id="0" name="Instance variable">Crouching</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="893986713318906">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="312619370950046" type="System">
+                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="669714309348937">
+                                        <event-block sid="386421499366294">
                                             <conditions>
-                                                <condition behavior="Platform" id="0" name="Is moving" sid="983174781247431" type="Fighters" />
+                                                <condition id="-4" name="Trigger once while true" sid="961461936578787" type="System" />
                                             </conditions>
                                             <actions />
+                                            <sub-events>
+                                                <event-block sid="706444722954678">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="508451936093277" type="Fighters">
+                                                            <param id="0" name="Instance variable">DoubleJumping</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="434994793465611" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;DoubleJumpStraight&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="473266633964856">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="465555663336201" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="545893078070420" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;JumpStraight&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <event-block sid="532401427423064">
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="782874242597674">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="224274880209020" type="System">
+                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="668838605028462">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="906800412231234" type="System" />
+                                                <condition id="-4" name="Trigger once while true" sid="411957236669883" type="System" />
                                             </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="411246357169235" type="Fighters">
-                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="703102794326735">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="359123955715388" type="Fighters">
+                                                            <param id="0" name="Instance variable">DoubleJumping</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="849546311401533" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="901989250217777">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="372058232096491" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="968919016738757" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;JumpRun&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="671643403548000">
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="472681166430501" title="Leppo">
+            <sub-events>
+                <event-block sid="740326712437984">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="812973422655220" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="123755432289689" type="SverreDirtEffect">
+                            <param id="0" name="Object">Sverre</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="618625033575715">
                             <conditions>
-                                <condition behavior="Platform" id="8" name="On moved" sid="565965306869635" type="Fighters" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="536213820825380" type="Fighters">
-                                    <param id="0" name="Animation">&quot;Run&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="883916294166506">
-                            <conditions>
-                                <condition behavior="Platform" id="7" name="On stopped" sid="501174509632978" type="Fighters" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="675582706482354" type="Fighters">
-                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="454149713870500">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="628906220119887" type="System">
-                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">0</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="832872085752058" type="Sverre">
+                                    <param id="0" name="Instance variable">active</param>
                                 </condition>
                             </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="241556989901954">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="110161088043089" type="Sverre" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="861548508221513" type="SverreDirtEffect">
+                                            <param id="0" name="Angle">200</param>
+                                        </action>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="302183170172736" type="Sverre">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="573287985397488">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="526793001661281" type="Sverre" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="717041305395050" type="Sverre">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="679803044069761" type="SverreDirtEffect">
+                                            <param id="0" name="Angle">340</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="923295066634746">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="343222334562727" type="Leppo">
+                            <param id="0" name="Animation">&quot;B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="835299578723644" type="Function">
+                            <param id="0" name="Name">&quot;Leppo_SverreStrike&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="569115584635020">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="486479908043215" type="Leppo">
+                            <param id="0" name="Animation">&quot;UpB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="890963328832147">
+                    <conditions>
+                        <condition id="0" name="On function" sid="781500826824041" type="Function">
+                            <param id="0" name="Name">&quot;Leppo_SverreStrike&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="895354006306655" type="Leppo">
+                            <param id="0" name="Instance variable">Can_B</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="120575188935225" type="Leppo">
+                            <param id="0" name="Instance variable">CanControl</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="816694669399048" type="Leppo">
+                            <param id="0" name="Instance variable">Can_B</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="616211208502777" type="Leppo">
+                            <param id="0" name="Object">Sverre</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="609426849493211" type="Sverre">
+                            <param id="0" name="Vector Y">-100</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="755614118260402">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="467583092036705" type="Leppo" />
+                            </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="992486675934513" type="Fighters">
+                                <action id="7" name="Set mirrored" sid="412356669534435" type="Sverre">
                                     <param id="0" name="State">0</param>
                                 </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="936672678436887" type="Sverre">
+                                    <param id="0" name="Vector X">-100</param>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="813534158092551">
+                        <event-block sid="570952300114838">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="579945751342440" type="System">
-                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="569974762224062" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="800331981831505" type="Fighters">
+                                <action id="7" name="Set mirrored" sid="165035689238870" type="Sverre">
                                     <param id="0" name="State">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="272159294587867">
-                    <conditions>
-                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="587148659969289" type="Fighters" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="171558235296493" type="Fighters">
-                            <param id="0" name="Instance variable">Crouching</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="966760344405249">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="482915587778866" type="System">
-                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="450212191196502">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="549274205875026" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="240581373321735">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="766397528522963" type="Fighters">
-                                                    <param id="0" name="Instance variable">DoubleJumping</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="806532821992667" type="Fighters">
-                                                    <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="384753680379232">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="161980557773591" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="291422276173383" type="Fighters">
-                                                    <param id="0" name="Animation">&quot;JumpRun&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="766701637881691">
-                    <conditions>
-                        <condition behavior="Platform" id="9" name="On landed" sid="427834876782074" type="Fighters" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="635279251709146" type="Fighters">
-                            <param id="0" name="Instance variable">DoubleJumping</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="734933835354925">
-                            <conditions>
-                                <condition behavior="Platform" id="0" name="Is moving" sid="613448528185674" type="Fighters" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="891028526215167" type="Fighters">
-                                    <param id="0" name="Animation">&quot;Run&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="796053148855301" type="Sverre">
+                                    <param id="0" name="Vector X">100</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="358085069569327">
+                        <event-block sid="125129038491476">
                             <conditions>
-                                <condition id="-22" name="Else" sid="431835787403727" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="794564706424956" type="System" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="934143443602822" type="Fighters">
-                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                    <param id="1" name="From">1</param>
+                                <action id="-16" name="Wait" sid="869525065303089" type="System">
+                                    <param id="0" name="Seconds">2.0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="504516946789943" type="Leppo">
+                                    <param id="0" name="Instance variable">Can_B</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="206767656743824">
+                <event-block any="1" sid="241495378062840">
                     <conditions>
-                        <condition behavior="Platform" id="5" name="On jump" sid="577636466357055" type="Fighters" />
+                        <condition id="-9" inverted="1" name="Is visible" sid="711268100185940" type="Sverre" />
+                        <condition id="-4" name="Is outside layout" sid="305752373016688" type="Sverre" />
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="913177309079083" type="Fighters">
-                            <param id="0" name="Instance variable">Crouching</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="893986713318906">
+                        <event-block sid="563259548934994">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="312619370950046" type="System">
-                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="304111152154633" type="System" />
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="386421499366294">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="961461936578787" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="706444722954678">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="508451936093277" type="Fighters">
-                                                    <param id="0" name="Instance variable">DoubleJumping</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="434994793465611" type="Fighters">
-                                                    <param id="0" name="Animation">&quot;DoubleJumpStraight&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="473266633964856">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="465555663336201" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="545893078070420" type="Fighters">
-                                                    <param id="0" name="Animation">&quot;JumpStraight&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="782874242597674">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="224274880209020" type="System">
-                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="668838605028462">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="411957236669883" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="703102794326735">
-                                            <conditions>
-                                                <condition id="-8" name="Is boolean instance variable set" sid="359123955715388" type="Fighters">
-                                                    <param id="0" name="Instance variable">DoubleJumping</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="849546311401533" type="Fighters">
-                                                    <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="901989250217777">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="372058232096491" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="968919016738757" type="Fighters">
-                                                    <param id="0" name="Animation">&quot;JumpRun&quot;</param>
-                                                    <param id="1" name="From">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-16" name="Wait" sid="549699257135147" type="System">
+                                    <param id="0" name="Seconds">2.0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="313073026681558" type="Sverre" />
+                            </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block any="1" sid="129362361630839">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="120176289029309" type="Sverre" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="152112871578711" type="SverreDirtEffect">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="872741986008925">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="311207826053781" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="649405407276794" type="SverreDirtEffect">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="975788500973230">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="110469986761029" type="Sverre" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="132982745494680" type="Sverre">
+                            <param id="0" name="Instance variable">active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="933625056833614">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="314310658809699" type="Leppo">
+                            <param id="0" name="Animation">&quot;B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="784848786887696" type="Leppo">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="421461719146578" type="Leppo">
+                            <param id="0" name="Instance variable">CanControl</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="830476234603304">
+                    <conditions>
+                        <condition behavior="Platform" id="1" name="Compare speed" sid="570219732595535" type="Sverre">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="188926661505124" type="Sverre">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
