@@ -13,6 +13,48 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block any="1" sid="686131886139215">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="148129924648955" type="Keyboard">
+                                    <param id="0" name="Key">87</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="651642876836952" type="Keyboard">
+                                    <param id="0" name="Key">83</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="410870587348435">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="864150934207517" type="Fighters">
+                                            <param id="0" name="Object">Ladder</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="944665672215401" type="Fighters">
+                                            <param id="0" name="Instance variable">Crouching</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="588712917268525" type="Fighters">
+                                            <param id="0" name="Instance variable">Climbing</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="672259833193848" type="Fighters">
+                                            <param id="0" name="Instance variable">CanControl</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="11" name="Set enabled" sid="911139979163965" type="Fighters">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="352200694139737" type="Fighters">
+                                            <param id="0" name="X">Ladder.X</param>
+                                        </action>
+                                        <action behavior="8Direction" id="8" name="Set enabled" sid="942216665724849" type="Fighters">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="570168979268279">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="582481973595822" type="Keyboard">
@@ -484,6 +526,66 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="445825020702131">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="299826884624597" type="Fighters">
+                            <param id="0" name="Instance variable">Climbing</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="286745146681018">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="280447543890381" type="Keyboard">
+                                    <param id="0" name="Key">87</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="928111624773903" type="Fighters">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="699703829445380">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="498796208836160" type="Keyboard">
+                                    <param id="0" name="Key">83</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="811288708329166" type="Fighters">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="501863700854165">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="872611461928808" type="Keyboard">
+                                    <param id="0" name="Key">65</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="921623502972841" type="Keyboard">
+                                    <param id="0" name="Key">68</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="242963220907198" type="Fighters">
+                                    <param id="0" name="Instance variable">Climbing</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="446121731630448" type="Fighters">
+                                    <param id="0" name="Instance variable">CanControl</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="770925266924371" type="Fighters">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="8Direction" id="8" name="Set enabled" sid="756062978296410" type="Fighters">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

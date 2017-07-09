@@ -131,11 +131,12 @@
                 <instance type="Leppo" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Idle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Climbing>false</Climbing>
                         <Crouching>false</Crouching>
                         <CrouchSpeed>50</CrouchSpeed>
                         <DoubleJumping>false</DoubleJumping>
@@ -161,6 +162,17 @@
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>100</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

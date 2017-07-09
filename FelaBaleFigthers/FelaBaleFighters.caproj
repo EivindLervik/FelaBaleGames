@@ -24,7 +24,9 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -157,8 +159,8 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\LeppoWalkSverre2.png">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                             <collision-poly>
-                                <point x="0.25" y="0" />
-                                <point x="0.6875" y="0" />
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
                                 <point x="0.6875" y="1" />
                                 <point x="0.25" y="1" />
                             </collision-poly>
@@ -168,8 +170,8 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                             <collision-poly>
-                                <point x="0.25" y="0" />
-                                <point x="0.6875" y="0" />
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
                                 <point x="0.6875" y="1" />
                                 <point x="0.25" y="1" />
                             </collision-poly>
@@ -180,8 +182,8 @@
                     <frame duration="100" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -236,8 +238,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk1.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -245,8 +247,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -254,8 +256,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk2.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -263,8 +265,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\Leppo.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -274,8 +276,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJump.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -285,8 +287,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJump.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -336,8 +338,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJumpDobbel.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -347,8 +349,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJumpDobbel.png">
                         <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                         <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.6875" y="0.03125" />
                             <point x="0.6875" y="1" />
                             <point x="0.25" y="1" />
                         </collision-poly>
@@ -450,6 +452,105 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="HouseTiles" sid="154163472356011">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="772944782773141">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="745671456505731">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445304296432974" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.375" y="0" />
+                            <point x="0.625" y="0" />
+                            <point x="0.625" y="1" />
+                            <point x="0.375" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BG_Objects" sid="354337053674174">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653970359847011" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                    <frame duration="1" hotspotX="1" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ladder" sid="576220057892691">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224099098575786" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Door" sid="173245903258290">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361703664888899" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.416667" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SceneTrigger" sid="527088690961323">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Scene" sid="833157932758624" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982704369025247" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Ground" plugin-id="Sprite" sid="125361228845125">
@@ -467,6 +568,7 @@
                 <member>Leppo</member>
             </members>
             <instance-variables>
+                <instance-variable name="Climbing" sid="434040673678836" type="boolean" />
                 <instance-variable name="Crouching" sid="699390722124981" type="boolean" />
                 <instance-variable name="CrouchSpeed" sid="240274882997474" type="number" />
                 <instance-variable name="DoubleJumping" sid="456803982591975" type="boolean" />
@@ -481,10 +583,16 @@
                 <behavior-type name="ScrollTo" sid="133023640167974">
                     <behavior id="scrollto" />
                 </behavior-type>
+                <behavior-type name="8Direction" sid="470326386613712">
+                    <behavior id="EightDir" />
+                </behavior-type>
             </behaviors>
         </family>
     </families>
     <layout-folder>
+        <layout-folder name="Leppo">
+            <layout>Leppo_House.xml</layout>
+        </layout-folder>
         <layout>TestLevel.xml</layout>
         <layout>CharacterSelect.xml</layout>
     </layout-folder>
