@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LeppoHouse</name>
+    <events>
+        <include>MAIN</include>
+        <event-block sid="890030903479385">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="755873826117343" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="520213278434929" type="Bed">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="562704255232822" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="5" name="Set frame" sid="822779357165530" type="Bed">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="745784916685107" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="0" name="Call function" sid="261717281016858" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="5" name="Set frame" sid="177339644090929" type="Bed">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="532659850051673" type="Bed">
+                    <param id="0" name="Object">Leppo</param>
+                    <param id="1" name="Layer">&quot;Action&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

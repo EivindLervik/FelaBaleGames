@@ -5,17 +5,6 @@
     <events>
         <include>SoundHandler</include>
         <include>Characters</include>
-        <event-block sid="429564107174159">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="338160121730599" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="249931280358181" type="Function">
-                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="707283695066593">
             <conditions>
                 <condition id="5" name="On any finished" sid="531333515386187" type="TublastEffect" />
