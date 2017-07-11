@@ -10,11 +10,14 @@
     <unique-id>2qpiupr2gjili</unique-id>
     <saved-with-version>24500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -41,7 +44,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>TestLevel</first-layout>
+    <first-layout>Leppo_House</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -56,164 +59,786 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Black" sid="3206956448522659">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="WebStorage" sid="1510269620771624">
-            <plugin id="WebStorage" />
-        </object-type>
-        <object-type name="Gamepad" sid="996683554706134">
-            <plugin id="gamepad" />
-        </object-type>
-        <object-type name="Keyboard" sid="4436305314906168">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Mouse" sid="3506161195311074">
-            <plugin id="Mouse" />
-        </object-type>
-        <object-type name="Touch" sid="2463496682349194">
-            <plugin id="Touch" />
-        </object-type>
-        <object-type name="Audio" sid="2722091819329769">
-            <plugin id="Audio" />
-        </object-type>
-        <object-type name="Browser" sid="3498868852026895">
-            <plugin id="Browser" />
-        </object-type>
-        <object-type name="Function" sid="836672609792000">
-            <plugin id="Function" />
-        </object-type>
-        <object-type name="GrassGround" sid="474711614639522">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="20" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="278682345060804" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.875" y="0" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.875" y="0" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.9375" />
-                            <point x="0.125" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.9375" />
-                            <point x="0" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.875" y="0" />
-                            <point x="0.875" y="0.9375" />
-                            <point x="0" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0" y="0.75" />
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                            <point x="1" y="0.75" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0.75" y="0.75" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.25" y="0.75" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="NWjs" sid="443898454721553">
-            <plugin id="NodeWebkit" />
-        </object-type>
-        <object-type name="Leppo" sid="803323350803221">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation-folder name="Attacks">
-                    <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="993327162680605" speed="2">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\LeppoWalkSverre2.png">
+        <object-folder name="Plugins">
+            <object-type name="Audio" sid="2722091819329769">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Browser" sid="3498868852026895">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="836672609792000">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Gamepad" sid="996683554706134">
+                <plugin id="gamepad" />
+            </object-type>
+            <object-type name="Keyboard" sid="4436305314906168">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="3506161195311074">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Touch" sid="2463496682349194">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="NWjs" sid="443898454721553">
+                <plugin id="NodeWebkit" />
+            </object-type>
+            <object-type name="WebStorage" sid="1510269620771624">
+                <plugin id="WebStorage" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Backgrounds">
+            <object-type name="Black" sid="3206956448522659">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="StoneCaveBackground" sid="486626455777818">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Effects">
+            <object-type name="SverreDirtEffect" sid="696183882889469">
+                <plugin id="Particles" />
+                <container>
+                    <type>Sverre</type>
+                    <type>SverreDirtEffect</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="TublastEffect" sid="960815756312723">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697226613202329" speed="16">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_7.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_8.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_9.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_10.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Projectiles">
+            <object-type name="Sverre" sid="576927731024474">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="active" sid="296771545204925" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="715561797064600">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Sverre</type>
+                    <type>SverreDirtEffect</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="9" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="257183723768639" speed="30">
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk1s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk2s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk3s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk4s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk5s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk6s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk7s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk8s.png" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk9s.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Sensors">
+            <object-type name="CameraFollower" sid="414135128148825">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="8Direction" sid="135879838015917">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="545899440304497">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315869870424937" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SceneTrigger" sid="527088690961323">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Scene" sid="833157932758624" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982704369025247" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Tiles">
+            <object-type name="GrassGround" sid="474711614639522">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="20" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="278682345060804" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0.125" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="0.75" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.75" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.25" y="0.75" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GravelGround" sid="977800629379744">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793699536362587" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="1" />
+                                <point x="0" y="0.992188" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HouseTiles" sid="154163472356011">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="772944782773141">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Jumpthru" sid="745671456505731">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="12" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445304296432974" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.375" y="0" />
+                                <point x="0.625" y="0" />
+                                <point x="0.625" y="1" />
+                                <point x="0.375" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TarmacGround" sid="500553007023796">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860943832375407" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0.125" />
+                                <point x="1" y="0.125" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0.125" />
+                                <point x="1" y="0.125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.875" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.125" />
+                                <point x="0.875" y="0.125" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.4375" y="0" />
+                                <point x="0.5625" y="0.125" />
+                                <point x="1" y="0.125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0.125" />
+                                <point x="0.4375" y="0.125" />
+                                <point x="0.5625" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.4375" y="0" />
+                                <point x="0.5625" y="0.125" />
+                                <point x="1" y="0.125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0.125" />
+                                <point x="0.4375" y="0.125" />
+                                <point x="0.5625" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0.125" />
+                                <point x="1" y="0.125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0.125" />
+                                <point x="1" y="0.125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="StoneGround" sid="964373595946909">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="14" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="592008463981644" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0.125" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="1" y="0.9375" />
+                                <point x="0" y="0.9375" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Objects">
+            <object-type name="Door" sid="173245903258290">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361703664888899" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.583333" hotspotY="1">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.416667" hotspotY="1">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bed" sid="892240108004027">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211910408620928" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.2" y="1" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.8" y="0" />
+                                <point x="0.8" y="0.666667" />
+                                <point x="0" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.2" y="1" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.8" y="0" />
+                                <point x="0.8" y="0.666667" />
+                                <point x="0" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.2" y="1" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.8" y="0" />
+                                <point x="0.8" y="0.666667" />
+                                <point x="0" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Nature" sid="152244412067570">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508933362672850" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Ladder" sid="576220057892691">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224099098575786" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Create" sid="107116402272279">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="964537700903038" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fence" sid="605840076907415">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333849017289446" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Tree" sid="816371696453207">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Oak" pingpong="0" repeatcount="1" repeatto="0" sid="749852161726340" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.75" y="0.75" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.25" y="0.25" />
+                                <point x="0.75" y="0.25" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BG_Objects" sid="354337053674174">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653970359847011" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                        <frame duration="1" hotspotX="1" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.125" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.25" y="0.75" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Houses" sid="998137105289352">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="138997840694266" speed="0">
+                        <frame duration="1" hotspotX="0.380208" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Hus\LeppoHus.png">
+                            <collision-poly>
+                                <point x="0.171875" y="0.20625" />
+                                <point x="0.5" y="0.13125" />
+                                <point x="0.713542" y="0.34375" />
+                                <point x="0.713542" y="0.5" />
+                                <point x="0.953125" y="0.94375" />
+                                <point x="0.5" y="1" />
+                                <point x="0.0416667" y="0.95" />
+                                <point x="0.0416667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Text">
+            <object-type name="NoPurposeText" sid="772904177651942">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="MenuItems">
+            <object-type name="MenuSelection" sid="507573962260318">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="482626513666057" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuCharacter" sid="962324554129754">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722690280719079" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\FelaBale.png">
+                            <collision-poly>
+                                <point x="0.04375" y="0.21875" />
+                                <point x="0.5" y="0.03125" />
+                                <point x="0.91875" y="0.40625" />
+                                <point x="0.93125" y="0.5" />
+                                <point x="0.93125" y="0.65625" />
+                                <point x="0.5" y="1" />
+                                <point x="0.05625" y="0.71875" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CharacterSelection" sid="370527701358397">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="917364861805369" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Characters">
+            <object-type name="Leppo" sid="803323350803221">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation-folder name="Attacks">
+                        <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="993327162680605" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\LeppoWalkSverre2.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="UpB" pingpong="0" repeatcount="1" repeatto="0" sid="391147850020927" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                    <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="914560740427815" speed="40">
+                        <frame duration="100" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo.png">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                             <collision-poly>
                                 <point x="0.25" y="0.03125" />
@@ -222,8 +847,42 @@
                                 <point x="0.25" y="1" />
                             </collision-poly>
                         </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="UpB" pingpong="0" repeatcount="1" repeatto="0" sid="391147850020927" speed="2">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo3.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo4.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                             <collision-poly>
@@ -234,749 +893,145 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="4" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="543497506245759" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk1.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\Leppo.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="JumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="718094917835736" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJump.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="JumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="238062327716604" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJump.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="704485128729986" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="Crawl" pingpong="0" repeatcount="1" repeatto="0" sid="402459141019352" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl3.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="DoubleJumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="108223382866993" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJumpDobbel.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="DoubleJumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="707328854951146" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJumpDobbel.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
-                <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="914560740427815" speed="40">
-                    <frame duration="100" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo2.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo3.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo4.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0" />
-                            <point x="0.6875" y="0" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="4" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="543497506245759" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk1.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk2.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\Leppo.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="JumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="718094917835736" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJump.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="JumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="238062327716604" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJump.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="704485128729986" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.5" y="0.5" />
-                            <point x="0.875" y="0.5" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="3" loop="1" name="Crawl" pingpong="0" repeatcount="1" repeatto="0" sid="402459141019352" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.5" y="0.5" />
-                            <point x="0.875" y="0.5" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl2.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.5" y="0.5" />
-                            <point x="0.875" y="0.5" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl3.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.5" y="0.5" />
-                            <point x="0.875" y="0.5" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="DoubleJumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="108223382866993" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJumpDobbel.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="DoubleJumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="707328854951146" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJumpDobbel.png">
-                        <image-point name="Imagepoint 1" x="0.625" y="0.5" />
-                        <collision-poly>
-                            <point x="0.25" y="0.03125" />
-                            <point x="0.6875" y="0.03125" />
-                            <point x="0.6875" y="1" />
-                            <point x="0.25" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="MenuCharacter" sid="962324554129754">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722690280719079" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\FelaBale.png">
-                        <collision-poly>
-                            <point x="0.04375" y="0.21875" />
-                            <point x="0.5" y="0.03125" />
-                            <point x="0.91875" y="0.40625" />
-                            <point x="0.93125" y="0.5" />
-                            <point x="0.93125" y="0.65625" />
-                            <point x="0.5" y="1" />
-                            <point x="0.05625" y="0.71875" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="MenuSelection" sid="507573962260318">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="482626513666057" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="CharacterSelection" sid="370527701358397">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="917364861805369" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sverre" sid="576927731024474">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="active" sid="296771545204925" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Platform" sid="715561797064600">
-                    <behavior id="Platform" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>Sverre</type>
-                <type>SverreDirtEffect</type>
-            </container>
-            <animation-folder>
-                <animation framecount="9" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="257183723768639" speed="30">
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk1s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk2s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk3s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk4s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk5s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk6s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk7s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk8s.png" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Sverre\walk9s.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SverreDirtEffect" sid="696183882889469">
-            <plugin id="Particles" />
-            <container>
-                <type>Sverre</type>
-                <type>SverreDirtEffect</type>
-            </container>
+            </object-type>
+        </object-folder>
+        <object-type name="DialogueFrame" sid="873428182266782">
+            <plugin id="NinePatch" />
             <texture />
         </object-type>
-        <object-type name="TublastEffect" sid="960815756312723">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697226613202329" speed="16">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_3.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_4.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_5.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_6.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_7.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_8.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_9.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.84375" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Tublast\tublast_10.png" />
-                </animation>
-            </animation-folder>
+        <object-type global="1" name="LoadedLanguage" sid="285408761656998">
+            <plugin id="Dictionary" />
         </object-type>
-        <object-type name="HouseTiles" sid="154163472356011">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="772944782773141">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Jumpthru" sid="745671456505731">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="12" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445304296432974" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.375" y="0" />
-                            <point x="0.625" y="0" />
-                            <point x="0.625" y="1" />
-                            <point x="0.375" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
+        <object-type global="1" name="LoadedDialogues" sid="811768554055892">
+            <plugin id="Dictionary" />
         </object-type>
-        <object-type name="BG_Objects" sid="354337053674174">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653970359847011" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
-                    <frame duration="1" hotspotX="1" hotspotY="1">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.125" hotspotY="1">
-                        <collision-poly>
-                            <point x="0.25" y="0.25" />
-                            <point x="0.75" y="0.25" />
-                            <point x="0.75" y="0.75" />
-                            <point x="0.25" y="0.75" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
+        <object-type name="AJAX" sid="995543279059086">
+            <plugin id="AJAX" />
         </object-type>
-        <object-type name="Ladder" sid="576220057892691">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224099098575786" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Door" sid="173245903258290">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361703664888899" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <collision-poly>
-                            <point x="0" y="0.5" />
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.583333" hotspotY="1">
-                        <collision-poly>
-                            <point x="0" y="0.5" />
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.416667" hotspotY="1">
-                        <collision-poly>
-                            <point x="0" y="0.5" />
-                            <point x="1" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SceneTrigger" sid="527088690961323">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Scene" sid="833157932758624" type="string" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982704369025247" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Bed" sid="892240108004027">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="211910408620928" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="1">
-                        <image-point name="Imagepoint 1" x="0.2" y="1" />
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.8" y="0" />
-                            <point x="0.8" y="0.666667" />
-                            <point x="0" y="0.666667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="1">
-                        <image-point name="Imagepoint 1" x="0.2" y="1" />
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.8" y="0" />
-                            <point x="0.8" y="0.666667" />
-                            <point x="0" y="0.666667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="1">
-                        <image-point name="Imagepoint 1" x="0.2" y="1" />
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.8" y="0" />
-                            <point x="0.8" y="0.666667" />
-                            <point x="0" y="0.666667" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Houses" sid="998137105289352">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="138997840694266" speed="0">
-                    <frame duration="1" hotspotX="0.380208" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Hus\LeppoHus.png">
-                        <collision-poly>
-                            <point x="0.171875" y="0.20625" />
-                            <point x="0.5" y="0.13125" />
-                            <point x="0.713542" y="0.34375" />
-                            <point x="0.713542" y="0.5" />
-                            <point x="0.953125" y="0.94375" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0416667" y="0.95" />
-                            <point x="0.0416667" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Fence" sid="605840076907415">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333849017289446" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="GravelGround" sid="977800629379744">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793699536362587" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.875" y="0" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="0.992188" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TarmacGround" sid="500553007023796">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860943832375407" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0.125" />
-                            <point x="1" y="0.125" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0.125" />
-                            <point x="1" y="0.125" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.125" />
-                            <point x="0.875" y="0.125" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.4375" y="0" />
-                            <point x="0.5625" y="0.125" />
-                            <point x="1" y="0.125" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0.125" />
-                            <point x="0.4375" y="0.125" />
-                            <point x="0.5625" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.4375" y="0" />
-                            <point x="0.5625" y="0.125" />
-                            <point x="1" y="0.125" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0.125" />
-                            <point x="0.4375" y="0.125" />
-                            <point x="0.5625" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0.125" />
-                            <point x="1" y="0.125" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0.125" />
-                            <point x="1" y="0.125" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Create" sid="107116402272279">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="964537700903038" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Nature" sid="152244412067570">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="508933362672850" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Tree" sid="816371696453207">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="3" loop="0" name="Oak" pingpong="0" repeatcount="1" repeatto="0" sid="749852161726340" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <collision-poly>
-                            <point x="0.75" y="0.75" />
-                            <point x="0.25" y="0.75" />
-                            <point x="0.25" y="0.25" />
-                            <point x="0.75" y="0.25" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="StoneGround" sid="964373595946909">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="14" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="592008463981644" speed="0">
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.875" y="0" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.125" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.875" y="0" />
-                            <point x="0.875" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0.125" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.9375" />
-                            <point x="0.125" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.9375" />
-                            <point x="0" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.875" y="0" />
-                            <point x="0.875" y="0.9375" />
-                            <point x="0" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.9375" />
-                            <point x="0" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="0.9375" />
-                            <point x="0" y="0.9375" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="StoneCaveBackground" sid="486626455777818">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="NoPurposeText" sid="772904177651942">
+        <object-type name="DialogueText" sid="283112331400995">
             <plugin id="Text" />
         </object-type>
     </object-folder>
@@ -999,6 +1054,7 @@
                 <member>Leppo</member>
             </members>
             <instance-variables>
+                <instance-variable name="Controller" sid="630920551521965" type="number" />
                 <instance-variable name="Climbing" sid="434040673678836" type="boolean" />
                 <instance-variable name="Crouching" sid="699390722124981" type="boolean" />
                 <instance-variable name="CrouchSpeed" sid="240274882997474" type="number" />
@@ -1033,17 +1089,32 @@
     <layout-folder>
         <layout-folder name="Leppo">
             <layout>Leppo_House.xml</layout>
+            <layout>Leppo_Outside.xml</layout>
         </layout-folder>
-        <layout>TestLevel.xml</layout>
-        <layout>CharacterSelect.xml</layout>
+        <layout-folder name="Menues">
+            <layout>CharacterSelect.xml</layout>
+            <layout>Map.xml</layout>
+        </layout-folder>
+        <layout-folder name="GeneralPurpuse">
+            <layout>CommonLayerMaster.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
+        <event-folder name="Menues">
+            <event-sheet>Map.xml</event-sheet>
+            <event-sheet>CharacterSelect.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Functionality">
+            <event-sheet>MAIN.xml</event-sheet>
+            <event-sheet>Characters.xml</event-sheet>
+            <event-sheet>Controller.xml</event-sheet>
+            <event-sheet>SoundHandler.xml</event-sheet>
+            <event-sheet>DialogueSystem.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Leppo">
+            <event-sheet>LeppoHouse.xml</event-sheet>
+        </event-folder>
         <event-sheet>Course.xml</event-sheet>
-        <event-sheet>MAIN.xml</event-sheet>
-        <event-sheet>Characters.xml</event-sheet>
-        <event-sheet>CharacterSelect.xml</event-sheet>
-        <event-sheet>SoundHandler.xml</event-sheet>
-        <event-sheet>LeppoHouse.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
@@ -1076,6 +1147,7 @@
         <global-instance type="Browser" uid="7" />
         <global-instance type="Function" uid="8" />
         <global-instance type="NWjs" uid="29" />
+        <global-instance type="AJAX" uid="699" />
     </global-instances>
     <sounds-folder />
     <music-folder>
@@ -1090,6 +1162,12 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Languages">
+            <file-folder name="Norsk">
+                <file name="Norsk.dia" />
+                <file name="Norsk.lang" />
+            </file-folder>
         </file-folder>
     </files-folder>
 </c2project>

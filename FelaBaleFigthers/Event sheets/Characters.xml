@@ -13,96 +13,239 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="686131886139215">
+                        <event-block sid="149119461578710">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="148129924648955" type="Keyboard">
-                                    <param id="0" name="Key">87</param>
-                                </condition>
-                                <condition id="2" name="Key is down" sid="651642876836952" type="Keyboard">
-                                    <param id="0" name="Key">83</param>
+                                <condition id="-11" name="For Each" sid="155415114499536" type="System">
+                                    <param id="0" name="Object">Fighters</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="410870587348435">
+                                <event-block any="1" sid="686131886139215">
                                     <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="864150934207517" type="Fighters">
-                                            <param id="0" name="Object">Ladder</param>
+                                        <condition id="-8" name="Compare two values" sid="148129924648955" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;up&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
                                         </condition>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="944665672215401" type="Fighters">
-                                            <param id="0" name="Instance variable">Crouching</param>
+                                        <condition id="-8" name="Compare two values" sid="329629926544303" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;down&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="410870587348435">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="864150934207517" type="Fighters">
+                                                    <param id="0" name="Object">Ladder</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="944665672215401" type="Fighters">
+                                                    <param id="0" name="Instance variable">Crouching</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="588712917268525" type="Fighters">
+                                                    <param id="0" name="Instance variable">Climbing</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="672259833193848" type="Fighters">
+                                                    <param id="0" name="Instance variable">CanControl</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action behavior="Platform" id="11" name="Set enabled" sid="911139979163965" type="Fighters">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="352200694139737" type="Fighters">
+                                                    <param id="0" name="X">Ladder.X</param>
+                                                </action>
+                                                <action behavior="8Direction" id="8" name="Set enabled" sid="942216665724849" type="Fighters">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="570168979268279">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="354369812467534" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;left&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="588712917268525" type="Fighters">
-                                            <param id="0" name="Instance variable">Climbing</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="672259833193848" type="Fighters">
-                                            <param id="0" name="Instance variable">CanControl</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action behavior="Platform" id="11" name="Set enabled" sid="911139979163965" type="Fighters">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action id="-1" name="Set X" sid="352200694139737" type="Fighters">
-                                            <param id="0" name="X">Ladder.X</param>
-                                        </action>
-                                        <action behavior="8Direction" id="8" name="Set enabled" sid="942216665724849" type="Fighters">
-                                            <param id="0" name="State">1</param>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="243548456344503" type="Fighters">
+                                            <param id="0" name="Control">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="276341983789041">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="957178776053856" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;right&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="133061416867323" type="Fighters">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="864704451565719">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="734793481098485" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;a&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="335103943925418" type="Fighters">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="570834805832653">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="480872537695214" type="Fighters">
+                                            <param id="0" name="Instance variable">Crouching</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="201912473890932">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="475599148096793" type="System">
+                                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">Fighters.CrouchSpeed</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="337705486759517" type="Fighters">
+                                                    <param id="0" name="Vector X">Fighters.CrouchSpeed</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="186963762537731" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;Crawl&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="443078176317411">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="897645467589662" type="System" />
+                                                <condition id="-8" name="Compare two values" sid="495604017524878" type="System">
+                                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">-Fighters.CrouchSpeed</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Platform" id="8" name="Set vector X" sid="729421271514679" type="Fighters">
+                                                    <param id="0" name="Vector X">-Fighters.CrouchSpeed</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="722941785261871" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;Crawl&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="997916771596052">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="629317318642470" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="159616417881651" type="Fighters">
+                                                    <param id="0" name="Animation">&quot;Duck&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="272159294587867">
+                                    <conditions>
+                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="587148659969289" type="Fighters" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="171558235296493" type="Fighters">
+                                            <param id="0" name="Instance variable">Crouching</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="966760344405249">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="482915587778866" type="System">
+                                                    <param id="0" name="First value">Fighters.Platform.VectorX</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="450212191196502">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="549274205875026" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="240581373321735">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="766397528522963" type="Fighters">
+                                                                    <param id="0" name="Instance variable">DoubleJumping</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="806532821992667" type="Fighters">
+                                                                    <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="384753680379232">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="161980557773591" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="291422276173383" type="Fighters">
+                                                                    <param id="0" name="Animation">&quot;JumpRun&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="570168979268279">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="582481973595822" type="Keyboard">
-                                    <param id="0" name="Key">65</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="243548456344503" type="Fighters">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="276341983789041">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="890337925677367" type="Keyboard">
-                                    <param id="0" name="Key">68</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="133061416867323" type="Fighters">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="864704451565719">
-                            <conditions>
-                                <condition id="2" name="Key is down" sid="934681910415324" type="Keyboard">
-                                    <param id="0" name="Key">71</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="335103943925418" type="Fighters">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                            </actions>
                         </event-block>
                         <event-block sid="861333940592420">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="870048357965644" type="Keyboard">
-                                    <param id="0" name="Key">70</param>
+                                <condition id="0" name="On function" sid="870048357965644" type="Function">
+                                    <param id="0" name="Name">&quot;controller_x&quot;</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="294175152671707" type="System">
+                                    <param id="0" name="Object">Fighters</param>
+                                    <param id="1" name="Expression">Fighters.Controller</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Function.Param(0)</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="305928591725613">
                                     <conditions>
-                                        <condition id="2" name="Key is down" sid="648167258278528" type="Keyboard">
-                                            <param id="0" name="Key">87</param>
+                                        <condition id="-8" name="Compare two values" sid="667807088938625" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;up&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
                                         </condition>
                                         <condition id="-8" name="Is boolean instance variable set" sid="650379473593182" type="Fighters">
                                             <param id="0" name="Instance variable">Can_UpB</param>
@@ -145,10 +288,16 @@
                         </event-block>
                         <event-block sid="361857329413881">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="707295847922438" type="Keyboard">
-                                    <param id="0" name="Key">71</param>
+                                <condition id="0" name="On function" sid="567554596430017" type="Function">
+                                    <param id="0" name="Name">&quot;controller_a&quot;</param>
                                 </condition>
                                 <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="184664227796644" type="Fighters" />
+                                <condition id="-33" name="Pick by comparison" sid="388846130165938" type="System">
+                                    <param id="0" name="Object">Fighters</param>
+                                    <param id="1" name="Expression">Fighters.Controller</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Function.Param(0)</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-13" name="Set boolean" sid="788581322591336" type="Fighters">
@@ -156,121 +305,6 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="570834805832653">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="480872537695214" type="Fighters">
-                                    <param id="0" name="Instance variable">Crouching</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="201912473890932">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="475599148096793" type="System">
-                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">Fighters.CrouchSpeed</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="337705486759517" type="Fighters">
-                                            <param id="0" name="Vector X">Fighters.CrouchSpeed</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="186963762537731" type="Fighters">
-                                            <param id="0" name="Animation">&quot;Crawl&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="443078176317411">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="897645467589662" type="System" />
-                                        <condition id="-8" name="Compare two values" sid="495604017524878" type="System">
-                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Second value">-Fighters.CrouchSpeed</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="8" name="Set vector X" sid="729421271514679" type="Fighters">
-                                            <param id="0" name="Vector X">-Fighters.CrouchSpeed</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="722941785261871" type="Fighters">
-                                            <param id="0" name="Animation">&quot;Crawl&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="997916771596052">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="629317318642470" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="159616417881651" type="Fighters">
-                                            <param id="0" name="Animation">&quot;Duck&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="272159294587867">
-                            <conditions>
-                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="587148659969289" type="Fighters" />
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="171558235296493" type="Fighters">
-                                    <param id="0" name="Instance variable">Crouching</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="966760344405249">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="482915587778866" type="System">
-                                            <param id="0" name="First value">Fighters.Platform.VectorX</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="450212191196502">
-                                            <conditions>
-                                                <condition id="-4" name="Trigger once while true" sid="549274205875026" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="240581373321735">
-                                                    <conditions>
-                                                        <condition id="-8" name="Is boolean instance variable set" sid="766397528522963" type="Fighters">
-                                                            <param id="0" name="Instance variable">DoubleJumping</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="806532821992667" type="Fighters">
-                                                            <param id="0" name="Animation">&quot;DoubleJumpRun&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="384753680379232">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="161980557773591" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="291422276173383" type="Fighters">
-                                                            <param id="0" name="Animation">&quot;JumpRun&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="418974656097675">
                             <conditions>
@@ -285,8 +319,10 @@
                             <sub-events>
                                 <event-block sid="179856504247941">
                                     <conditions>
-                                        <condition id="2" name="Key is down" sid="350869610397659" type="Keyboard">
-                                            <param id="0" name="Key">83</param>
+                                        <condition id="-8" name="Compare two values" sid="386690049094163" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;down&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -539,8 +575,10 @@
                     <sub-events>
                         <event-block sid="286745146681018">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="280447543890381" type="Keyboard">
-                                    <param id="0" name="Key">87</param>
+                                <condition id="-8" name="Compare two values" sid="114835809333475" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;up&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -551,8 +589,10 @@
                         </event-block>
                         <event-block sid="699703829445380">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="498796208836160" type="Keyboard">
-                                    <param id="0" name="Key">83</param>
+                                <condition id="-8" name="Compare two values" sid="707321166562258" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;down&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -563,11 +603,15 @@
                         </event-block>
                         <event-block any="1" sid="501863700854165">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="872611461928808" type="Keyboard">
-                                    <param id="0" name="Key">65</param>
+                                <condition id="-8" name="Compare two values" sid="415105397873481" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;left&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
-                                <condition id="2" name="Key is down" sid="921623502972841" type="Keyboard">
-                                    <param id="0" name="Key">68</param>
+                                <condition id="-8" name="Compare two values" sid="761717519596394" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;right&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
                                 </condition>
                             </conditions>
                             <actions>

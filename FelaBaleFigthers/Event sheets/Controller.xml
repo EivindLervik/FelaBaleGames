@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Controller</name>
+    <events>
+        <variable constant="0" name="Player1" sid="987868571375034" static="0" type="text">none</variable>
+        <variable constant="0" name="Player2" sid="224946148224138" static="0" type="text">none</variable>
+        <variable constant="0" name="Player3" sid="736272449389332" static="0" type="text">none</variable>
+        <variable constant="0" name="Player4" sid="421443703726186" static="0" type="text">none</variable>
+        <event-block sid="862766943762140">
+            <conditions>
+                <condition id="0" name="On function" sid="169295264604184" type="Function">
+                    <param id="0" name="Name">&quot;IsKeyDown&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="533212371184715" type="Function">
+                    <param id="0" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="969092941522788">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="846967228707307" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="586907543612458">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="626331624319706" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="508119616059499" type="Keyboard">
+                                    <param id="0" name="Key">87</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="972282389162198" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="742852762164601">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="314541985191426" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="715656103228611" type="Keyboard">
+                                    <param id="0" name="Key">83</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="827123096190608" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="485068368297989">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="624802820556993" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="378525773411631" type="Keyboard">
+                                    <param id="0" name="Key">65</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="575509688175415" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="823901696238727">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="719960321985865" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="913671216486241" type="Keyboard">
+                                    <param id="0" name="Key">68</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="128095146905371" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="710179566349823">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="681639477558071" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;a&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="277494393622999" type="Keyboard">
+                                    <param id="0" name="Key">71</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="701863759550222" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="945055022368339">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="979981881431282" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;b&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="388683878570950" type="Keyboard">
+                                    <param id="0" name="Key">72</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="472390506310162" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="237078319291452">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="325491598844994" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;x&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="350743549458594" type="Keyboard">
+                                    <param id="0" name="Key">70</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="917206275994604" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="321237447415893">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="840964224404507" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;y&quot;</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="910100822653347" type="Keyboard">
+                                    <param id="0" name="Key">84</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="558380936958239" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="646324741957780">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="457753809047312" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="1" name="Compare parameter" sid="819931620344310" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="909291282550156" title="Keyboard">
+            <sub-events>
+                <event-block sid="624848515018792">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="530851088668840" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="517261245440566" type="Function">
+                            <param id="0" name="Name">&quot;controller_up&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="607573814057364">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="686632438000036" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="860881874356411" type="Function">
+                            <param id="0" name="Name">&quot;controller_down&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="895000995224293">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="295933137981291" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="927002743803536" type="Function">
+                            <param id="0" name="Name">&quot;controller_left&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="497354822124427">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="274448023635950" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="908844229235460" type="Function">
+                            <param id="0" name="Name">&quot;controller_right&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="239487833018075">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="933495644261909" type="Keyboard">
+                            <param id="0" name="Key">71</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="536140742610963" type="Function">
+                            <param id="0" name="Name">&quot;controller_a&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="446438066995997">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="984022464133559" type="Keyboard">
+                            <param id="0" name="Key">72</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="464788390077395" type="Function">
+                            <param id="0" name="Name">&quot;controller_b&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="868924715827864">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="123761236770234" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="415744662282925" type="Function">
+                            <param id="0" name="Name">&quot;controller_x&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="608256143494307">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="966237414464764" type="Keyboard">
+                            <param id="0" name="Key">84</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="302047656911039" type="Function">
+                            <param id="0" name="Name">&quot;controller_y&quot;</param>
+                            <param id="1" name="Parameter {n}">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

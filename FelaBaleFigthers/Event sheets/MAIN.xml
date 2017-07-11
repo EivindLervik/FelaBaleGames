@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MAIN</name>
     <events>
+        <include>DialogueSystem</include>
+        <include>Controller</include>
         <include>SoundHandler</include>
         <include>Characters</include>
         <event-block sid="707283695066593">
