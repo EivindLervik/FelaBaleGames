@@ -3,6 +3,201 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Map</name>
     <events>
+        <variable constant="0" name="Map_Index" sid="427299387566196" static="0" type="number">0</variable>
+        <variable constant="0" name="Map_MaxIndex" sid="883168292787057" static="0" type="number">10</variable>
         <include>MAIN</include>
+        <event-block sid="955935924022704">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="594074532852465" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="518293103230816" type="Function">
+                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Raudskjegg&quot;{###}0{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="412315568113004" type="Function">
+                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Yokko&quot;{###}1{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="215150048496970" type="Function">
+                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Playboy&quot;{###}2{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="584367698742927" type="Function">
+                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Leppo&quot;{###}3{###}&quot;Yes&quot;{###}&quot;Leppo_House&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="659250520424306" type="Function">
+                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;MIDI&quot;{###}4{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="632718776943735">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="357111384229297" type="System">
+                            <param id="0" name="Object">MissionFrame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="905291827819171" type="MissionFrame" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="874404255685568">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="792474022220343" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="655229502219402" type="MissionFrame">
+                    <param id="0" name="Y">lerp(MissionFrame.Y, MissionFrame.TargetY, 0.25)</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="312693725168034" type="MissionDisabler">
+                    <param id="0" name="Object">MissionFrame</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="654619846028998" type="MissionText">
+                    <param id="0" name="Object">MissionFrame</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="966458991748204">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="646287764809492" type="Keyboard">
+                    <param id="0" name="Key">87</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="737782589647544">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="425599137294498" type="System">
+                            <param id="0" name="Variable">Map_Index</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="498192125396958" type="System">
+                            <param id="0" name="Variable">ChosenLanguage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="907773611672518">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="148318609156591" type="System">
+                                    <param id="0" name="Object">MissionFrame</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="978510826660808" type="MissionFrame">
+                                    <param id="0" name="Instance variable">TargetY</param>
+                                    <param id="1" name="Value">MissionFrame.TargetY + MissionFrame.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="172972545895732">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="717268673076451" type="Keyboard">
+                    <param id="0" name="Key">83</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="901709192607419">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="777329081692607" type="System">
+                            <param id="0" name="Variable">Map_Index</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">MAP_MaxIndex</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="681062853797592" type="System">
+                            <param id="0" name="Variable">Map_Index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="411525973991548">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="161824313737010" type="System">
+                                    <param id="0" name="Object">MissionFrame</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="231168296286180" type="MissionFrame">
+                                    <param id="0" name="Instance variable">TargetY</param>
+                                    <param id="1" name="Value">MissionFrame.TargetY - MissionFrame.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="231739296990687">
+            <conditions>
+                <condition id="0" name="On function" sid="680586248140069" type="Function">
+                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="862433180853364" type="System">
+                    <param id="0" name="Object to create">MissionFrame</param>
+                    <param id="1" name="Layer">&quot;Elements&quot;</param>
+                    <param id="2" name="X">192</param>
+                    <param id="3" name="Y">(Function.Param(1) * MissionFrame.Height) + MissionSelector.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="711257779204284" type="MissionFrame">
+                    <param id="0" name="Instance variable">TargetY</param>
+                    <param id="1" name="Value">MissionFrame.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="743340855699705" type="MissionFrame">
+                    <param id="0" name="Instance variable">Layout</param>
+                    <param id="1" name="Value">Function.Param(3)</param>
+                </action>
+                <action id="0" name="Set text" sid="200709627482196" type="MissionText">
+                    <param id="0" name="Text">Function.Param(0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="831387668041174">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="723872308933594" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Yes&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="669011951873821" type="MissionDisabler">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="359147422387246">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="127079482579024" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;No&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="203353629309124" type="MissionDisabler">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

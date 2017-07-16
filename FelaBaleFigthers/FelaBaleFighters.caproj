@@ -30,6 +30,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -572,6 +573,24 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GameWorldTiles" sid="589343276476267">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="682421591159857">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Jumpthru" sid="530938777634820">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142229934281087" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Objects">
             <object-type name="Door" sid="173245903258290">
@@ -837,6 +856,42 @@
                             </frame>
                         </animation>
                     </animation-folder>
+                    <animation-folder name="Climb">
+                        <animation framecount="4" loop="1" name="Climb" pingpong="0" repeatcount="1" repeatto="0" sid="706321878090186" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climb1.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climb2.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climbe3.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
                     <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="914560740427815" speed="40">
                         <frame duration="100" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Idle\Leppo.png">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
@@ -1034,6 +1089,139 @@
         <object-type name="DialogueText" sid="283112331400995">
             <plugin id="Text" />
         </object-type>
+        <object-type name="GameWorldWall" sid="156296798270195">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="GameWorldMountain" sid="232713050142301">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="GameWorldGrid" sid="669959499554190">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="GameWorldRisingPlatform" sid="179304379397406">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="361969879557571">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="898045613526890">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327938986528232" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.0625" />
+                            <point x="0" y="0.0625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Notes" sid="193397726301391">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="383121779101077">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="732037646369204">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="301854233270413" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RadoyMap" sid="540584067821742">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="MissionText" sid="896511742337494">
+            <plugin id="Text" />
+            <container>
+                <type>MissionFrame</type>
+                <type>MissionDisabler</type>
+                <type>MissionText</type>
+            </container>
+        </object-type>
+        <object-type name="MissionFrame" sid="117410965335675">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Layout" sid="322383570683012" type="string" />
+                <instance-variable name="TargetY" sid="905394398673080" type="number" />
+            </instance-variables>
+            <container>
+                <type>MissionFrame</type>
+                <type>MissionDisabler</type>
+                <type>MissionText</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894695864595665" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MissionSelector" sid="834638255134946">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574687353486454" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MissionDisabler" sid="696504496620107">
+            <plugin id="Sprite" />
+            <container>
+                <type>MissionFrame</type>
+                <type>MissionDisabler</type>
+                <type>MissionText</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797855950272971" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MissionListBG" sid="707777403771046">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="MissionListBG2" sid="402359231464767">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Ground" plugin-id="Sprite" sid="125361228845125">
@@ -1098,6 +1286,9 @@
         <layout-folder name="GeneralPurpuse">
             <layout>CommonLayerMaster.xml</layout>
         </layout-folder>
+        <layout-folder name="MIDI">
+            <layout>MIDI_GameWorld.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="Menues">
@@ -1113,6 +1304,9 @@
         </event-folder>
         <event-folder name="Leppo">
             <event-sheet>LeppoHouse.xml</event-sheet>
+        </event-folder>
+        <event-folder name="MIDI">
+            <event-sheet>MIDI_GameWorld.xml</event-sheet>
         </event-folder>
         <event-sheet>Course.xml</event-sheet>
     </event-folder>

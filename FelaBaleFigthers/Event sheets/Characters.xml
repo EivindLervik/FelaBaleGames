@@ -585,10 +585,15 @@
                                 <action behavior="8Direction" id="7" name="Simulate control" sid="928111624773903" type="Fighters">
                                     <param id="0" name="Control">2</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="473426682748337" type="Fighters">
+                                    <param id="0" name="Animation">&quot;Climb&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="699703829445380">
                             <conditions>
+                                <condition id="-22" name="Else" sid="552321440482964" type="System" />
                                 <condition id="-8" name="Compare two values" sid="707321166562258" type="System">
                                     <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;down&quot;)</param>
                                     <param id="1" name="Comparison">0</param>
@@ -599,6 +604,18 @@
                                 <action behavior="8Direction" id="7" name="Simulate control" sid="811288708329166" type="Fighters">
                                     <param id="0" name="Control">3</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="821029366600474" type="Fighters">
+                                    <param id="0" name="Animation">&quot;Climb&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="261195042921707">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="951741359468053" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Stop" sid="292607368542466" type="Fighters" />
                             </actions>
                         </event-block>
                         <event-block any="1" sid="501863700854165">
@@ -630,6 +647,12 @@
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="301022462499354">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="759914996489834" type="Fighters" />
+                            </conditions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

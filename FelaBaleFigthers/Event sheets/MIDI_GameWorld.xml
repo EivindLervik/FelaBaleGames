@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MIDI_GameWorld</name>
+    <events>
+        <include>MAIN</include>
+        <event-block sid="179806951318080">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="408815424631275" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="121397128305162" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
