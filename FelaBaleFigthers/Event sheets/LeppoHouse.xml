@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>LeppoHouse</name>
     <events>
-        <include>MAIN</include>
+        <include>Course</include>
         <event-block sid="890030903479385">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="755873826117343" type="System" />

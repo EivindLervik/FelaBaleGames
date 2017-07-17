@@ -4,43 +4,70 @@
     <name>Map</name>
     <events>
         <variable constant="0" name="Map_Index" sid="427299387566196" static="0" type="number">0</variable>
-        <variable constant="0" name="Map_MaxIndex" sid="883168292787057" static="0" type="number">10</variable>
+        <variable constant="0" name="Map_MaxIndex" sid="883168292787057" static="0" type="number">0</variable>
         <include>MAIN</include>
         <event-block sid="955935924022704">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="594074532852465" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="518293103230816" type="Function">
-                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Raudskjegg&quot;{###}0{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="412315568113004" type="Function">
-                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Yokko&quot;{###}1{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="215150048496970" type="Function">
-                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Playboy&quot;{###}2{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="584367698742927" type="Function">
-                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Leppo&quot;{###}3{###}&quot;Yes&quot;{###}&quot;Leppo_House&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="659250520424306" type="Function">
-                    <param id="0" name="Name">&quot;Map_Create&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;MIDI&quot;{###}4{###}&quot;Yes&quot;{###}&quot;Layout&quot;</param>
+                <action id="0" name="Call function" sid="731761577809127" type="Function">
+                    <param id="0" name="Name">&quot;Fade_FadeIn&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="632718776943735">
+                <event-block sid="466306554642231">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="357111384229297" type="System">
+                        <condition id="-11" name="For Each" sid="413630729769286" type="System">
                             <param id="0" name="Object">MissionFrame</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="905291827819171" type="MissionFrame" />
+                        <action id="-9" name="Destroy" sid="727866236742525" type="MissionFrame" />
+                    </actions>
+                </event-block>
+                <event-block sid="641001416933829">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="299590017837540" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="952016758924041" type="Map_MarkerSelector">
+                            <param id="0" name="X">150</param>
+                            <param id="1" name="Y">128</param>
+                        </action>
+                        <action id="0" name="Call function" sid="518293103230816" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Raudskjegg&quot;{###}&quot;Yes&quot;{###}&quot;Layout&quot;{###}150{###}128{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="412315568113004" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Yokko&quot;{###}&quot;Yes&quot;{###}&quot;Layout&quot;{###}93{###}109{###}0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="215150048496970" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Playboy&quot;{###}&quot;Yes&quot;{###}&quot;Layout&quot;{###}106{###}86{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="584367698742927" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Leppo&quot;{###}&quot;Yes&quot;{###}&quot;Leppo_House&quot;{###}115{###}87{###}0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="659250520424306" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;MIDI&quot;{###}&quot;Yes&quot;{###}&quot;MIDI_GameWorld&quot;{###}106{###}86{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="192096603718712" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Svart Kaffi&quot;{###}&quot;No&quot;{###}&quot;Layout&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="354556288482019" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Bussturen&quot;{###}&quot;No&quot;{###}&quot;Layout&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="946884186659786" type="Function">
+                            <param id="0" name="Name">&quot;Map_Create&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Skåddo&quot;{###}&quot;No&quot;{###}&quot;Layout&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -65,8 +92,8 @@
         </event-block>
         <event-block sid="966458991748204">
             <conditions>
-                <condition id="0" name="On key pressed" sid="646287764809492" type="Keyboard">
-                    <param id="0" name="Key">87</param>
+                <condition id="0" name="On function" sid="646287764809492" type="Function">
+                    <param id="0" name="Name">&quot;controller_up&quot;</param>
                 </condition>
             </conditions>
             <actions />
@@ -81,8 +108,12 @@
                     </conditions>
                     <actions>
                         <action id="-11" name="Subtract from" sid="498192125396958" type="System">
-                            <param id="0" name="Variable">ChosenLanguage</param>
+                            <param id="0" name="Variable">Map_Index</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="302519454505001" type="Function">
+                            <param id="0" name="Name">&quot;Map_Cursor_Refresh&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -105,8 +136,8 @@
         </event-block>
         <event-block sid="172972545895732">
             <conditions>
-                <condition id="0" name="On key pressed" sid="717268673076451" type="Keyboard">
-                    <param id="0" name="Key">83</param>
+                <condition id="0" name="On function" sid="786898133256187" type="Function">
+                    <param id="0" name="Name">&quot;controller_down&quot;</param>
                 </condition>
             </conditions>
             <actions />
@@ -116,13 +147,17 @@
                         <condition id="-14" name="Compare variable" sid="777329081692607" type="System">
                             <param id="0" name="Variable">Map_Index</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">MAP_MaxIndex</param>
+                            <param id="2" name="Value">MAP_MaxIndex -1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="681062853797592" type="System">
                             <param id="0" name="Variable">Map_Index</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="638538703321432" type="Function">
+                            <param id="0" name="Name">&quot;Map_Cursor_Refresh&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -143,6 +178,19 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="997544564585687">
+            <conditions>
+                <condition id="0" name="On function" sid="600293177323456" type="Function">
+                    <param id="0" name="Name">&quot;controller_a&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="775575281425892" type="Function">
+                    <param id="0" name="Name">&quot;Map_Select&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="231739296990687">
             <conditions>
                 <condition id="0" name="On function" sid="680586248140069" type="Function">
@@ -154,7 +202,7 @@
                     <param id="0" name="Object to create">MissionFrame</param>
                     <param id="1" name="Layer">&quot;Elements&quot;</param>
                     <param id="2" name="X">192</param>
-                    <param id="3" name="Y">(Function.Param(1) * MissionFrame.Height) + MissionSelector.Y</param>
+                    <param id="3" name="Y">(Map_MaxIndex * MissionFrame.Height) + MissionSelector.Y</param>
                 </action>
                 <action id="-10" name="Set value" sid="711257779204284" type="MissionFrame">
                     <param id="0" name="Instance variable">TargetY</param>
@@ -162,38 +210,117 @@
                 </action>
                 <action id="-10" name="Set value" sid="743340855699705" type="MissionFrame">
                     <param id="0" name="Instance variable">Layout</param>
-                    <param id="1" name="Value">Function.Param(3)</param>
+                    <param id="1" name="Value">Function.Param(2)</param>
                 </action>
-                <action id="0" name="Set text" sid="200709627482196" type="MissionText">
-                    <param id="0" name="Text">Function.Param(0)</param>
+                <action id="-10" name="Set value" sid="670607463392838" type="MissionFrame">
+                    <param id="0" name="Instance variable">Index</param>
+                    <param id="1" name="Value">Map_MaxIndex</param>
+                </action>
+                <action id="-3" name="Set position" sid="431189853746994" type="Map_Marker">
+                    <param id="0" name="X">Function.Param(3)</param>
+                    <param id="1" name="Y">Function.Param(4)</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="831387668041174">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="723872308933594" type="Function">
-                            <param id="0" name="Index">2</param>
+                            <param id="0" name="Index">1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Yes&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="669011951873821" type="MissionDisabler">
+                        <action id="-15" name="Set visible" sid="203353629309124" type="MissionDisabler">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="528359308101629" type="Map_Marker">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="200709627482196" type="MissionText">
+                            <param id="0" name="Text">Function.Param(0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="234251597217670" type="System">
+                            <param id="0" name="Variable">Map_MaxIndex</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="359147422387246">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="127079482579024" type="Function">
-                            <param id="0" name="Index">2</param>
+                            <param id="0" name="Index">1</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;No&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="203353629309124" type="MissionDisabler">
+                        <action id="-15" name="Set visible" sid="669011951873821" type="MissionDisabler">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="228299658651189" type="Map_Marker">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="879345150092967" type="MissionText">
+                            <param id="0" name="Text">&quot;?&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="864270261180306">
+            <conditions>
+                <condition id="0" name="On function" sid="375356437868088" type="Function">
+                    <param id="0" name="Name">&quot;Map_Cursor_Refresh&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="919506025841451">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="390068866261565" type="System">
+                            <param id="0" name="Object">MissionFrame</param>
+                            <param id="1" name="Expression">MissionFrame.Index</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Map_Index</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="449556697654618" type="Map_MarkerSelector">
+                            <param id="0" name="Object">Map_Marker</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="876203573310110">
+            <conditions>
+                <condition id="0" name="On function" sid="643737847216965" type="Function">
+                    <param id="0" name="Name">&quot;Map_Select&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="706074320827924">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="688307001682628" type="System">
+                            <param id="0" name="Object">MissionFrame</param>
+                            <param id="1" name="Expression">MissionFrame.Index</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Map_Index</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="871275939769935" type="Function">
+                            <param id="0" name="Name">&quot;Fade_FadeOut&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="649026130381095" type="System">
+                            <param id="0" name="Tag">&quot;FadedOut&quot;</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="396140296338121" type="System">
+                            <param id="0" name="Layout">MissionFrame.Layout</param>
                         </action>
                     </actions>
                 </event-block>

@@ -88,5 +88,158 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="432638811671028" title="Fading">
+            <sub-events>
+                <variable constant="0" name="Action" sid="774751819762491" static="1" type="text">FadeIn</variable>
+                <event-block sid="934625462345205">
+                    <conditions>
+                        <condition id="0" name="On function" sid="140145190828393" type="Function">
+                            <param id="0" name="Name">&quot;Fade_FadeIn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="503034890614234" type="System">
+                            <param id="0" name="Variable">Action</param>
+                            <param id="1" name="Value">&quot;FadeIn&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393395589148788">
+                    <conditions>
+                        <condition id="0" name="On function" sid="174970401541393" type="Function">
+                            <param id="0" name="Name">&quot;Fade_FadeOut&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="317919714584212" type="System">
+                            <param id="0" name="Variable">Action</param>
+                            <param id="1" name="Value">&quot;FadeOut&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="494269496011689">
+                    <conditions>
+                        <condition id="0" name="On function" sid="613807699754423" type="Function">
+                            <param id="0" name="Name">&quot;Fade_SetVisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="453200533225240" type="System">
+                            <param id="0" name="Layer">&quot;Fader&quot;</param>
+                            <param id="1" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="248251454806309">
+                    <conditions>
+                        <condition id="0" name="On function" sid="223681614781859" type="Function">
+                            <param id="0" name="Name">&quot;Fade_SetInvisible&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="440078017096056" type="System">
+                            <param id="0" name="Layer">&quot;Fader&quot;</param>
+                            <param id="1" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="619843128592853">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="357570442827090" type="System">
+                            <param id="0" name="Variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;FadeIn&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="305318657605937" type="System">
+                            <param id="0" name="Layer">&quot;Fader&quot;</param>
+                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;Fader&quot;), 0, 0.05)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="975582348807839">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="347091992980608" type="System">
+                                    <param id="0" name="Layer">&quot;Fader&quot;</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Opacity">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="950822888098101" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="467449089374851" type="Function">
+                                    <param id="0" name="Name">&quot;Fade_SetVisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="501181809463281">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="423186822872262" type="System">
+                            <param id="0" name="Variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;FadeOut&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="350065026328890" type="System">
+                            <param id="0" name="Layer">&quot;Fader&quot;</param>
+                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;Fader&quot;), 100, 0.05)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="724073559886811">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="670681159326627" type="System">
+                                    <param id="0" name="Layer">&quot;Fader&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Opacity">99</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="739418115435051" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="966170245870076" type="Function">
+                                    <param id="0" name="Name">&quot;Fade_SetInvisible&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="911279352014111">
+                    <conditions>
+                        <condition id="-17" name="Compare opacity" sid="687021006430481" type="System">
+                            <param id="0" name="Layer">&quot;Fader&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Opacity">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="158960039253236" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="533326176830284" type="System">
+                            <param id="0" name="Tag">&quot;FadedIn&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="693921904696570">
+                    <conditions>
+                        <condition id="-17" name="Compare opacity" sid="364858571856833" type="System">
+                            <param id="0" name="Layer">&quot;Fader&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Opacity">100</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="172000964019402" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="798985727729791" type="System">
+                            <param id="0" name="Tag">&quot;FadedOut&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

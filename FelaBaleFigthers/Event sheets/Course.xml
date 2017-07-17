@@ -4,5 +4,16 @@
     <name>Course</name>
     <events>
         <include>MAIN</include>
+        <event-block sid="287694665988130">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="733124562523301" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="689239958276012" type="Function">
+                    <param id="0" name="Name">&quot;Fade_FadeIn&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

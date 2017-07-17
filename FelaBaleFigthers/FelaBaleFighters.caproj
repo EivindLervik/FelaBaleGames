@@ -45,7 +45,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Leppo_House</first-layout>
+    <first-layout>Map</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -1143,16 +1143,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="RadoyMap" sid="540584067821742">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="MissionText" sid="896511742337494">
             <plugin id="Text" />
             <container>
                 <type>MissionFrame</type>
                 <type>MissionDisabler</type>
                 <type>MissionText</type>
+                <type>Map_Marker</type>
             </container>
         </object-type>
         <object-type name="MissionFrame" sid="117410965335675">
@@ -1160,11 +1157,13 @@
             <instance-variables>
                 <instance-variable name="Layout" sid="322383570683012" type="string" />
                 <instance-variable name="TargetY" sid="905394398673080" type="number" />
+                <instance-variable name="Index" sid="265965101466759" type="number" />
             </instance-variables>
             <container>
                 <type>MissionFrame</type>
                 <type>MissionDisabler</type>
                 <type>MissionText</type>
+                <type>Map_Marker</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894695864595665" speed="0">
@@ -1200,6 +1199,7 @@
                 <type>MissionFrame</type>
                 <type>MissionDisabler</type>
                 <type>MissionText</type>
+                <type>Map_Marker</type>
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797855950272971" speed="0">
@@ -1214,13 +1214,71 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MissionListBG" sid="707777403771046">
-            <plugin id="TiledBg" />
+        <object-type name="RadoyMap" sid="921623562487224">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="412146495403904" speed="2">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Radøy\Radøy1.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Radøy\Radøy2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MissionListBG" sid="229953985254258">
+            <plugin id="NinePatch" />
             <texture />
         </object-type>
-        <object-type name="MissionListBG2" sid="402359231464767">
-            <plugin id="TiledBg" />
+        <object-type name="MissionListBG2" sid="768007924849959">
+            <plugin id="NinePatch" />
             <texture />
+        </object-type>
+        <object-type name="Map_Marker" sid="936847973390948">
+            <plugin id="Sprite" />
+            <container>
+                <type>MissionFrame</type>
+                <type>MissionDisabler</type>
+                <type>MissionText</type>
+                <type>Map_Marker</type>
+            </container>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="196481473942625" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Map_MarkerSelector" sid="771966271718990">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="151016889004471">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="435608811122030" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
