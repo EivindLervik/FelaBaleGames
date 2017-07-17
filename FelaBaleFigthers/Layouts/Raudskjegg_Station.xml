@@ -1424,14 +1424,17 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Health>1000</Health>
                         <Controller>-1</Controller>
                         <Climbing>false</Climbing>
                         <Crouching>false</Crouching>
                         <CrouchSpeed>50</CrouchSpeed>
                         <DoubleJumping>false</DoubleJumping>
-                        <Can_B>true</Can_B>
                         <CanControl>true</CanControl>
+                        <Can_B>true</Can_B>
+                        <B_Damage>0</B_Damage>
                         <Can_UpB>true</Can_UpB>
+                        <UpB_Damage>0</UpB_Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

@@ -250,7 +250,6 @@
                                         <condition id="-8" name="Is boolean instance variable set" sid="650379473593182" type="Fighters">
                                             <param id="0" name="Instance variable">Can_UpB</param>
                                         </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="215011166150032" type="System" />
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="383955841193548" type="Fighters">
@@ -368,42 +367,63 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="523381477506225">
+                                        <event-block sid="626517963578419">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="999908166083888" type="System">
+                                                <condition id="-8" name="Compare two values" sid="984199824551123" type="System">
                                                     <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;down&quot;)</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-13" name="Set boolean" sid="272128933521847" type="Fighters">
+                                                <action id="-13" name="Set boolean" sid="602636122668188" type="Fighters">
                                                     <param id="0" name="Instance variable">Crouching</param>
                                                     <param id="1" name="Value">0</param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                        <event-block sid="148825297028180">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="285903988232429" type="Fighters">
+                                                    <param id="0" name="Instance variable">Crouching</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
                                             <sub-events>
-                                                <event-block sid="669714309348937">
+                                                <event-block any="1" sid="918914715828565">
                                                     <conditions>
-                                                        <condition behavior="Platform" id="0" name="Is moving" sid="983174781247431" type="Fighters" />
+                                                        <condition id="2" name="Is playing" sid="857678449142488" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;Duck&quot;</param>
+                                                        </condition>
+                                                        <condition id="2" name="Is playing" sid="646250738246086" type="Fighters">
+                                                            <param id="0" name="Animation">&quot;Crawl&quot;</param>
+                                                        </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="798823543920436" type="Fighters">
-                                                            <param id="0" name="Animation">&quot;Run&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="532401427423064">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="906800412231234" type="System" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="411246357169235" type="Fighters">
-                                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="491842936224628">
+                                                            <conditions>
+                                                                <condition behavior="Platform" id="0" name="Is moving" sid="462786915635653" type="Fighters" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="554042746310566" type="Fighters">
+                                                                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="335856745703485">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="435121459885716" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="370691889028807" type="Fighters">
+                                                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -658,6 +678,128 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="948544363887074" title="Fighting">
+            <sub-events>
+                <event-block sid="481035195862715">
+                    <conditions>
+                        <condition id="0" name="On function" sid="304764308660987" type="Function">
+                            <param id="0" name="Name">&quot;Fighter_GetHit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="RAND" sid="273208762755431" static="0" type="number">0</variable>
+                        <variable constant="1" name="KNOCKBACKMODEFIER" sid="734813374461458" static="1" type="number">50</variable>
+                        <event-block sid="236907771346005">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="848439430461548" type="Fighters">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="238564480282580" type="Fighters">
+                                    <param id="0" name="Instance variable">CanControl</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="458459710578068" type="Fighters">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="983513759564015" type="System">
+                                    <param id="0" name="Variable">RAND</param>
+                                    <param id="1" name="Value">floor(random(0, 2))</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="123980836988685" type="Fighters">
+                                    <param id="0" name="Vector Y">-Function.Param(4) * KNOCKBACKMODEFIER</param>
+                                </action>
+                                <action behavior="Platform" id="3" name="Set deceleration" sid="273890070924407" type="Fighters">
+                                    <param id="0" name="Deceleration">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="117739251389430">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="925918725819184" type="Fighters">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Function.Param(2)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="796924308739906" type="Fighters">
+                                            <param id="0" name="Vector X">-Function.Param(4) * KNOCKBACKMODEFIER</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="219586150281618">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="121345508948849" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="839736537685701" type="Fighters">
+                                            <param id="0" name="Vector X">Function.Param(4) * KNOCKBACKMODEFIER</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="700696048553120">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="668872328369856" type="System">
+                                            <param id="0" name="Variable">RAND</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="427946712563500" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Damage1&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="340578177053834">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="743697063224618" type="System">
+                                            <param id="0" name="Variable">RAND</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="830553226163693" type="Fighters">
+                                            <param id="0" name="Animation">&quot;Damage2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="729488423797431">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="406182075519432" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="733470084378801" type="System">
+                                            <param id="0" name="Seconds">0.2 + (0.1 * Function.Param(4))</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="433982770599947" type="Fighters">
+                                            <param id="0" name="Instance variable">CanControl</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="762646544265401">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="519590449215900" type="Fighters" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="3" name="Set deceleration" sid="247489838177347" type="Fighters">
+                            <param id="0" name="Deceleration">1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="472681166430501" title="Leppo">
             <sub-events>
                 <event-block sid="740326712437984">
@@ -714,11 +856,12 @@
                         <condition id="2" name="Is playing" sid="343222334562727" type="Leppo">
                             <param id="0" name="Animation">&quot;B&quot;</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="648874790001847" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="835299578723644" type="Function">
                             <param id="0" name="Name">&quot;Leppo_SverreStrike&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                            <param id="1" name="Parameter {n}">Leppo.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -735,68 +878,141 @@
                         <condition id="0" name="On function" sid="781500826824041" type="Function">
                             <param id="0" name="Name">&quot;Leppo_SverreStrike&quot;</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="895354006306655" type="Leppo">
-                            <param id="0" name="Instance variable">Can_B</param>
+                        <condition id="-14" name="Pick by unique ID" sid="981529775854713" type="Leppo">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="120575188935225" type="Leppo">
-                            <param id="0" name="Instance variable">CanControl</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="816694669399048" type="Leppo">
-                            <param id="0" name="Instance variable">Can_B</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="616211208502777" type="Leppo">
-                            <param id="0" name="Object">Sverre</param>
-                            <param id="1" name="Layer">&quot;Action&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="609426849493211" type="Sverre">
-                            <param id="0" name="Vector Y">-100</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="755614118260402">
+                        <event-block sid="617718868856096">
                             <conditions>
-                                <condition id="7" name="Is mirrored" sid="467583092036705" type="Leppo" />
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="412356669534435" type="Sverre">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="936672678436887" type="Sverre">
-                                    <param id="0" name="Vector X">-100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="570952300114838">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="569974762224062" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="7" name="Set mirrored" sid="165035689238870" type="Sverre">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="796053148855301" type="Sverre">
-                                    <param id="0" name="Vector X">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="125129038491476">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="794564706424956" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="869525065303089" type="System">
-                                    <param id="0" name="Seconds">2.0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="504516946789943" type="Leppo">
+                                <condition id="-8" name="Is boolean instance variable set" sid="895354006306655" type="Leppo">
                                     <param id="0" name="Instance variable">Can_B</param>
-                                    <param id="1" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="120575188935225" type="Leppo">
+                                    <param id="0" name="Instance variable">CanControl</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="816694669399048" type="Leppo">
+                                    <param id="0" name="Instance variable">Can_B</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="616211208502777" type="Leppo">
+                                    <param id="0" name="Object">Sverre</param>
+                                    <param id="1" name="Layer">&quot;Action&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="729991241660194" type="Sverre">
+                                    <param id="0" name="Instance variable">Creator</param>
+                                    <param id="1" name="Value">Leppo.UID</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="609426849493211" type="Sverre">
+                                    <param id="0" name="Vector Y">-100</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="755614118260402">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="467583092036705" type="Leppo" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="412356669534435" type="Sverre">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="936672678436887" type="Sverre">
+                                            <param id="0" name="Vector X">-100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="570952300114838">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="569974762224062" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="165035689238870" type="Sverre">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="796053148855301" type="Sverre">
+                                            <param id="0" name="Vector X">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="125129038491476">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="794564706424956" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="869525065303089" type="System">
+                                            <param id="0" name="Seconds">2.0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="504516946789943" type="Leppo">
+                                            <param id="0" name="Instance variable">Can_B</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="676808902641220">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="102627135954283" type="System">
+                            <param id="0" name="Object">Sverre</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="693583523534601">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="441841349441546" type="Sverre">
+                                    <param id="0" name="Object">Fighters</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="159115930254203" type="DialogueText">
+                                    <param id="0" name="Text">Fighters.PickedCount</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="932108187555619">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="784966014032051" type="System">
+                                            <param id="0" name="Object">Fighters</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="867429169418385">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="212961726089598" type="System">
+                                                    <param id="0" name="First value">Fighters.UID</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">Sverre.Creator</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="705256756200295">
+                                                    <conditions>
+                                                        <condition id="-6" name="Every X seconds" sid="663125247562452" type="System">
+                                                            <param id="0" name="Interval (seconds)">0.6</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="587641841434484" type="Function">
+                                                            <param id="0" name="Name">&quot;Fighter_GetHit&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Fighters.UID{###}Sverre.Damage{###}Sverre.X{###}Sverre.Y{###}2</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -880,6 +1096,98 @@
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="604928770525125" title="Playboy">
+            <sub-events>
+                <event-block sid="618006112289916">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="792025871732409" type="Playboy">
+                            <param id="0" name="Animation">&quot;B&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="240741759750381" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="188352781518116" type="Function">
+                            <param id="0" name="Name">&quot;Playboy_PianoAttack&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225575826672644">
+                    <conditions>
+                        <condition id="0" name="On function" sid="283588998713556" type="Function">
+                            <param id="0" name="Name">&quot;Playboy_PianoAttack&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="385869788872026" type="Playboy">
+                            <param id="0" name="Instance variable">Can_B</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="166948659990262" type="Playboy">
+                            <param id="0" name="Instance variable">CanControl</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="887302282330699" type="Playboy">
+                            <param id="0" name="Instance variable">Can_B</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="223916253010742">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="960081565697538" type="Playboy">
+                            <param id="0" name="Animation">&quot;B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="458308868459700" type="Playboy">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="139373680783850" type="Playboy">
+                            <param id="0" name="Instance variable">CanControl</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="238279417555067" type="Playboy">
+                            <param id="0" name="Instance variable">Can_B</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="427542587473469">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="826998704708395" type="Playboy">
+                            <param id="0" name="Animation">&quot;B&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="984859387502841">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="108202654273534" type="Fighters">
+                                    <param id="0" name="Object">Playboy</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="675754130179233">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="871439328608102" type="System">
+                                            <param id="0" name="Interval (seconds)">0.6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="522661251079350" type="Function">
+                                            <param id="0" name="Name">&quot;Fighter_GetHit&quot;</param>
+                                            <param id="1" name="Parameter {n}">Fighters.UID{###}Playboy.B_Damage{###}Playboy.X{###}Playboy.Y{###}2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
