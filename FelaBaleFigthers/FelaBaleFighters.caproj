@@ -98,6 +98,10 @@
                 <plugin id="TiledBg" />
                 <texture />
             </object-type>
+            <object-type name="SpaceStationBackground" sid="708018201769585">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Effects">
             <object-type name="SverreDirtEffect" sid="696183882889469">
@@ -591,6 +595,34 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="SpaceTiles" sid="316222059860198">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="944998755173412">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Jumpthru" sid="270649862659445">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348202627220705" speed="0">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Objects">
             <object-type name="Door" sid="173245903258290">
@@ -726,7 +758,7 @@
             <object-type name="BG_Objects" sid="354337053674174">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653970359847011" speed="0">
+                    <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653970359847011" speed="0">
                         <frame duration="1" hotspotX="0" hotspotY="1" />
                         <frame duration="1" hotspotX="0" hotspotY="1" />
                         <frame duration="1" hotspotX="1" hotspotY="1">
@@ -757,6 +789,15 @@
                                 <point x="0.25" y="0.75" />
                             </collision-poly>
                         </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1020,6 +1061,203 @@
                         </frame>
                     </animation>
                     <animation framecount="3" loop="1" name="Crawl" pingpong="0" repeatcount="1" repeatto="0" sid="402459141019352" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl3.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="DoubleJumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="108223382866993" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJumpDobbel.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="DoubleJumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="707328854951146" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJumpDobbel.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Raudskjegg" sid="331322899212328">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation-folder name="Attacks">
+                        <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="469408593194983" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\LeppoWalkSverre2.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="UpB" pingpong="0" repeatcount="1" repeatto="0" sid="630627485866968" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                    <animation-folder name="Climb">
+                        <animation framecount="4" loop="1" name="Climb" pingpong="0" repeatcount="1" repeatto="0" sid="558435358471284" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climb1.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climb2.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climbe3.png">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                    <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="476421107314768" speed="40">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Raudskjegg.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="241787237834581" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk1.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\LeppoWalk2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Walk\Leppo.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="JumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="574886796055673" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJump.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="JumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="848915740805521" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJump.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="443484649148608" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Eivind\Documents\GitHub\FelaBaleGames\FelaBaleFigthers\Assets\Graphix\Sprites\Leppo\LeppoCrawl.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="Crawl" pingpong="0" repeatcount="1" repeatto="0" sid="910526806146332" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                             <collision-poly>
@@ -1048,7 +1286,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="DoubleJumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="108223382866993" speed="0">
+                    <animation framecount="1" loop="0" name="DoubleJumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="224275148671074" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\StillJumpDobbel.png">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                             <collision-poly>
@@ -1059,8 +1297,255 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="DoubleJumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="707328854951146" speed="0">
+                    <animation framecount="1" loop="0" name="DoubleJumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="489448253166563" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Jump\WalkJumpDobbel.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Playboy" sid="597128748164385">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation-folder name="Attacks">
+                        <animation framecount="1" loop="0" name="B" pingpong="0" repeatcount="1" repeatto="0" sid="754478895415239" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\LeppoWalkSverre2.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="UpB" pingpong="0" repeatcount="1" repeatto="0" sid="328183360604317" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                    <animation-folder name="Climb">
+                        <animation framecount="4" loop="1" name="Climb" pingpong="0" repeatcount="1" repeatto="0" sid="641080545654456" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climb1.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climb2.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Climb\Climbe3.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="1">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                    <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="250195388775868" speed="40">
+                        <frame duration="100" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Idle\Playboy.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Idle\Playboy2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Idle\Playboy3.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Idle\Playboy4.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="617356365403345" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Walk\PlayboyWalk1.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Walk\Playboy.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Walk\PlayboyWalk2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="JumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="430916516706215" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Jump\StillJump.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="JumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="642861662405211" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Jump\WalkJump.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="985884216280781" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Crawl\LeppoCrawl.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="Crawl" pingpong="0" repeatcount="1" repeatto="0" sid="870164297548210" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Crawl\LeppoCrawl2.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Crawl\LeppoCrawl3.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Crawl\LeppoCrawl.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.5" />
+                                <point x="0.6875" y="0.5" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="DoubleJumpStraight" pingpong="0" repeatcount="1" repeatto="0" sid="892133457685829" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Jump\StillJumpDobbel.png">
+                            <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.03125" />
+                                <point x="0.6875" y="0.03125" />
+                                <point x="0.6875" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="DoubleJumpRun" pingpong="0" repeatcount="1" repeatto="0" sid="965593061002136" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Jump\WalkJumpDobbel.png">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
                             <collision-poly>
                                 <point x="0.25" y="0.03125" />
@@ -1280,6 +1765,43 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Raudskjegg_Launch_Sky" sid="294259222599025">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Himmel\Morning.png" />
+        </object-type>
+        <object-type name="Raudskjegg_Launch_Island" sid="302605000814441">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Himmel\Morning.png" />
+        </object-type>
+        <object-type name="Raudskjegg_Earth_Side" sid="904617913848297">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="SpaceStation" sid="190682666262950">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788815055855346" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Raudskjegg_Rocket" sid="160143635340394">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566069129566071" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Raudskjegg_Space" sid="701970343054253">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_SpaceWEarth" sid="546633146304409">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Ground" plugin-id="Sprite" sid="125361228845125">
@@ -1298,6 +1820,8 @@
         <family name="Fighters" plugin-id="Sprite" sid="984622862357390">
             <members>
                 <member>Leppo</member>
+                <member>Playboy</member>
+                <member>Raudskjegg</member>
             </members>
             <instance-variables>
                 <instance-variable name="Controller" sid="630920551521965" type="number" />
@@ -1347,6 +1871,14 @@
         <layout-folder name="MIDI">
             <layout>MIDI_GameWorld.xml</layout>
         </layout-folder>
+        <layout-folder name="Raudskjegg">
+            <layout>Raudskjegg_Launch.xml</layout>
+            <layout>Raudskjegg_Space.xml</layout>
+            <layout>Raudskjegg_Station.xml</layout>
+        </layout-folder>
+        <layout-folder name="Multiplayer">
+            <layout>FinalDestination.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="Menues">
@@ -1365,6 +1897,14 @@
         </event-folder>
         <event-folder name="MIDI">
             <event-sheet>MIDI_GameWorld.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Raudskjegg">
+            <event-sheet>Raudskjegg_Launch.xml</event-sheet>
+            <event-sheet>Raudskjegg_Space.xml</event-sheet>
+            <event-sheet>Raudskjegg_Station.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Multiplayer">
+            <event-sheet>MultiplayerCourse.xml</event-sheet>
         </event-folder>
         <event-sheet>Course.xml</event-sheet>
     </event-folder>

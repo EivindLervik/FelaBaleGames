@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Raudskjegg_Station</name>
+    <events>
+        <include>Course</include>
+        <event-block sid="615682067046124">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="586810337763441" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="5" name="Set gravity" sid="793761609007524" type="Fighters">
+                    <param id="0" name="Gravity">500</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="615858450583723" type="Fighters">
+                    <param id="0" name="Jump strength">150</param>
+                </action>
+                <action behavior="Platform" id="1" name="Set max speed" sid="967869381712967" type="Fighters">
+                    <param id="0" name="Max Speed">100</param>
+                </action>
+                <action behavior="Platform" id="2" name="Set acceleration" sid="643812343471218" type="Fighters">
+                    <param id="0" name="Acceleration">100</param>
+                </action>
+                <action behavior="Platform" id="3" name="Set deceleration" sid="299643124136606" type="Fighters">
+                    <param id="0" name="Deceleration">100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

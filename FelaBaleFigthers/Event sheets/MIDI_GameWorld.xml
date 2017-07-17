@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MIDI_GameWorld</name>
     <events>
-        <include>MAIN</include>
+        <include>Course</include>
         <event-block sid="179806951318080">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="408815424631275" type="System" />

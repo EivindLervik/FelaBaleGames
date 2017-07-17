@@ -181,6 +181,152 @@
                         </condition>
                     </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="396414267055323">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="942609957962172" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="913639086517913" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="216374721115331" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="920341013832575">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="436774732389593" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="721384018624298" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="422917303965778" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="441269363494111">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="970823807766164" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="776571538156343" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">14</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="590265909454392" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="889407695754419">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="847303959244194" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="183405523319362" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="906426780594357" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855155401894676">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="123579853604446" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;a&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="244978404837689" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="422328875582363" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="537374526352193">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="260335855245952" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;b&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="502658129805775" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="173959792886124" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="935702817675781">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="479785936478383" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;x&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="838827590370226" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="138026154812966" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="603124705867792">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="539209603530485" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;y&quot;</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="996350393909365" type="Gamepad">
+                                    <param id="0" name="Gamepad">Function.Param(0)</param>
+                                    <param id="1" name="Button">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="627355455570225" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -290,6 +436,126 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="552719192168950" title="Controller">
+            <sub-events>
+                <event-group description="" sid="877108739358233" title="0">
+                    <sub-events>
+                        <event-block sid="226766420202251">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="722138344813602" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">12</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="608897325479270" type="Function">
+                                    <param id="0" name="Name">&quot;controller_up&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="101664852404062">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="251223684310391" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="850252332236478" type="Function">
+                                    <param id="0" name="Name">&quot;controller_down&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="820631803518011">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="909582257883683" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">14</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="584978345991628" type="Function">
+                                    <param id="0" name="Name">&quot;controller_left&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="505529051518001">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="482923766543063" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="297329892334052" type="Function">
+                                    <param id="0" name="Name">&quot;controller_right&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="415292004485858">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="984044671518131" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="723094424340048" type="Function">
+                                    <param id="0" name="Name">&quot;controller_a&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="385743900544371">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="214440109683343" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="945668420437370" type="Function">
+                                    <param id="0" name="Name">&quot;controller_b&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="267176828665715">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="814035396123031" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="414747665723154" type="Function">
+                                    <param id="0" name="Name">&quot;controller_x&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="138970974876892">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="100291562987554" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="521720202272451" type="Function">
+                                    <param id="0" name="Name">&quot;controller_y&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>

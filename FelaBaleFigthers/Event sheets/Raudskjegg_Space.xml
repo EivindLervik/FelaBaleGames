@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Raudskjegg_Space</name>
+    <events>
+        <variable constant="1" name="SLOWLERP" sid="598347362871228" static="0" type="number">0.005</variable>
+        <include>MAIN</include>
+        <event-block sid="703701949822812">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="362751507989667" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="966370466357027" type="Function">
+                    <param id="0" name="Name">&quot;Fade_FadeIn&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-7" name="Set size" sid="639982469207131" type="Raudskjegg_Rocket">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="429319508214769" type="System">
+                    <param id="0" name="Seconds">12</param>
+                </action>
+                <action id="0" name="Call function" sid="561096421954903" type="Function">
+                    <param id="0" name="Name">&quot;Fade_FadeOut&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="291508221769137" type="System">
+                    <param id="0" name="Tag">&quot;FadedOut&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="493414966717394" type="System">
+                    <param id="0" name="Layout">Raudskjegg_Station</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="380832997281000">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="323253217205500" type="System" />
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="159529305892854" type="SpaceStation">
+                    <param id="0" name="Distance">0.2</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="721176058848138" type="Raudskjegg_Earth_Side">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">0.025</param>
+                </action>
+                <action id="-3" name="Set position" sid="365462128398759" type="Raudskjegg_Rocket">
+                    <param id="0" name="X">lerp(Raudskjegg_Rocket.X, 208, SLOWLERP)</param>
+                    <param id="1" name="Y">lerp(Raudskjegg_Rocket.Y, 112, SLOWLERP)</param>
+                </action>
+                <action id="-7" name="Set size" sid="312649815668519" type="Raudskjegg_Rocket">
+                    <param id="0" name="Width">lerp(Raudskjegg_Rocket.Width, 16, SLOWLERP)</param>
+                    <param id="1" name="Height">lerp(Raudskjegg_Rocket.Height, 16, SLOWLERP)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
