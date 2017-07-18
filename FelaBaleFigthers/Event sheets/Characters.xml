@@ -695,8 +695,15 @@
                                 <condition id="-14" name="Pick by unique ID" sid="848439430461548" type="Fighters">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="795518475699468" type="Fighters">
+                                    <param id="0" name="Instance variable">CanTakeDamage</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-13" name="Set boolean" sid="998601205729833" type="Fighters">
+                                    <param id="0" name="Instance variable">CanTakeDamage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-13" name="Set boolean" sid="238564480282580" type="Fighters">
                                     <param id="0" name="Instance variable">CanControl</param>
                                     <param id="1" name="Value">0</param>
@@ -780,6 +787,10 @@
                                         </action>
                                         <action id="-13" name="Set boolean" sid="433982770599947" type="Fighters">
                                             <param id="0" name="Instance variable">CanControl</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="218405987596542" type="Fighters">
+                                            <param id="0" name="Instance variable">CanTakeDamage</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -957,58 +968,44 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="676808902641220">
+                <event-block sid="623948834208520">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="102627135954283" type="System">
+                        <condition id="-11" name="For Each" sid="812893544906899" type="System">
                             <param id="0" name="Object">Sverre</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="693583523534601">
+                        <event-block sid="565515153963839">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="441841349441546" type="Sverre">
+                                <condition id="1" name="Is overlapping another object" sid="413014178030608" type="Sverre">
                                     <param id="0" name="Object">Fighters</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="159115930254203" type="DialogueText">
-                                    <param id="0" name="Text">Fighters.PickedCount</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="932108187555619">
+                                <event-block sid="548072769146579">
                                     <conditions>
-                                        <condition id="-11" name="For Each" sid="784966014032051" type="System">
+                                        <condition id="-11" name="For Each" sid="333918746922539" type="System">
                                             <param id="0" name="Object">Fighters</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="867429169418385">
+                                        <event-block sid="276917364552848">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="212961726089598" type="System">
+                                                <condition id="-8" name="Compare two values" sid="506536443354401" type="System">
                                                     <param id="0" name="First value">Fighters.UID</param>
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">Sverre.Creator</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="705256756200295">
-                                                    <conditions>
-                                                        <condition id="-6" name="Every X seconds" sid="663125247562452" type="System">
-                                                            <param id="0" name="Interval (seconds)">0.6</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Call function" sid="587641841434484" type="Function">
-                                                            <param id="0" name="Name">&quot;Fighter_GetHit&quot;</param>
-                                                            <param id="1" name="Parameter {n}">Fighters.UID{###}Sverre.Damage{###}Sverre.X{###}Sverre.Y{###}2</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="448347130862193" type="Function">
+                                                    <param id="0" name="Name">&quot;Fighter_GetHit&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Fighters.UID{###}Sverre.Damage{###}Sverre.X{###}Sverre.Y{###}2</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>

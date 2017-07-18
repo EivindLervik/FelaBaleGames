@@ -1431,6 +1431,7 @@
                         <CrouchSpeed>50</CrouchSpeed>
                         <DoubleJumping>false</DoubleJumping>
                         <CanControl>true</CanControl>
+                        <CanTakeDamage>true</CanTakeDamage>
                         <Can_B>true</Can_B>
                         <B_Damage>0</B_Damage>
                         <Can_UpB>true</Can_UpB>

@@ -1900,6 +1900,7 @@
                 <instance-variable name="CrouchSpeed" sid="240274882997474" type="number" />
                 <instance-variable name="DoubleJumping" sid="456803982591975" type="boolean" />
                 <instance-variable name="CanControl" sid="676957827933789" type="boolean" />
+                <instance-variable name="CanTakeDamage" sid="202966910749718" type="boolean" />
                 <instance-variable name="Can_B" sid="467623310454187" type="boolean" />
                 <instance-variable name="B_Damage" sid="633692416866043" type="number" />
                 <instance-variable name="Can_UpB" sid="801685656319840" type="boolean" />
