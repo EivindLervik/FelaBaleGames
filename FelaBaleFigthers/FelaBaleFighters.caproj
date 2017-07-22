@@ -1871,6 +1871,47 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="HomeFrame" sid="593604577313715">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Layout" sid="105994919898552" type="string" />
+                <instance-variable name="Index" sid="220782427302950" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243894586620185" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HomeText" sid="682366861538994">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HomeSelector" sid="198708718880178">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Current" sid="880618176908743" type="number" />
+                <instance-variable name="Max" sid="261034455259579" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="290600540167267" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Ground" plugin-id="Sprite" sid="125361228845125">
@@ -1946,6 +1987,7 @@
         <layout-folder name="Menues">
             <layout>CharacterSelect.xml</layout>
             <layout>Map.xml</layout>
+            <layout>Home.xml</layout>
         </layout-folder>
         <layout-folder name="GeneralPurpuse">
             <layout>CommonLayerMaster.xml</layout>
@@ -1966,6 +2008,7 @@
         <event-folder name="Menues">
             <event-sheet>Map.xml</event-sheet>
             <event-sheet>CharacterSelect.xml</event-sheet>
+            <event-sheet>Home.xml</event-sheet>
         </event-folder>
         <event-folder name="Functionality">
             <event-sheet>MAIN.xml</event-sheet>

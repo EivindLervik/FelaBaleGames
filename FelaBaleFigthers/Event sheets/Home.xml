@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Home</name>
+    <events>
+        <include>MAIN</include>
+        <event-block any="1" sid="683007295171288">
+            <conditions>
+                <condition id="0" name="On function" sid="983645741660596" type="Function">
+                    <param id="0" name="Name">&quot;controller_up&quot;</param>
+                </condition>
+                <condition id="0" name="On function" sid="577108074790244" type="Function">
+                    <param id="0" name="Name">&quot;controller_right&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="419014655036628">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="113476942947656" type="HomeSelector">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">HomeSelector.Max</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="485213925704561" type="HomeSelector">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="730234386341548">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="779804812434124" type="System">
+                                    <param id="0" name="Object">HomeFrame</param>
+                                    <param id="1" name="Expression">HomeFrame.Index</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">HomeSelector.Current</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="755418765331374" type="HomeSelector">
+                                    <param id="0" name="Object">HomeFrame</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="731446216824671">
+            <conditions>
+                <condition id="0" name="On function" sid="525581482640566" type="Function">
+                    <param id="0" name="Name">&quot;controller_down&quot;</param>
+                </condition>
+                <condition id="0" name="On function" sid="387183609662579" type="Function">
+                    <param id="0" name="Name">&quot;controller_left&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="258491728745438">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="761777915666576" type="HomeSelector">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="813352818812717" type="HomeSelector">
+                            <param id="0" name="Instance variable">Current</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="363716013750025">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="865225793568130" type="System">
+                                    <param id="0" name="Object">HomeFrame</param>
+                                    <param id="1" name="Expression">HomeFrame.Index</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">HomeSelector.Current</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="634678485233486" type="HomeSelector">
+                                    <param id="0" name="Object">HomeFrame</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
