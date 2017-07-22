@@ -226,65 +226,6 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="861333940592420">
-                            <conditions>
-                                <condition id="0" name="On function" sid="870048357965644" type="Function">
-                                    <param id="0" name="Name">&quot;controller_b&quot;</param>
-                                </condition>
-                                <condition id="-33" name="Pick by comparison" sid="294175152671707" type="System">
-                                    <param id="0" name="Object">Fighters</param>
-                                    <param id="1" name="Expression">Fighters.Controller</param>
-                                    <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Function.Param(0)</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="305928591725613">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="667807088938625" type="System">
-                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;up&quot;)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">1</param>
-                                        </condition>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="650379473593182" type="Fighters">
-                                            <param id="0" name="Instance variable">Can_UpB</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="9" name="Set vector Y" sid="383955841193548" type="Fighters">
-                                            <param id="0" name="Vector Y">-Fighters.Platform.JumpStrength</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="808368708646486" type="Fighters">
-                                            <param id="0" name="Instance variable">Can_UpB</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="872065697160425" type="Fighters">
-                                            <param id="0" name="Instance variable">DoubleJumping</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="271714393241661" type="Fighters">
-                                            <param id="0" name="Animation">&quot;UpB&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="688940299519839">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="388157904403882" type="System" />
-                                        <condition id="-8" name="Is boolean instance variable set" sid="963437266133341" type="Fighters">
-                                            <param id="0" name="Instance variable">Can_B</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="125084632613211" type="Fighters">
-                                            <param id="0" name="Animation">&quot;B&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                         <event-block sid="361857329413881">
                             <conditions>
                                 <condition id="0" name="On function" sid="567554596430017" type="Function">
@@ -695,17 +636,17 @@
                                 <condition id="-14" name="Pick by unique ID" sid="848439430461548" type="Fighters">
                                     <param id="0" name="Unique ID">Function.Param(0)</param>
                                 </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="795518475699468" type="Fighters">
+                                <condition id="-8" name="Is boolean instance variable set" sid="823513857368289" type="Fighters">
                                     <param id="0" name="Instance variable">CanTakeDamage</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="998601205729833" type="Fighters">
-                                    <param id="0" name="Instance variable">CanTakeDamage</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                                 <action id="-13" name="Set boolean" sid="238564480282580" type="Fighters">
                                     <param id="0" name="Instance variable">CanControl</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="367194732399944" type="Fighters">
+                                    <param id="0" name="Instance variable">CanTakeDamage</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-12" name="Subtract from" sid="458459710578068" type="Fighters">
@@ -789,7 +730,7 @@
                                             <param id="0" name="Instance variable">CanControl</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-13" name="Set boolean" sid="218405987596542" type="Fighters">
+                                        <action id="-13" name="Set boolean" sid="124129545751223" type="Fighters">
                                             <param id="0" name="Instance variable">CanTakeDamage</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -808,6 +749,272 @@
                             <param id="0" name="Deceleration">1000</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="883100852514131">
+                    <conditions>
+                        <condition id="0" name="On function" sid="581936239775826" type="Function">
+                            <param id="0" name="Name">&quot;controller_b&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="778126868991284" type="System">
+                            <param id="0" name="Object">Fighters</param>
+                            <param id="1" name="Expression">Fighters.Controller</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="688348341274637" type="Fighters">
+                            <param id="0" name="Instance variable">CanControl</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="185561467109719">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="357535005315718" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;up&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="453406952530939" type="Fighters">
+                                    <param id="0" name="Instance variable">Can_UpB</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="829864046725820" type="Fighters">
+                                    <param id="0" name="Vector Y">-Fighters.Platform.JumpStrength</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="648069574386817" type="Fighters">
+                                    <param id="0" name="Instance variable">Can_UpB</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="924428639758623" type="Fighters">
+                                    <param id="0" name="Instance variable">DoubleJumping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="696691942374929" type="Fighters">
+                                    <param id="0" name="Animation">&quot;UpB&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="699352991540303">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="110076729874073" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="322335472570703" type="Fighters">
+                                    <param id="0" name="Instance variable">Can_B</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="156072464981861" type="Fighters">
+                                    <param id="0" name="Animation">&quot;B&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="950671545337275">
+                    <conditions>
+                        <condition id="0" name="On function" sid="118449323161161" type="Function">
+                            <param id="0" name="Name">&quot;controller_x&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="987970152289801" type="System">
+                            <param id="0" name="Object">Fighters</param>
+                            <param id="1" name="Expression">Fighters.Controller</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="481741970726618" type="Fighters">
+                            <param id="0" name="Instance variable">CanControl</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="879832188219318">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="858645206212213" type="Fighters" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="676230723867952">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="323866795183973" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;left&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="587593026588114" type="System">
+                                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, Fighters.Controller, &quot;right&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="508258571335975" type="Fighters">
+                                            <param id="0" name="Animation">&quot;A&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="866089728535302" type="Fighters">
+                                            <param id="0" name="Instance variable">CanControl</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="799852379533213" type="Fighters">
+                                            <param id="0" name="Object">HitBox</param>
+                                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                                            <param id="2" name="Image point">&quot;Attack&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="885071082785246" type="HitBox">
+                                            <param id="0" name="Instance variable">Owner</param>
+                                            <param id="1" name="Value">Fighters.UID</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="870597421427262" type="HitBox">
+                                            <param id="0" name="Instance variable">DamageGrade</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="435301986081944" type="HitBox">
+                                            <param id="0" name="Instance variable">DamageAmount</param>
+                                            <param id="1" name="Value">Fighters.A_Damage</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="148606092070538">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="995661708587868" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="248426297725387">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="906250122061658" type="Fighters">
+                            <param id="0" name="Animation">&quot;A&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="932729232271765" type="Fighters">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="428426661671573" type="Fighters">
+                            <param id="0" name="Instance variable">CanControl</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="315589239400073">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="193546611688693" type="System">
+                                    <param id="0" name="Object">HitBox</param>
+                                    <param id="1" name="Expression">HitBox.Owner</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">Fighters.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="690540663376048" type="HitBox" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="367138449528228">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="770248957786122" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="570468295948320">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="378643562185264" type="System">
+                                    <param id="0" name="Object">HitBox</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="TempX" sid="689604445391081" static="0" type="number">0</variable>
+                                <variable constant="0" name="TempY" sid="628091210892767" static="0" type="number">0</variable>
+                                <event-block sid="661444659976064">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="932889390805101" type="Fighters">
+                                            <param id="0" name="Unique ID">HitBox.Owner</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="251856129328774" type="HitBox">
+                                            <param id="0" name="Object">Fighters</param>
+                                            <param id="1" name="Image point (optional)">&quot;Attack&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="630828266218943" type="System">
+                                            <param id="0" name="Variable">TempX</param>
+                                            <param id="1" name="Value">Fighters.X</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="629719429268375" type="System">
+                                            <param id="0" name="Variable">TempY</param>
+                                            <param id="1" name="Value">Fighters.Y</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="970810232208081">
+                                            <conditions>
+                                                <condition id="7" name="Is mirrored" sid="240758644234991" type="Fighters" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="394530060524963" type="HitBox">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="680981925793019">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="415216922316791" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="637059443132660" type="HitBox">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="638057303145287">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="449175899432095" type="Fighters">
+                                            <param id="0" name="Object">HitBox</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="694952715583319">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="219594471228509" type="System">
+                                                    <param id="0" name="Object">Fighters</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="594392299702981">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="944077169572965" type="System">
+                                                            <param id="0" name="First value">Fighters.UID</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Second value">HitBox.Owner</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="554363870623339" type="Function">
+                                                            <param id="0" name="Name">&quot;Fighter_GetHit&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Fighters.UID{###}HitBox.DamageAmount{###}TempX{###}TempY{###}HitBox.DamageGrade</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -968,40 +1175,40 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="623948834208520">
+                <event-block sid="127075477036797">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="812893544906899" type="System">
+                        <condition id="-11" name="For Each" sid="500475781618720" type="System">
                             <param id="0" name="Object">Sverre</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="565515153963839">
+                        <event-block sid="841693648302502">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="413014178030608" type="Sverre">
+                                <condition id="1" name="Is overlapping another object" sid="823743989296626" type="Sverre">
                                     <param id="0" name="Object">Fighters</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="548072769146579">
+                                <event-block sid="954971462186132">
                                     <conditions>
-                                        <condition id="-11" name="For Each" sid="333918746922539" type="System">
+                                        <condition id="-11" name="For Each" sid="812490364851865" type="System">
                                             <param id="0" name="Object">Fighters</param>
                                         </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="276917364552848">
+                                        <event-block sid="980749526952533">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="506536443354401" type="System">
+                                                <condition id="-8" name="Compare two values" sid="868102262248818" type="System">
                                                     <param id="0" name="First value">Fighters.UID</param>
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">Sverre.Creator</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="448347130862193" type="Function">
+                                                <action id="0" name="Call function" sid="341661612554612" type="Function">
                                                     <param id="0" name="Name">&quot;Fighter_GetHit&quot;</param>
                                                     <param id="1" name="Parameter {n}">Fighters.UID{###}Sverre.Damage{###}Sverre.X{###}Sverre.Y{###}2</param>
                                                 </action>

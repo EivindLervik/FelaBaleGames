@@ -29,74 +29,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Leppo" uid="1025">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Idle</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Health>1000</Health>
-                        <Controller>-1</Controller>
-                        <Climbing>false</Climbing>
-                        <Crouching>false</Crouching>
-                        <CrouchSpeed>50</CrouchSpeed>
-                        <DoubleJumping>false</DoubleJumping>
-                        <CanControl>true</CanControl>
-                        <CanTakeDamage>true</CanTakeDamage>
-                        <Can_B>true</Can_B>
-                        <B_Damage>0</B_Damage>
-                        <Can_UpB>true</Can_UpB>
-                        <UpB_Damage>0</UpB_Damage>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>150</max-speed>
-                                <acceleration>2000</acceleration>
-                                <deceleration>1000</deceleration>
-                                <jump-strength>250</jump-strength>
-                                <gravity>1000</gravity>
-                                <max-fall-speed>500</max-fall-speed>
-                                <double-jump>Enabled</double-jump>
-                                <jump-sustain>100</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>100</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
-                                <directions>8 directions</directions>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>112</x>
-                        <y>160</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Playboy" uid="1026">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -112,10 +44,11 @@
                         <CrouchSpeed>50</CrouchSpeed>
                         <DoubleJumping>false</DoubleJumping>
                         <CanControl>true</CanControl>
-                        <CanTakeDamage>true</CanTakeDamage>
                         <Can_B>true</Can_B>
-                        <B_Damage>10</B_Damage>
                         <Can_UpB>true</Can_UpB>
+                        <CanTakeDamage>true</CanTakeDamage>
+                        <A_Damage>0</A_Damage>
+                        <B_Damage>10</B_Damage>
                         <UpB_Damage>10</UpB_Damage>
                     </instance-variables>
                     <behavior-instances>
@@ -654,6 +587,102 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Leppo" uid="1051">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Health>1000</Health>
+                        <Controller>-1</Controller>
+                        <Climbing>false</Climbing>
+                        <Crouching>false</Crouching>
+                        <CrouchSpeed>50</CrouchSpeed>
+                        <DoubleJumping>false</DoubleJumping>
+                        <CanControl>true</CanControl>
+                        <Can_B>true</Can_B>
+                        <Can_UpB>true</Can_UpB>
+                        <CanTakeDamage>true</CanTakeDamage>
+                        <A_Damage>5</A_Damage>
+                        <B_Damage>10</B_Damage>
+                        <UpB_Damage>15</UpB_Damage>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>150</max-speed>
+                                <acceleration>2000</acceleration>
+                                <deceleration>1000</deceleration>
+                                <jump-strength>250</jump-strength>
+                                <gravity>1000</gravity>
+                                <max-fall-speed>500</max-fall-speed>
+                                <double-jump>Enabled</double-jump>
+                                <jump-sustain>100</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="8Direction">
+                            <properties>
+                                <max-speed>100</max-speed>
+                                <acceleration>600</acceleration>
+                                <deceleration>500</deceleration>
+                                <directions>8 directions</directions>
+                                <set-angle>No</set-angle>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>112</x>
+                        <y>160</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HitBox" uid="1025">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Owner>0</Owner>
+                        <DamageGrade>0</DamageGrade>
+                        <DamageAmount>0</DamageAmount>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>80</x>
+                        <y>208</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

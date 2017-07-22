@@ -896,6 +896,18 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="0" name="A" pingpong="0" repeatcount="1" repeatto="0" sid="645880929637033" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Leppo\Attack\LeppoAttack1.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <image-point name="Attack" x="0.65625" y="0.46875" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                     <animation-folder name="Climb">
                         <animation framecount="4" loop="1" name="Climb" pingpong="0" repeatcount="1" repeatto="0" sid="706321878090186" speed="10">
@@ -1446,6 +1458,30 @@
                             </frame>
                         </animation>
                     </animation-folder>
+                    <animation-folder name="Damage">
+                        <animation framecount="1" loop="1" name="Damage1" pingpong="0" repeatcount="1" repeatto="0" sid="345985752572774" speed="40">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Littskada\LittSkadd1.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="Damage2" pingpong="0" repeatcount="1" repeatto="0" sid="701542349266088" speed="40">
+                            <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Littskada\LittSkadd2.png">
+                                <image-point name="Imagepoint 1" x="0.625" y="0.5" />
+                                <collision-poly>
+                                    <point x="0.25" y="0.03125" />
+                                    <point x="0.6875" y="0.03125" />
+                                    <point x="0.6875" y="1" />
+                                    <point x="0.25" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
                     <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="250195388775868" speed="40">
                         <frame duration="100" hotspotX="0.5" hotspotY="1" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Playboy\Idle\Playboy.png">
                             <image-point name="Imagepoint 1" x="0.625" y="0.5" />
@@ -1912,6 +1948,19 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="HitBox" sid="802668016848013">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Owner" sid="582094989952969" type="number" />
+                <instance-variable name="DamageGrade" sid="696491910665533" type="number" />
+                <instance-variable name="DamageAmount" sid="878920681265316" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="370405648641194" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Ground" plugin-id="Sprite" sid="125361228845125">
@@ -1941,10 +1990,11 @@
                 <instance-variable name="CrouchSpeed" sid="240274882997474" type="number" />
                 <instance-variable name="DoubleJumping" sid="456803982591975" type="boolean" />
                 <instance-variable name="CanControl" sid="676957827933789" type="boolean" />
-                <instance-variable name="CanTakeDamage" sid="202966910749718" type="boolean" />
                 <instance-variable name="Can_B" sid="467623310454187" type="boolean" />
-                <instance-variable name="B_Damage" sid="633692416866043" type="number" />
                 <instance-variable name="Can_UpB" sid="801685656319840" type="boolean" />
+                <instance-variable name="CanTakeDamage" sid="462906179519790" type="boolean" />
+                <instance-variable name="A_Damage" sid="319362352229613" type="number" />
+                <instance-variable name="B_Damage" sid="633692416866043" type="number" />
                 <instance-variable name="UpB_Damage" sid="798077023399016" type="number" />
             </instance-variables>
             <behaviors>
