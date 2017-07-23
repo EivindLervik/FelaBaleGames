@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SLE</name>
+    <events>
+        <variable constant="0" name="Shift" sid="923437646500089" static="0" type="number">0</variable>
+        <variable comment="The path to the current file" constant="0" name="FilePath" sid="400613986824825" static="0" type="text"></variable>
+        <variable comment="The contents of the file" constant="0" name="FileContent" sid="189158826074406" static="0" type="text"></variable>
+        <event-block sid="663566258099904">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="677762558129801" type="System" />
+            </conditions>
+            <actions>
+                <action id="18" name="Maximize" sid="436275157257248" type="NWjs" />
+            </actions>
+        </event-block>
+        <event-block sid="575984260611320">
+            <conditions>
+                <condition id="0" name="On clicked" sid="774250824607996" type="SLE_Button" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="169743109050980">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="210547121428726" type="SLE_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;New&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="766605890924593" type="Function">
+                            <param id="0" name="Name">&quot;SLE_Clear&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="277368012910016" type="Start_TB">
+                            <param id="0" name="Text">&quot;0&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="371094756582367" type="End_TB">
+                            <param id="0" name="Text">&quot;11&quot;</param>
+                        </action>
+                        <action id="8" name="Show save dialog" sid="905688215160755" type="NWjs">
+                            <param id="0" name="Accept">&quot;.map&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="981617590531728">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="815139759400108" type="SLE_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Back&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="303900482062194" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="895146884165220">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="190989059951707" type="SLE_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Save&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="244632102562835" type="Function">
+                            <param id="0" name="Name">&quot;SLE_Save&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="322140020651239">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="943299886786298" type="SLE_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Load&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Show open dialog" sid="903503071291815" type="NWjs">
+                            <param id="0" name="Accept">&quot;.map&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="735444532247547">
+            <conditions>
+                <condition id="2" name="On open dialog OK" sid="274889622588345" type="NWjs" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="212995687893083" type="System">
+                    <param id="0" name="Variable">FilePath</param>
+                    <param id="1" name="Value">NWjs.ChosenPath</param>
+                </action>
+                <action id="-9" name="Set value" sid="336666883289461" type="System">
+                    <param id="0" name="Variable">FileContent</param>
+                    <param id="1" name="Value">NWjs.ReadFile(FilePath)</param>
+                </action>
+                <action id="0" name="Call function" sid="578107376724528" type="Function">
+                    <param id="0" name="Name">&quot;SLE_Load&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="627557978182576">
+            <conditions>
+                <condition id="4" name="On save dialog OK" sid="308576287123039" type="NWjs" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="929463759996438" type="System">
+                    <param id="0" name="Variable">FilePath</param>
+                    <param id="1" name="Value">NWjs.ChosenPath</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="184077933932023">
+            <conditions>
+                <condition id="0" name="On function" sid="984924249314476" type="Function">
+                    <param id="0" name="Name">&quot;SLE_Save&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="String" sid="358841258390396" static="0" type="text"></variable>
+                <event-block sid="911366412968119">
+                    <conditions>
+                        <condition id="-10" name="For" sid="166464152673962" type="System">
+                            <param id="0" name="Name">&quot;row&quot;</param>
+                            <param id="1" name="Start index">int(Start_TB.Text)</param>
+                            <param id="2" name="End index">int(End_TB.Text)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="609929019978177">
+                            <conditions>
+                                <condition id="-10" name="For" sid="719227136816612" type="System">
+                                    <param id="0" name="Name">&quot;element&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="841641101254195" type="System">
+                                    <param id="0" name="Variable">String</param>
+                                    <param id="1" name="Value">Level.At(loopindex(&quot;element&quot;), loopindex(&quot;row&quot;))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="580548374113417">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="615328551755160" type="System">
+                                            <param id="0" name="First value">loopindex(&quot;element&quot;)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="888688582229246" type="System">
+                                            <param id="0" name="Variable">String</param>
+                                            <param id="1" name="Value">&quot;,&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="628276013052584">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="802009015992815" type="System">
+                                    <param id="0" name="First value">loopindex(&quot;row&quot;)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">int(End_TB.Text)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="955616633161666" type="System">
+                                    <param id="0" name="Variable">String</param>
+                                    <param id="1" name="Value">&quot;+&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="178387779675976">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="561992857456761" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Write file" sid="766132542031286" type="NWjs">
+                            <param id="0" name="Path">FilePath</param>
+                            <param id="1" name="Contents">String</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="527105703278409">
+            <conditions>
+                <condition id="0" name="On function" sid="461148423313811" type="Function">
+                    <param id="0" name="Name">&quot;SLE_Load&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="163202639128074" type="Start_TB">
+                    <param id="0" name="Text">&quot;0&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="775774732639188" type="End_TB">
+                    <param id="0" name="Text">str(tokencount(FileContent, &quot;+&quot;)-1)</param>
+                </action>
+                <action id="0" name="Call function" sid="857979265497331" type="Function">
+                    <param id="0" name="Name">&quot;SLE_Clear&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="471140312528038">
+                    <conditions>
+                        <condition id="-10" name="For" sid="575812390222549" type="System">
+                            <param id="0" name="Name">&quot;row&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">tokencount(FileContent, &quot;+&quot;)-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="990794147301080">
+                            <conditions>
+                                <condition id="-10" name="For" sid="197282392190915" type="System">
+                                    <param id="0" name="Name">&quot;element&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="788949186421749" type="Level">
+                                    <param id="0" name="X">loopindex(&quot;element&quot;)</param>
+                                    <param id="1" name="Y">loopindex(&quot;row&quot;)</param>
+                                    <param id="2" name="Value">tokenat(tokenat(FileContent, loopindex(&quot;row&quot;), &quot;+&quot;), loopindex(&quot;element&quot;), &quot;,&quot;)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="139661495029867">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="430727984494301" type="System">
+                                            <param id="0" name="First value">Level.At(loopindex(&quot;element&quot;), loopindex(&quot;row&quot;))</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="971506240126350" type="System">
+                                            <param id="0" name="Object to create">SLE_Tiles</param>
+                                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                                            <param id="2" name="X">Canvas.X + (loopindex(&quot;element&quot;) * 16)</param>
+                                            <param id="3" name="Y">176 - (loopindex(&quot;row&quot;) * 16) + (Shift * 192)</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="588943088117503" type="SLE_Tiles">
+                                            <param id="0" name="Instance variable">Include</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="383701330199105" type="SLE_Tiles">
+                                            <param id="0" name="Instance variable">PositionX</param>
+                                            <param id="1" name="Value">int((SLE_Tiles.X  - Canvas.X)  /16)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="416477892721883" type="SLE_Tiles">
+                                            <param id="0" name="Instance variable">PositionY</param>
+                                            <param id="1" name="Value">int(((176 - SLE_Tiles.Y )/ 16) + (12 * Shift))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="938313603486060" type="SLE_Tiles">
+                                            <param id="0" name="Instance variable">TargetY</param>
+                                            <param id="1" name="Value">SLE_Tiles.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="101019471684940" type="SLE_Tiles">
+                                            <param id="0" name="Frame number">int(Level.At(loopindex(&quot;element&quot;), loopindex(&quot;row&quot;))) - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="951000685567650">
+            <conditions>
+                <condition id="0" name="On function" sid="116207397043216" type="Function">
+                    <param id="0" name="Name">&quot;SLE_Clear&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="369278907329613">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="336364706145511" type="System">
+                            <param id="0" name="Object">SLE_Tiles</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="819525394066633">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="280786850343088" type="SLE_Tiles">
+                                    <param id="0" name="Instance variable">Include</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="332700463085304" type="SLE_Tiles" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="238114868231291">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="269710742060936" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Arrow</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="941815310756581">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="775706054521948" type="Arrow">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="263601628000837" type="System">
+                            <param id="0" name="Variable">Shift</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">99</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="985999895987922" type="System">
+                            <param id="0" name="Variable">Shift</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="569744202559767">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="356756943567684" type="System">
+                                    <param id="0" name="Object">LineText</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="106520788857091" type="LineText">
+                                    <param id="0" name="Instance variable">MyNumber</param>
+                                    <param id="1" name="Value">12</param>
+                                </action>
+                                <action id="0" name="Set text" sid="621429278119149" type="LineText">
+                                    <param id="0" name="Text">LineText.MyNumber</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="271570136511974">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="865151099408088" type="System">
+                                    <param id="0" name="Object">SLE_Tiles</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="843529723058356" type="SLE_Tiles">
+                                    <param id="0" name="Instance variable">TargetY</param>
+                                    <param id="1" name="Value">192</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="259365959758371">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="443071813507531" type="Arrow">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="236592540654252" type="System">
+                            <param id="0" name="Variable">Shift</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="758221267472238" type="System">
+                            <param id="0" name="Variable">Shift</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="429209575116865">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="414984332557786" type="System">
+                                    <param id="0" name="Object">LineText</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="753987612249706" type="LineText">
+                                    <param id="0" name="Instance variable">MyNumber</param>
+                                    <param id="1" name="Value">12</param>
+                                </action>
+                                <action id="0" name="Set text" sid="908335902702940" type="LineText">
+                                    <param id="0" name="Text">LineText.MyNumber</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="884879767858092">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="715100912784311" type="System">
+                                    <param id="0" name="Object">SLE_Tiles</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="131903306332295" type="SLE_Tiles">
+                                    <param id="0" name="Instance variable">TargetY</param>
+                                    <param id="1" name="Value">192</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="956634427870164">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="723104320034666" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Canvas</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="Frame" sid="506795596171586" static="0" type="number">0</variable>
+                <event-block sid="818029544448578">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="877719794022505" type="SLE_Tiles">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="640685886051958" type="System">
+                            <param id="0" name="Variable">Frame</param>
+                            <param id="1" name="Value">SLE_Tiles.AnimationFrame</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="989122521761658" type="System">
+                            <param id="0" name="Object to create">SLE_Tiles</param>
+                            <param id="1" name="Layer">&quot;Tiles&quot;</param>
+                            <param id="2" name="X">Mouse.X - (Mouse.X % 16)</param>
+                            <param id="3" name="Y">Mouse.Y - (Mouse.Y % 16)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="622160610927663" type="SLE_Tiles">
+                            <param id="0" name="Instance variable">Include</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="166493632333644" type="SLE_Tiles">
+                            <param id="0" name="Instance variable">PositionX</param>
+                            <param id="1" name="Value">int((SLE_Tiles.X  - Canvas.X)  /16)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="540967727920333" type="SLE_Tiles">
+                            <param id="0" name="Instance variable">PositionY</param>
+                            <param id="1" name="Value">int(((176 - SLE_Tiles.Y )/ 16) + (12 * Shift))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="618290631257596" type="SLE_Tiles">
+                            <param id="0" name="Instance variable">TargetY</param>
+                            <param id="1" name="Value">SLE_Tiles.Y</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="202682796501683" type="SLE_Tiles">
+                            <param id="0" name="Frame number">Frame</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="237297044820307" type="Level">
+                            <param id="0" name="X">SLE_Tiles.PositionX</param>
+                            <param id="1" name="Y">SLE_Tiles.PositionY</param>
+                            <param id="2" name="Value">Frame +1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="124791316321461">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="956222591811396" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SLE_Tiles</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="UID" sid="290448888631893" static="0" type="number">0</variable>
+                <event-block sid="349703664245264">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="317384666186301" type="SLE_Tiles">
+                            <param id="0" name="Object">Canvas</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="960901948011197" type="System">
+                            <param id="0" name="Variable">UID</param>
+                            <param id="1" name="Value">SLE_Tiles.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="145065142158891">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="133807278267092" type="System">
+                                    <param id="0" name="Object">SLE_Tiles</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="724666325689737">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="612436843030732" type="System">
+                                            <param id="0" name="Object">SLE_Tiles</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="577282835664945" type="SLE_Tiles">
+                                            <param id="0" name="Instance variable">Include</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="428866966686926">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="233228001226223" type="System">
+                                                    <param id="0" name="First value">SLE_Tiles.UID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="175164961547245" type="SLE_Tiles">
+                                                    <param id="0" name="Opacity">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="795216698335997">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="511871687614349" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="915888152428847" type="SLE_Tiles">
+                                                    <param id="0" name="Opacity">50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="884598387716106">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="331569810820507" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SLE_Tiles</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="938785002356402">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="745002495078463" type="SLE_Tiles">
+                            <param id="0" name="Object">Canvas</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="241431094297764" type="Level">
+                            <param id="0" name="X">SLE_Tiles.PositionX</param>
+                            <param id="1" name="Y">SLE_Tiles.PositionY</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="891758550489363" type="SLE_Tiles" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="938344870543842">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="764217302177128" type="SLE_Tiles">
+                    <param id="0" name="Instance variable">Include</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="633799102593106" type="SLE_Tiles">
+                    <param id="0" name="Y">lerp(SLE_Tiles.Y, SLE_Tiles.TargetY, 0.1)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1979,7 +1979,8 @@
         <object-type name="Waves" sid="499395720309977">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253424061766014" speed="0">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253424061766014" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                 </animation>
             </animation-folder>
@@ -2165,8 +2166,11 @@
         </object-type>
         <object-type name="Yokko_CourseEdges" sid="648450762701437">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Disposable" sid="271723644878328" type="boolean" />
+            </instance-variables>
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="537560872044434" speed="0">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="537560872044434" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <collision-poly>
                             <point x="0.125" y="0.53125" />
@@ -2181,6 +2185,53 @@
                             <point x="0.875" y="0.53125" />
                             <point x="0.875" y="0.84375" />
                             <point x="0.125" y="0.84375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625">
+                        <collision-poly>
+                            <point x="0.875" y="0.421875" />
+                            <point x="0.125" y="0.421875" />
+                            <point x="0.125" y="0.265625" />
+                            <point x="0.875" y="0.265625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.90625">
+                        <collision-poly>
+                            <point x="0.875" y="0.421875" />
+                            <point x="0.125" y="0.421875" />
+                            <point x="0.125" y="0.265625" />
+                            <point x="0.875" y="0.265625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Yokko_Clouds" sid="390790712048556">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Yokko_Mountain2" sid="584465288436326">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Himmel\Mountain.png" />
+        </object-type>
+        <object-type name="Yokko_Bathers" sid="387987834104698">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519903022487926" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.8125">
+                        <collision-poly>
+                            <point x="0.78125" y="0.9375" />
+                            <point x="0.21875" y="0.9375" />
+                            <point x="0.21875" y="0.75" />
+                            <point x="0.78125" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.8125">
+                        <collision-poly>
+                            <point x="0.78125" y="0.9375" />
+                            <point x="0.21875" y="0.9375" />
+                            <point x="0.21875" y="0.75" />
+                            <point x="0.78125" y="0.75" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2259,6 +2310,7 @@
                 <member>Ramp</member>
                 <member>Waves</member>
                 <member>Y_YokkoBeach</member>
+                <member>Yokko_Bathers</member>
                 <member>Yokko_CourseEdges</member>
             </members>
             <instance-variables>
