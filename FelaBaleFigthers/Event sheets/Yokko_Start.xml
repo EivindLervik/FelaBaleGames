@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Yokko_Start</name>
+    <events>
+        <include>MAIN</include>
+        <event-block sid="721599045927293">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="348639763199461" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="286665949929656" type="System">
+                    <param id="0" name="Layout">Yokko_WaterScooter</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

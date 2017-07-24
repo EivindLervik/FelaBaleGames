@@ -2152,10 +2152,10 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697878377352289" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.71875">
                         <collision-poly>
-                            <point x="0.875" y="0.84375" />
-                            <point x="0.125" y="0.84375" />
-                            <point x="0.125" y="0.53125" />
-                            <point x="0.875" y="0.53125" />
+                            <point x="0.90625" y="0.84375" />
+                            <point x="0.09375" y="0.84375" />
+                            <point x="0.09375" y="0.46875" />
+                            <point x="0.90625" y="0.46875" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2353,6 +2353,7 @@
         </layout-folder>
         <layout-folder name="Yokko">
             <layout>Yokko_WaterScooter.xml</layout>
+            <layout>Yokko_Start.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -2382,8 +2383,11 @@
         <event-folder name="Multiplayer">
             <event-sheet>MultiplayerCourse.xml</event-sheet>
         </event-folder>
+        <event-folder name="Yokko">
+            <event-sheet>Yokko_Start.xml</event-sheet>
+            <event-sheet>Yokko_WaterScooter.xml</event-sheet>
+        </event-folder>
         <event-sheet>Course.xml</event-sheet>
-        <event-sheet>Yokko_WaterScooter.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
@@ -2424,6 +2428,8 @@
         <file name="Bilcross.ogg" />
         <file name="Yokko_1.m4a" />
         <file name="Yokko_1.ogg" />
+        <file name="Yokko_2.m4a" />
+        <file name="Yokko_2.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

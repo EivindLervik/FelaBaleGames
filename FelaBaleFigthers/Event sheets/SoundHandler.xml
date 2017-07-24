@@ -6,18 +6,15 @@
         <event-group description="" sid="586825805723559" title="Music">
             <sub-events>
                 <variable constant="0" name="CurrentClip" sid="201712876177140" static="1" type="text">none</variable>
+                <variable constant="0" name="Action" sid="530039411152890" static="1" type="text"></variable>
+                <variable constant="0" name="NextToPlay" sid="457158089837377" static="1" type="text"></variable>
                 <event-block sid="784863922163161">
                     <conditions>
                         <condition id="0" name="On function" sid="143529364684024" type="Function">
                             <param id="0" name="Name">&quot;Music_Play&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="947573335894176" type="System">
-                            <param id="0" name="Variable">CurrentClip</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="892678195649380">
                             <conditions>
@@ -28,11 +25,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="955240443987508" type="Audio">
-                                    <param id="0" name="Audio file">Bilcross</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;a&quot;</param>
+                                <action id="-9" name="Set value" sid="597922983225012" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Bilcross&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -45,11 +40,69 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="923519780735474" type="Audio">
-                                    <param id="0" name="Audio file">Yokko_1</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;a&quot;</param>
+                                <action id="-9" name="Set value" sid="510606514928224" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Yokko_1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="689936532764127">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="516845233675488" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;yokko_2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="787172842270203" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Yokko_2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="356206737836211">
+                            <conditions>
+                                <condition id="5" name="Is tag playing" sid="982247901799241" type="Audio">
+                                    <param id="0" name="Tag">&quot;a&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="673921388095137" type="System">
+                                    <param id="0" name="Variable">Action</param>
+                                    <param id="1" name="Value">&quot;FadeOut_a&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="440718470484066">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="326428004453796" type="System" />
+                                <condition id="5" name="Is tag playing" sid="718170406207168" type="Audio">
+                                    <param id="0" name="Tag">&quot;b&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="279803478467690" type="System">
+                                    <param id="0" name="Variable">Action</param>
+                                    <param id="1" name="Value">&quot;FadeOut_b&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="758571310024899">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="606873128560180" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Play (by name)" sid="106348781989164" type="Audio">
+                                    <param id="0" name="Folder">1</param>
+                                    <param id="1" name="Audio file name">NextToPlay</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;a&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="947573335894176" type="System">
+                                    <param id="0" name="Variable">CurrentClip</param>
+                                    <param id="1" name="Value">NextToPlay</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -60,7 +113,7 @@
                         <condition id="-14" name="Compare variable" sid="496811859018170" type="System">
                             <param id="0" name="Variable">CurrentClip</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;bilcross&quot;</param>
+                            <param id="2" name="Value">&quot;Bilcross&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -96,6 +149,152 @@
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;a&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="961593112295012">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="459999432886170" type="System">
+                            <param id="0" name="Variable">CurrentClip</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Yokko_1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="452810260658517">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="362721188697667" type="System">
+                                    <param id="0" name="First value">Audio.PlaybackTime(&quot;a&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">131.95</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="325944886491563" type="Audio">
+                                    <param id="0" name="Audio file">Yokko_1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;b&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="941960525007477">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="894593265167083" type="System">
+                                    <param id="0" name="First value">Audio.PlaybackTime(&quot;b&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">131.95</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="455624904432685" type="Audio">
+                                    <param id="0" name="Audio file">Yokko_1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;a&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="653570039611110">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="861124069781334" type="System">
+                            <param id="0" name="Variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;FadeOut_a&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="953747905291847" type="Audio">
+                            <param id="0" name="Tag">&quot;a&quot;</param>
+                            <param id="1" name="dB">lerp(Audio.Volume(&quot;a&quot;), -55, 0.01)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="422977919345147">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="690534095530859" type="System">
+                                    <param id="0" name="First value">Audio.Volume(&quot;a&quot;)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="512468618641744" type="System">
+                                    <param id="0" name="Variable">Action</param>
+                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="923744932773602" type="Audio">
+                                    <param id="0" name="Tag">&quot;a&quot;</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="386517382753180" type="Audio">
+                                    <param id="0" name="Tag">&quot;a&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="7" name="Play (by name)" sid="218892888360127" type="Audio">
+                                    <param id="0" name="Folder">1</param>
+                                    <param id="1" name="Audio file name">NextToPlay</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;a&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="564913730901740" type="System">
+                                    <param id="0" name="Variable">CurrentClip</param>
+                                    <param id="1" name="Value">NextToPlay</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="508858447145879">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="259982113115930" type="System">
+                            <param id="0" name="Variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;FadeOut_b&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="819583428550731" type="Audio">
+                            <param id="0" name="Tag">&quot;b&quot;</param>
+                            <param id="1" name="dB">lerp(Audio.Volume(&quot;b&quot;), -55, 0.01)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="185549724563129">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="724386317939197" type="System">
+                                    <param id="0" name="First value">Audio.Volume(&quot;b&quot;)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="522627520580614" type="System">
+                                    <param id="0" name="Variable">Action</param>
+                                    <param id="1" name="Value">&quot;none&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="660101445427823" type="Audio">
+                                    <param id="0" name="Tag">&quot;b&quot;</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="239188189193355" type="Audio">
+                                    <param id="0" name="Tag">&quot;b&quot;</param>
+                                    <param id="1" name="dB">0</param>
+                                </action>
+                                <action id="7" name="Play (by name)" sid="564969866414898" type="Audio">
+                                    <param id="0" name="Folder">1</param>
+                                    <param id="1" name="Audio file name">NextToPlay</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">0</param>
+                                    <param id="2" name="Tag (optional)">&quot;a&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="415996576622127" type="System">
+                                    <param id="0" name="Variable">CurrentClip</param>
+                                    <param id="1" name="Value">NextToPlay</param>
                                 </action>
                             </actions>
                         </event-block>

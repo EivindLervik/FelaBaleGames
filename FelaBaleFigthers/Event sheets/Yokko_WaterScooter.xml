@@ -25,6 +25,34 @@
                     <param id="0" name="Instance variable">StartHeight</param>
                     <param id="1" name="Value">Yokko_Scooter.Y</param>
                 </action>
+                <action id="-16" name="Wait" sid="244406354639734" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Call function" sid="903747686874569" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Yokko_Go&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="694155392023653" type="System">
+                    <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="323306367838348" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">Enabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="985562586367397" type="System">
+                    <param id="0" name="Seconds">11</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="127546821991033" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">Enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="141421648635904" type="System">
+                    <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="833724611804506" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">Enabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="382992294985428">
@@ -159,6 +187,10 @@
                         <action id="9" name="Set scale" sid="696691460309751" type="Yokko_CourseEdges">
                             <param id="0" name="Scale">0.5</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="656556990059027" type="Yokko_CourseEdges">
+                            <param id="0" name="Instance variable">Disposable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-3" name="Create object" sid="621336461210398" type="System">
                             <param id="0" name="Object to create">Yokko_CourseEdges</param>
                             <param id="1" name="Layer">&quot;Object&quot;</param>
@@ -177,6 +209,10 @@
                         </action>
                         <action id="9" name="Set scale" sid="806916263224074" type="Yokko_CourseEdges">
                             <param id="0" name="Scale">0.5</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="627203015252954" type="Yokko_CourseEdges">
+                            <param id="0" name="Instance variable">Disposable</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -661,19 +697,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="975494779627753">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="165163739782029" type="Keyboard">
-                    <param id="0" name="Key">84</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="873148767403163" type="Yokko_Scooter">
-                    <param id="0" name="Instance variable">Enabled</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="319597837179622">
             <conditions>
                 <condition id="0" name="On key pressed" sid="908542586574858" type="Keyboard">
@@ -694,6 +717,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="799481586930470" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;yokko_2&quot;</param>
+                </action>
                 <action id="-15" name="Set visible" sid="211722038066828" type="Yokko_Clouds">
                     <param id="0" name="Visibility">1</param>
                 </action>

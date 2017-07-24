@@ -236,9 +236,8 @@
                                 <action id="-15" name="Set visible" sid="101019927444712" type="MenuCharacter">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-13" name="Set boolean" sid="316751916325373" type="Fighters">
-                                    <param id="0" name="Instance variable">CanControl</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-42" name="Signal" sid="316751916325373" type="System">
+                                    <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -279,6 +278,62 @@
                                     <actions>
                                         <action id="5" name="Set frame" sid="580145819193920" type="MenuCharacter">
                                             <param id="0" name="Frame number">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="590698348568298">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="844679215845920" type="System">
+                                            <param id="0" name="Variable">Who</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Raudskjegg&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="647403474029119" type="MenuCharacter">
+                                            <param id="0" name="Frame number">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="199254312911878">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="248410610384758" type="System">
+                                            <param id="0" name="Variable">Who</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;MIDI&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="450420269094694" type="MenuCharacter">
+                                            <param id="0" name="Frame number">5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="506817223330888">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="942575231958600" type="System">
+                                            <param id="0" name="Variable">Who</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Yokko&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="258368150196344" type="MenuCharacter">
+                                            <param id="0" name="Frame number">6</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="600419828064568">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="651272074353102" type="System">
+                                            <param id="0" name="Variable">Who</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Playboy&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="114879593814715" type="MenuCharacter">
+                                            <param id="0" name="Frame number">7</param>
                                         </action>
                                     </actions>
                                 </event-block>
