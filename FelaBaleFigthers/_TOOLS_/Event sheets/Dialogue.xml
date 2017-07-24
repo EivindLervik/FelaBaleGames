@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Dialogue</name>
+    <events>
+        <variable constant="1" name="DIALOGUESEPPERATOR" sid="425415155214814" static="0" type="text">(DIA)</variable>
+        <variable constant="1" name="ENTRYSEPPERATOR" sid="607970099523059" static="0" type="text">(ENTRY)</variable>
+        <variable constant="1" name="ELEMENTSEPPERATOR" sid="175594197032950" static="0" type="text">(ELM)</variable>
+        <variable constant="0" name="CurrentDialogue" sid="185807618792122" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentEntry" sid="865574517727523" static="0" type="number">0</variable>
+        <variable constant="0" name="CurrentDialogueContent" sid="838986020756840" static="0" type="text"></variable>
+        <variable constant="0" name="IAmAt" sid="449202859242861" static="0" type="text">main</variable>
+        <event-block sid="650068734494002">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="169943405485660" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="322337139579275">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="163852074257371" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;main&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="538621680654633">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="104036129261771" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;editDialogue_Edit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="955777077643602" type="System">
+                            <param id="0" name="Variable">CurrentDialogueContent</param>
+                            <param id="1" name="Value">Dialogues.At(1, CurrentDialogue)</param>
+                        </action>
+                        <action id="0" name="Clear" sid="962483528185720" type="Entries" />
+                        <action id="1" name="Set size" sid="654779349861451" type="Entries">
+                            <param id="0" name="Width">4</param>
+                            <param id="1" name="Height">tokencount(CurrentDialogueContent, ENTRYSEPPERATOR)</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="800021438717594" type="Function">
+                            <param id="0" name="Name">&quot;Dialogue_Refresh_EditDialogue&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="342495891510790">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="248186505659037" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;editDialogue_New&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Clear" sid="692670896469030" type="Entries" />
+                        <action id="1" name="Set size" sid="299867287988481" type="Entries">
+                            <param id="0" name="Width">4</param>
+                            <param id="1" name="Height">0</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="5" name="Push" sid="274230168780275" type="Dialogues">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">0</param>
+                            <param id="2" name="Axis">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="180226940791338" type="System">
+                            <param id="0" name="Variable">CurrentDialogue</param>
+                            <param id="1" name="Value">Dialogues.Height - 1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="817995350064012" type="System">
+                            <param id="0" name="Variable">CurrentDialogueContent</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="667131580573642">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="757666584911693" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;editDialogue_Back&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="680009622741779" type="Function">
+                            <param id="0" name="Name">&quot;Dialogue_Refresh_EditDialogue&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="479429164515569">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="275423752140934" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;editEntry&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="436088683607417">
+            <conditions>
+                <condition id="0" name="On clicked" sid="473010211527908" type="Dialogue_BTN" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="351756515007968">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="854216775001092" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;New&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Show save dialog" sid="796468191036881" type="NWjs">
+                            <param id="0" name="Accept">&quot;.dia&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="965190791188111">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="432675477427046" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Save&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="SaveText" sid="273302260894903" static="0" type="text"></variable>
+                        <event-block sid="571981189922970">
+                            <conditions>
+                                <condition id="-10" name="For" sid="546663912270164" type="System">
+                                    <param id="0" name="Name">&quot;d&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Dialogues.Height - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="869932269481918" type="System">
+                                    <param id="0" name="Variable">SaveText</param>
+                                    <param id="1" name="Value">Dialogues.At(0, loopindex(&quot;d&quot;))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="264064373230429" type="System">
+                                    <param id="0" name="Variable">SaveText</param>
+                                    <param id="1" name="Value">ELEMENTSEPPERATOR</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="164848939607016" type="System">
+                                    <param id="0" name="Variable">SaveText</param>
+                                    <param id="1" name="Value">Dialogues.At(1, loopindex(&quot;d&quot;))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="564634201505500">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="741244675856071" type="System">
+                                            <param id="0" name="First value">loopindex(&quot;d&quot;)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Dialogues.Height - 1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="416988154926356" type="System">
+                                            <param id="0" name="Variable">SaveText</param>
+                                            <param id="1" name="Value">DIALOGUESEPPERATOR</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="581248625968240">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="242284739951661" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Write file" sid="608218825522633" type="NWjs">
+                                    <param id="0" name="Path">FilePath</param>
+                                    <param id="1" name="Contents">SaveText</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="130037954434146">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="300865069584573" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Load&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Show open dialog" sid="750952235659730" type="NWjs">
+                            <param id="0" name="Accept">&quot;.dia&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="562493672998994">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="792746280165172" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;EditD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="246919787373669" type="System">
+                            <param id="0" name="Variable">CurrentDialogue</param>
+                            <param id="1" name="Value">DialogueList.SelectedIndex</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="864235932643553" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Value">&quot;editDialogue_Edit&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="847168440494768" type="System">
+                            <param id="0" name="Layout">Dialogue_EditDialogue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="680534461816581">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="704644425867374" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Back&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="113031364232442" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="178858314426478">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="290818302457563" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BackD&quot;</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="988356212769550" type="DialogeName">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="530618352574340" type="System">
+                            <param id="0" name="Layout">Dialogue_Main</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="288769566490694">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="770194345895051" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BackE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="212363608394242" type="Entries">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">CurrentEntry</param>
+                            <param id="2" name="Value">NameList.SelectedText</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="454205323188941" type="Entries">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">CurrentEntry</param>
+                            <param id="2" name="Value">MoodList.SelectedText</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="406719579422308" type="Entries">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">CurrentEntry</param>
+                            <param id="2" name="Value">TextSpeed.Text</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="179719514450658" type="Entries">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">CurrentEntry</param>
+                            <param id="2" name="Value">Text_Box.Text</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="812943860111714">
+                            <conditions>
+                                <condition id="-10" name="For" sid="862464599508811" type="System">
+                                    <param id="0" name="Name">&quot;e&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Entries.Height - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="640281817051060" type="System">
+                                    <param id="0" name="Variable">CurrentDialogueContent</param>
+                                    <param id="1" name="Value">Entries.At(0, loopindex(&quot;e&quot;))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="201227421698581" type="System">
+                                    <param id="0" name="Variable">CurrentDialogueContent</param>
+                                    <param id="1" name="Value">ELEMENTSEPPERATOR</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="283757983184692" type="System">
+                                    <param id="0" name="Variable">CurrentDialogueContent</param>
+                                    <param id="1" name="Value">Entries.At(1, loopindex(&quot;e&quot;))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="245179572418674" type="System">
+                                    <param id="0" name="Variable">CurrentDialogueContent</param>
+                                    <param id="1" name="Value">ELEMENTSEPPERATOR</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="636196593319192" type="System">
+                                    <param id="0" name="Variable">CurrentDialogueContent</param>
+                                    <param id="1" name="Value">Entries.At(2, loopindex(&quot;e&quot;))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="217865139933547" type="System">
+                                    <param id="0" name="Variable">CurrentDialogueContent</param>
+                                    <param id="1" name="Value">ELEMENTSEPPERATOR</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="528450465218538" type="System">
+                                    <param id="0" name="Variable">CurrentDialogueContent</param>
+                                    <param id="1" name="Value">Entries.At(3, loopindex(&quot;e&quot;))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="828788882944842">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="900293253129621" type="System">
+                                            <param id="0" name="First value">loopindex(&quot;e&quot;)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Entries.Height - 1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="701727514549789" type="System">
+                                            <param id="0" name="Variable">CurrentDialogueContent</param>
+                                            <param id="1" name="Value">ENTRYSEPPERATOR</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="553446258037896">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="932496428474125" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="742429236944113" type="Dialogues">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">CurrentDialogue</param>
+                                            <param id="2" name="Value">CurrentDialogueContent</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="639597892358349" type="System">
+                                            <param id="0" name="Variable">IAmAt</param>
+                                            <param id="1" name="Value">&quot;editDialogue_Back&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="353709261179864" type="System">
+                                            <param id="0" name="Layout">Dialogue_EditDialogue</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="801933641303665">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="132835086817336" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;DelD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Delete" sid="148754535571898" type="Dialogues">
+                            <param id="0" name="Index">CurrentDialogue</param>
+                            <param id="1" name="Axis">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="633839472998806" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Value">&quot;main&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="508701587060975" type="System">
+                            <param id="0" name="Layout">Dialogue_Main</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="455702241838103">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="260009605817758" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;NewD&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="450751275409149" type="System">
+                            <param id="0" name="Variable">IAmAt</param>
+                            <param id="1" name="Value">&quot;editDialogue_New&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="630645841718381" type="System">
+                            <param id="0" name="Layout">Dialogue_EditDialogue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993256423818998">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="869222929932733" type="Dialogue_BTN">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;NewE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="342423864534685" type="System">
+                            <param id="0" name="Layout">Dialogue_EditEntry</param>
+                        </action>
+                        <action id="5" name="Push" sid="891295635719970" type="Entries">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">0</param>
+                            <param id="2" name="Axis">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="965789314434421" type="System">
+                            <param id="0" name="Variable">CurrentEntry</param>
+                            <param id="1" name="Value">Entries.Height - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="104816885377376">
+            <conditions>
+                <condition id="2" name="On open dialog OK" sid="701456158434685" type="NWjs" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="873911633866497" type="System">
+                    <param id="0" name="Variable">FilePath</param>
+                    <param id="1" name="Value">NWjs.ChosenPath</param>
+                </action>
+                <action id="-9" name="Set value" sid="601007267544032" type="System">
+                    <param id="0" name="Variable">FileContent</param>
+                    <param id="1" name="Value">NWjs.ReadFile(FilePath)</param>
+                </action>
+                <action id="0" name="Clear" sid="111163879216613" type="Dialogues" />
+                <action id="1" name="Set size" sid="646768150550895" type="Dialogues">
+                    <param id="0" name="Width">2</param>
+                    <param id="1" name="Height">tokencount(FileContent, DIALOGUESEPPERATOR)</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="11" name="Clear" sid="847070277578358" type="DialogueList" />
+            </actions>
+            <sub-events>
+                <event-block sid="726639471981708">
+                    <conditions>
+                        <condition id="-10" name="For" sid="123895721903460" type="System">
+                            <param id="0" name="Name">&quot;d&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">tokencount(FileContent, DIALOGUESEPPERATOR) - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="323909915172351" type="Dialogues">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">loopindex(&quot;d&quot;)</param>
+                            <param id="2" name="Value">tokenat(tokenat(FileContent, loopindex(&quot;d&quot;), DIALOGUESEPPERATOR), 0, ELEMENTSEPPERATOR)</param>
+                        </action>
+                        <action id="7" name="Add item" sid="338276435595254" type="DialogueList">
+                            <param id="0" name="Text">Dialogues.At(0, loopindex(&quot;d&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="485597272286660">
+            <conditions>
+                <condition id="4" name="On save dialog OK" sid="555818935108547" type="NWjs" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="436887932445178" type="System">
+                    <param id="0" name="Variable">FilePath</param>
+                    <param id="1" name="Value">NWjs.ChosenPath</param>
+                </action>
+                <action id="0" name="Write file" sid="525818742353898" type="NWjs">
+                    <param id="0" name="Path">FilePath</param>
+                    <param id="1" name="Contents">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Clear" sid="513908499740522" type="Dialogues" />
+                <action id="1" name="Set size" sid="961142448706250" type="Dialogues">
+                    <param id="0" name="Width">2</param>
+                    <param id="1" name="Height">0</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="685226870174422">
+            <conditions>
+                <condition id="0" name="On function" sid="279348247673672" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue_Refresh_EditDialogue&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="330612878069087" type="DialogeName">
+                    <param id="0" name="Text">Dialogues.At(0, CurrentDialogue)</param>
+                </action>
+                <action id="11" name="Clear" sid="589408087806793" type="EntryList" />
+            </actions>
+            <sub-events>
+                <event-block sid="982482185675360">
+                    <conditions>
+                        <condition id="-10" name="For" sid="917358072044094" type="System">
+                            <param id="0" name="Name">&quot;d&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">tokencount(CurrentDialogueContent, ENTRYSEPPERATOR) - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="230351737866865">
+                            <conditions>
+                                <condition id="-10" name="For" sid="712826200765920" type="System">
+                                    <param id="0" name="Name">&quot;e&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="744279744341628" type="Entries">
+                                    <param id="0" name="X">loopindex(&quot;e&quot;)</param>
+                                    <param id="1" name="Y">loopindex(&quot;d&quot;)</param>
+                                    <param id="2" name="Value">tokenat(tokenat(CurrentDialogueContent, loopindex(&quot;d&quot;), ENTRYSEPPERATOR), loopindex(&quot;e&quot;), ELEMENTSEPPERATOR)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="418891028656139">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="150128920826018" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Add item" sid="595305277949689" type="EntryList">
+                                    <param id="0" name="Text">Entries.At(0, loopindex(&quot;d&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="521327103294358">
+            <conditions>
+                <condition id="1" name="On text changed" sid="690672386814008" type="DialogeName" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="965290901751281" type="Dialogues">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">CurrentDialogue</param>
+                    <param id="2" name="Value">DialogeName.Text</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

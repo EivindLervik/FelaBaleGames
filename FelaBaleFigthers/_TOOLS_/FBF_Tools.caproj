@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NodeWebkit" version="1">NW.js</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -146,15 +147,62 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="DialogueList" sid="507072346193790">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="Name_Box" sid="799451052941625">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Text_Box" sid="787326776352706">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Name_Box3" sid="673481873014194">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Dialogue_BTN" sid="425048852643384">
+            <plugin id="Button" />
+            <instance-variables>
+                <instance-variable name="Action" sid="437171663145261" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="DialogueEntryList" sid="720407386409694">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="MoodList" sid="531362038898081">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="NameList" sid="322006881264361">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="EntryList" sid="280867444143830">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="DialogeName" sid="767759093199047">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="TextSpeed" sid="497447258090502">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type global="1" name="Dialogues" sid="942495370702019">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="Entries" sid="362747559543238">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Menu.xml</layout>
         <layout>SLE.xml</layout>
+        <layout>Dialogue_Main.xml</layout>
+        <layout>Dialogue_EditDialogue.xml</layout>
+        <layout>Dialogue_EditEntry.xml</layout>
+        <layout>_BASE_.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Menu.xml</event-sheet>
         <event-sheet>SLE.xml</event-sheet>
+        <event-sheet>Dialogue.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
