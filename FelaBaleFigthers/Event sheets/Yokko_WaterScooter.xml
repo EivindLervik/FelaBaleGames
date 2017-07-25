@@ -1061,18 +1061,6 @@
                     <param id="0" name="Instance variable">TargetY</param>
                     <param id="1" name="Value">Crosshair.Y</param>
                 </action>
-                <action disabled="1" id="-10" name="Set value" sid="373847049861005" type="Yokko_Projectile">
-                    <param id="0" name="Instance variable">Distance</param>
-                    <param id="1" name="Value">distance(Yokko_Scooter.ImagePointX(&quot;Gun&quot;), Yokko_Scooter.ImagePointY(&quot;Gun&quot;), Crosshair.X, Crosshair.Y) * 2</param>
-                </action>
-                <action disabled="1" id="-10" name="Set value" sid="481889015221987" type="Yokko_Projectile">
-                    <param id="0" name="Instance variable">TargetX</param>
-                    <param id="1" name="Value">Crosshair.X +(sin(Yokko_Projectile.Bullet.AngleOfMotion + 90) * (Yokko_Projectile.Distance / 2))</param>
-                </action>
-                <action disabled="1" id="-10" name="Set value" sid="101275533779177" type="Yokko_Projectile">
-                    <param id="0" name="Instance variable">TargetY</param>
-                    <param id="1" name="Value">Crosshair.Y +(cos(Yokko_Projectile.Bullet.AngleOfMotion + 90) * (Yokko_Projectile.Distance / 2))</param>
-                </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="536771555262510" type="Yokko_Projectile">
                     <param id="0" name="Speed">Yokko_Projectile.Speed</param>
                 </action>

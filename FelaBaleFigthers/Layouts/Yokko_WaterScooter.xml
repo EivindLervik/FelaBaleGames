@@ -108,7 +108,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Y_YokkoBeach" uid="1047">
+                <instance type="Yokko_Beach" uid="1047">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
