@@ -50,6 +50,7 @@
                         <A_Damage>0</A_Damage>
                         <B_Damage>10</B_Damage>
                         <UpB_Damage>10</UpB_Damage>
+                        <Deceleration>0</Deceleration>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -612,6 +613,7 @@
                         <A_Damage>5</A_Damage>
                         <B_Damage>10</B_Damage>
                         <UpB_Damage>15</UpB_Damage>
+                        <Deceleration>0</Deceleration>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

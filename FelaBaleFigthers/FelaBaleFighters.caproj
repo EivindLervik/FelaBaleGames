@@ -33,6 +33,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -2008,6 +2009,8 @@
                 <instance-variable name="StartHeight" sid="130805532479659" type="number" />
                 <instance-variable name="Enabled" sid="166935220093103" type="boolean" />
                 <instance-variable name="CurrentTileset" sid="764528064199284" type="number" />
+                <instance-variable name="Transformed" sid="542868059694027" type="boolean" />
+                <instance-variable name="MoveUp" sid="858473304970664" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="408832353201075">
@@ -2023,6 +2026,7 @@
             <animation-folder>
                 <animation framecount="2" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="294394553027563" speed="20">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirl.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2031,6 +2035,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirl2.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2041,6 +2046,7 @@
                 </animation>
                 <animation framecount="2" loop="1" name="TurnLeft" pingpong="0" repeatcount="1" repeatto="0" sid="256369489086700" speed="20">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeft1.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2049,6 +2055,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeft2.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2059,6 +2066,7 @@
                 </animation>
                 <animation framecount="2" loop="1" name="TurnRight" pingpong="0" repeatcount="1" repeatto="0" sid="884418232483405" speed="20">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRight1.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2067,6 +2075,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRight2.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2077,6 +2086,7 @@
                 </animation>
                 <animation framecount="2" loop="1" name="Jump_Run" pingpong="0" repeatcount="1" repeatto="0" sid="531506180594106" speed="20">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlJump.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2085,6 +2095,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlJump2.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2095,6 +2106,7 @@
                 </animation>
                 <animation framecount="2" loop="1" name="Jump_TurnLeft" pingpong="0" repeatcount="1" repeatto="0" sid="728211536940870" speed="20">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeftJump1.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2103,6 +2115,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeftJump2.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2113,6 +2126,7 @@
                 </animation>
                 <animation framecount="2" loop="1" name="Jump_TurnRight" pingpong="0" repeatcount="1" repeatto="0" sid="642077758097956" speed="20">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRightJump1.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2121,6 +2135,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRightJump2.png">
+                        <image-point name="Gun" x="0.5" y="0.53125" />
                         <collision-poly>
                             <point x="0.28125" y="0.5625" />
                             <point x="0.71875" y="0.5625" />
@@ -2237,6 +2252,134 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Raudskjegg_Vehicle" sid="734091676242692">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Enabled" sid="223460875346310" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="344289781773600">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="454141784971073" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Gun" x="0.8125" y="0.625" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Raudskjegg_SpaceSun" sid="442204021565148">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Mercury" sid="860184755755945">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Venus" sid="781565368886455">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Earth" sid="317501380832620">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Mars" sid="992341813365228">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Jupiter" sid="997036021493732">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Saturn" sid="470525468334209">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Uranus" sid="598316193281351">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Space_Planet_Neptun" sid="701897729559896">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Raudskjegg_Shot" sid="934976435159348">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="207816565530311">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="953030948762920">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="137496466741407" speed="0">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.875" y="1" />
+                            <point x="0" y="0.5" />
+                            <point x="0.875" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Raudskjegg_PowerUp" sid="345536047112652">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967092768118920" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Yokko_Cutscene" sid="600061241749859">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="257943428005406" speed="20">
+                    <frame duration="100" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene3.png" />
+                    <frame duration="40" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene4.png" />
+                    <frame duration="40" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2-2.png" />
+                    <frame duration="40" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Crosshair" sid="269876254223189">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="438955564529650" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Yokko_Projectile" sid="734954758860497">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Distance" sid="420601071662894" type="number" />
+                <instance-variable name="Speed" sid="215266889124340" type="number" />
+                <instance-variable name="TargetX" sid="210452043574216" type="number" />
+                <instance-variable name="TargetY" sid="530451314488143" type="number" />
+                <instance-variable name="PrevScale" sid="824034030445006" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="805286962917961">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="983022612716818">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344315782432349" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Ground" plugin-id="Sprite" sid="125361228845125">
@@ -2272,6 +2415,7 @@
                 <instance-variable name="A_Damage" sid="319362352229613" type="number" />
                 <instance-variable name="B_Damage" sid="633692416866043" type="number" />
                 <instance-variable name="UpB_Damage" sid="798077023399016" type="number" />
+                <instance-variable comment="A place where the deceleration can be stored" name="Deceleration" sid="439346891432759" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="898824907492133">
@@ -2326,6 +2470,21 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Planets" plugin-id="TiledBg" sid="434242922707308">
+            <members>
+                <member>Raudskjegg_Space_Planet_Earth</member>
+                <member>Raudskjegg_Space_Planet_Jupiter</member>
+                <member>Raudskjegg_Space_Planet_Mars</member>
+                <member>Raudskjegg_Space_Planet_Mercury</member>
+                <member>Raudskjegg_Space_Planet_Neptun</member>
+                <member>Raudskjegg_Space_Planet_Saturn</member>
+                <member>Raudskjegg_Space_Planet_Uranus</member>
+                <member>Raudskjegg_Space_Planet_Venus</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Speed" sid="406413893334648" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="Leppo">
@@ -2347,6 +2506,7 @@
             <layout>Raudskjegg_Launch.xml</layout>
             <layout>Raudskjegg_Space.xml</layout>
             <layout>Raudskjegg_Station.xml</layout>
+            <layout>Raudskjegg_SpaceShooter.xml</layout>
         </layout-folder>
         <layout-folder name="Multiplayer">
             <layout>FinalDestination.xml</layout>
@@ -2379,6 +2539,7 @@
             <event-sheet>Raudskjegg_Launch.xml</event-sheet>
             <event-sheet>Raudskjegg_Space.xml</event-sheet>
             <event-sheet>Raudskjegg_Station.xml</event-sheet>
+            <event-sheet>RaudSkjegg_SpaceShooter.xml</event-sheet>
         </event-folder>
         <event-folder name="Multiplayer">
             <event-sheet>MultiplayerCourse.xml</event-sheet>
@@ -2430,6 +2591,14 @@
         <file name="Yokko_1.ogg" />
         <file name="Yokko_2.m4a" />
         <file name="Yokko_2.ogg" />
+        <file name="Raudskjegg_0.m4a" />
+        <file name="Raudskjegg_0.ogg" />
+        <file name="Raudskjegg_1.m4a" />
+        <file name="Raudskjegg_1.ogg" />
+        <file name="Raudskjegg_2.m4a" />
+        <file name="Raudskjegg_2.ogg" />
+        <file name="Yokko_0.m4a" />
+        <file name="Yokko_0.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

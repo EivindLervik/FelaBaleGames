@@ -3,7 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DialogueSystem</name>
     <events>
-        <variable comment="The character that sepperates entries" constant="1" name="ENTRYSEPPERATOR" sid="294529328811246" static="0" type="text">|</variable>
+        <variable constant="1" name="DIALOGUESEPPERATOR" sid="158403464531593" static="0" type="text">(DIA)</variable>
+        <variable constant="1" name="DATASEPPERATOR" sid="268281054965399" static="0" type="text">(DATA)</variable>
+        <variable comment="The character that sepperates entries" constant="1" name="ENTRYSEPPERATOR" sid="294529328811246" static="0" type="text">(ENTRY)</variable>
+        <variable constant="1" name="ELEMENTSEPPERATOR" sid="304720086340722" static="0" type="text">(ELM)</variable>
         <variable comment="The language currently loaded" constant="0" name="LanguageLoaded" sid="242485621120510" static="0" type="text">none</variable>
         <variable comment="The language chosen by the user" constant="0" name="ChosenLanguage" sid="990034429669857" static="0" type="text">Norsk</variable>
         <event-block sid="467569984251288">
@@ -89,39 +92,15 @@
                         <condition id="-10" name="For" sid="354026537591707" type="System">
                             <param id="0" name="Name">&quot;entries&quot;</param>
                             <param id="1" name="Start index">0</param>
-                            <param id="2" name="End index">tokencount(AJAX.LastData, &quot;NEXT&quot; &amp; newline)-1</param>
+                            <param id="2" name="End index">tokencount(AJAX.LastData, DIALOGUESEPPERATOR)-1</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable constant="0" name="WholeEntry" sid="599865000690992" static="0" type="text"></variable>
-                        <event-block sid="107687631224904">
-                            <conditions>
-                                <condition id="-10" name="For" sid="167963258626847" type="System">
-                                    <param id="0" name="Name">&quot;entries2&quot;</param>
-                                    <param id="1" name="Start index">1</param>
-                                    <param id="2" name="End index">tokencount(tokenat(AJAX.LastData, loopindex(&quot;entries&quot;), &quot;NEXT&quot; &amp; newline), newline)-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="203025078921770" type="System">
-                                    <param id="0" name="Variable">WholeEntry</param>
-                                    <param id="1" name="Value">tokenat(tokenat(AJAX.LastData, loopindex(&quot;entries&quot;), &quot;NEXT&quot; &amp; newline), loopindex(&quot;entries2&quot;), newline)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="665777935248427">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="897441096501398" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Add key" sid="549122247952002" type="LoadedDialogues">
-                                    <param id="0" name="Key">tokenat(tokenat(AJAX.LastData, loopindex(&quot;entries&quot;), &quot;NEXT&quot; &amp; newline), 0, newline)</param>
-                                    <param id="1" name="Value">WholeEntry</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Add key" sid="549122247952002" type="LoadedDialogues">
+                            <param id="0" name="Key">tokenat(tokenat(AJAX.LastData, loopindex(&quot;entries&quot;), DIALOGUESEPPERATOR), 0, DATASEPPERATOR)</param>
+                            <param id="1" name="Value">tokenat(tokenat(AJAX.LastData, loopindex(&quot;entries&quot;), DIALOGUESEPPERATOR), 1, DATASEPPERATOR)</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
@@ -153,7 +132,7 @@
                         <condition id="-8" name="Compare two values" sid="222688643608006" type="System">
                             <param id="0" name="First value">LineIndex</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">tokencount(LoadedDialogues.Get(Dialogue),  &quot;@&quot;)</param>
+                            <param id="2" name="Second value">tokencount(LoadedDialogues.Get(Dialogue),  ENTRYSEPPERATOR)</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -223,7 +202,7 @@
                                 <condition id="-8" name="Compare two values" sid="559300124122307" type="System">
                                     <param id="0" name="First value">LineIndex</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">tokencount(LoadedDialogues.Get(Dialogue),  &quot;@&quot;)</param>
+                                    <param id="2" name="Second value">tokencount(LoadedDialogues.Get(Dialogue),  ENTRYSEPPERATOR)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -248,19 +227,19 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="849797684743645" type="System">
                                     <param id="0" name="Variable">Who</param>
-                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex, &quot;@&quot;), 0, &quot;|&quot;)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="278623882432288" type="System">
-                                    <param id="0" name="Variable">Speed</param>
-                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex, &quot;@&quot;), 1, &quot;|&quot;)</param>
+                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex, ENTRYSEPPERATOR), 0, ELEMENTSEPPERATOR)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="833657305812035" type="System">
                                     <param id="0" name="Variable">Mood</param>
-                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex, &quot;@&quot;), 2, &quot;|&quot;)</param>
+                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex, ENTRYSEPPERATOR), 1, ELEMENTSEPPERATOR)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="278623882432288" type="System">
+                                    <param id="0" name="Variable">Speed</param>
+                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex, ENTRYSEPPERATOR), 2, ELEMENTSEPPERATOR)</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="683394361974631" type="System">
                                     <param id="0" name="Variable">Text</param>
-                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex, &quot;@&quot;), 3, &quot;|&quot;)</param>
+                                    <param id="1" name="Value">tokenat(tokenat(LoadedDialogues.Get(Dialogue), LineIndex,ENTRYSEPPERATOR), 3, ELEMENTSEPPERATOR)</param>
                                 </action>
                                 <action id="0" name="Set text" sid="869059508539465" type="DialogueText">
                                     <param id="0" name="Text">Who &amp; &quot;:&quot;</param>

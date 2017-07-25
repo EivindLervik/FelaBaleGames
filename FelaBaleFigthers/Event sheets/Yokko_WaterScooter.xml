@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="Yokko_ScooterCenter" sid="441884005698403" static="0" type="number">0</variable>
         <variable constant="1" name="Yokko_Horizon" sid="135717454157164" static="0" type="number">96</variable>
-        <include>MAIN</include>
+        <include>Course</include>
         <event-block sid="973427943149153">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="328353380026585" type="System" />
@@ -28,30 +28,48 @@
                 <action id="-16" name="Wait" sid="244406354639734" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="0" name="Call function" sid="903747686874569" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="903747686874569" type="Function">
                     <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Yokko_Go&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Yokko_Start&quot;</param>
                 </action>
-                <action id="-41" name="Wait for signal" sid="694155392023653" type="System">
+                <action disabled="1" id="-41" name="Wait for signal" sid="694155392023653" type="System">
                     <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="323306367838348" type="Yokko_Scooter">
+                <action disabled="1" id="-13" name="Set boolean" sid="323306367838348" type="Yokko_Scooter">
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-16" name="Wait" sid="985562586367397" type="System">
+                <action disabled="1" id="-16" name="Wait" sid="985562586367397" type="System">
                     <param id="0" name="Seconds">11</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="127546821991033" type="Yokko_Scooter">
+                <action disabled="1" id="-13" name="Set boolean" sid="127546821991033" type="Yokko_Scooter">
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-41" name="Wait for signal" sid="141421648635904" type="System">
+                <action disabled="1" id="0" name="Call function" sid="200690072939134" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Yokko_Fjellvegg&quot;</param>
+                </action>
+                <action disabled="1" id="-41" name="Wait for signal" sid="141421648635904" type="System">
                     <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="833724611804506" type="Yokko_Scooter">
+                <action disabled="1" id="-13" name="Set boolean" sid="833724611804506" type="Yokko_Scooter">
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="528327309217273" type="System">
+                    <param id="0" name="Seconds">4.0</param>
+                </action>
+                <action disabled="1" id="0" name="Call function" sid="557947030202616" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Yokko_Midway&quot;</param>
+                </action>
+                <action disabled="1" id="-41" name="Wait for signal" sid="317718079160631" type="System">
+                    <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="112780985287703" type="Function">
+                    <param id="0" name="Name">&quot;Yokko_Takeoff&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -66,8 +84,63 @@
                 <action id="9" name="Set scale" sid="513025980464955" type="3D_Objects">
                     <param id="0" name="Scale">3D_Objects.Y / 192</param>
                 </action>
+                <action id="-3" name="Set position" sid="960718181022217" type="Crosshair">
+                    <param id="0" name="X">160 + ((Yokko_Scooter.ImagePointX(&quot;Gun&quot;) - 160) / 2)</param>
+                    <param id="1" name="Y">96 + ((Yokko_Scooter.ImagePointY(&quot;Gun&quot;) - 96) / 2)</param>
+                </action>
             </actions>
             <sub-events>
+                <event-block sid="785885395306853">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="150082586876703" type="System">
+                            <param id="0" name="Object">Yokko_Projectile</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="9" name="Set scale" sid="893829357688899" type="Yokko_Projectile">
+                            <param id="0" name="Scale">(distance(Yokko_Projectile.X, Yokko_Projectile.Y, Yokko_Projectile.TargetX, Yokko_Projectile.TargetY) / Yokko_Projectile.Distance)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="771990783158163">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="642182492755714" type="System">
+                                    <param id="0" name="First value">((distance(Yokko_Projectile.X, Yokko_Projectile.Y, Yokko_Projectile.TargetX, Yokko_Projectile.TargetY) + Yokko_Projectile.Distance) / (Yokko_Projectile.Distance * 2))</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Yokko_Projectile.PrevScale</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="184555835155592" type="Yokko_Projectile">
+                                    <param id="0" name="Speed">Yokko_Projectile.Speed * (distance(Yokko_Projectile.X, Yokko_Projectile.Y, Yokko_Projectile.TargetX, Yokko_Projectile.TargetY) / Yokko_Projectile.Distance)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="789322136742413" type="Yokko_Projectile">
+                                    <param id="0" name="Scale">((distance(Yokko_Projectile.X, Yokko_Projectile.Y, Yokko_Projectile.TargetX, Yokko_Projectile.TargetY) + Yokko_Projectile.Distance) / (Yokko_Projectile.Distance * 2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="531189805735054">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="657742537464411" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="869234483445564" type="Yokko_Projectile" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="796354402008821">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="874688123193755" type="System">
+                                    <param id="0" name="First value">distance(Yokko_Projectile.X, Yokko_Projectile.Y, Yokko_Projectile.TargetX, Yokko_Projectile.TargetY)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="746274256975929" type="Yokko_Projectile" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="146500339154116">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="568173550718209" type="3D_Objects">
@@ -335,51 +408,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="876376478844446">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="316438258890140" type="Yokko_Scooter">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">Yokko_Scooter.StartHeight</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="846272613729457" type="Yokko_Scooter">
-                    <param id="0" name="Y">Yokko_Scooter.StartHeight</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="566951373963913" type="Yokko_Scooter">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="125222706069586" type="Yokko_Scooter">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="926678613269361">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="473428488068450" type="Yokko_Scooter">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">Yokko_Scooter.Width / 2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="710557613031831" type="Yokko_Scooter">
-                    <param id="0" name="X">Yokko_Scooter.Width / 2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="511843626597164">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="770855282589381" type="Yokko_Scooter">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="X co-ordinate">320 - (Yokko_Scooter.Width / 2)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="861635306435215" type="Yokko_Scooter">
-                    <param id="0" name="X">320 - (Yokko_Scooter.Width / 2)</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="409558229756020">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="365745382842934" type="Yokko_Scooter">
@@ -388,6 +416,155 @@
             </conditions>
             <actions />
             <sub-events>
+                <event-block sid="655101133388492">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="254167594991468" type="Yokko_Scooter">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Yokko_Scooter.StartHeight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="990911694774375" type="Yokko_Scooter">
+                            <param id="0" name="Y">Yokko_Scooter.StartHeight</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="336432785059798" type="Yokko_Scooter">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="447809952511414" type="Yokko_Scooter">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="768890013613299">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="278828741258842" type="Yokko_Scooter">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Yokko_Scooter.Width / 2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="462809582915095" type="Yokko_Scooter">
+                            <param id="0" name="X">Yokko_Scooter.Width / 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="262503352157689">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="377866375393095" type="Yokko_Scooter">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">320 - (Yokko_Scooter.Width / 2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="832128238325361" type="Yokko_Scooter">
+                            <param id="0" name="X">320 - (Yokko_Scooter.Width / 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="929337963930256">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="402887469969419" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Transformed</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="681831064255590">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="675714316358953" type="Yokko_Scooter">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">Yokko_Scooter.StartHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="185286274585850" type="Yokko_Scooter">
+                                    <param id="0" name="Y">Yokko_Scooter.StartHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="318263809057415">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="608247554293655" type="Yokko_Scooter">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Yokko_Scooter.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="798558549008915" type="Yokko_Scooter">
+                                    <param id="0" name="Y">Yokko_Scooter.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="346532344090837">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="929502194403742" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;a&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="256181466023787" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;a&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="930200421145180">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="725802651539176" type="System">
+                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="307008757119421" type="Function">
+                                            <param id="0" name="Name">&quot;Yokko_Shoot&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="912184611318029">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="684703653282496" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;up&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="163379913315100" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;up&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="571628351456938" type="Yokko_Scooter">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="934352073525342">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="492998119984104" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;down&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="257093566546507" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;down&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="914522596624412" type="Yokko_Scooter">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block any="1" sid="192840729985303">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="248112306317714" type="System">
@@ -697,19 +874,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="319597837179622">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="908542586574858" type="Keyboard">
-                    <param id="0" name="Key">69</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="409311628189616" type="Function">
-                    <param id="0" name="Name">&quot;Yokko_Takeoff&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="506534423262840">
             <conditions>
                 <condition id="0" name="On function" sid="952779118256096" type="Function">
@@ -717,9 +881,41 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="986169872168882" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">Enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="0" name="Call function" sid="799481586930470" type="Function">
                     <param id="0" name="Name">&quot;Music_Play&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;yokko_2&quot;</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="782200479452228" type="Yokko_Scooter">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="388417728349749" type="Yokko_Scooter">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="417335743314400" type="Yokko_Scooter">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="871903792792723" type="Yokko_Scooter">
+                    <param id="0" name="Speed">500</param>
+                </action>
+                <action id="-16" name="Wait" sid="178367198614741" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="991643665939876" type="Yokko_Scooter">
+                    <param id="0" name="Y">320</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="127195879511807" type="Yokko_Scooter">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="287180430097159" type="Yokko_Scooter">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="793701726897407" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">MoveUp</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="211722038066828" type="Yokko_Clouds">
                     <param id="0" name="Visibility">1</param>
@@ -733,6 +929,9 @@
                 <action id="-34" name="Set layer background color" sid="630846837137972" type="System">
                     <param id="0" name="Layer">&quot;Sky&quot;</param>
                     <param id="1" name="Color">rgb(50, 50, 100)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="299434804093375" type="Crosshair">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -802,7 +1001,85 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="443776508017738">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="416076557495648" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="565760046915091" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="823374767804607" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">MoveUp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="916211228902644" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="880982528051425" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Transformed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="870075699407967">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="940269416639975" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">MoveUp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="475551920852567" type="Yokko_Scooter">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="147532219570023">
+            <conditions>
+                <condition id="0" name="On function" sid="388313155001540" type="Function">
+                    <param id="0" name="Name">&quot;Yokko_Shoot&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="144028004715384" type="Yokko_Scooter">
+                    <param id="0" name="Object">Yokko_Projectile</param>
+                    <param id="1" name="Layer">&quot;Crosshair&quot;</param>
+                    <param id="2" name="Image point">&quot;Gun&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="565438973071369" type="Yokko_Projectile">
+                    <param id="0" name="Instance variable">Distance</param>
+                    <param id="1" name="Value">distance(Yokko_Scooter.ImagePointX(&quot;Gun&quot;), Yokko_Scooter.ImagePointY(&quot;Gun&quot;), Crosshair.X, Crosshair.Y)</param>
+                </action>
+                <action id="-10" name="Set value" sid="933624865962911" type="Yokko_Projectile">
+                    <param id="0" name="Instance variable">TargetX</param>
+                    <param id="1" name="Value">Crosshair.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="437164455880633" type="Yokko_Projectile">
+                    <param id="0" name="Instance variable">TargetY</param>
+                    <param id="1" name="Value">Crosshair.Y</param>
+                </action>
+                <action disabled="1" id="-10" name="Set value" sid="373847049861005" type="Yokko_Projectile">
+                    <param id="0" name="Instance variable">Distance</param>
+                    <param id="1" name="Value">distance(Yokko_Scooter.ImagePointX(&quot;Gun&quot;), Yokko_Scooter.ImagePointY(&quot;Gun&quot;), Crosshair.X, Crosshair.Y) * 2</param>
+                </action>
+                <action disabled="1" id="-10" name="Set value" sid="481889015221987" type="Yokko_Projectile">
+                    <param id="0" name="Instance variable">TargetX</param>
+                    <param id="1" name="Value">Crosshair.X +(sin(Yokko_Projectile.Bullet.AngleOfMotion + 90) * (Yokko_Projectile.Distance / 2))</param>
+                </action>
+                <action disabled="1" id="-10" name="Set value" sid="101275533779177" type="Yokko_Projectile">
+                    <param id="0" name="Instance variable">TargetY</param>
+                    <param id="1" name="Value">Crosshair.Y +(cos(Yokko_Projectile.Bullet.AngleOfMotion + 90) * (Yokko_Projectile.Distance / 2))</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="536771555262510" type="Yokko_Projectile">
+                    <param id="0" name="Speed">Yokko_Projectile.Speed</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="139566142759963" type="Yokko_Projectile">
+                    <param id="0" name="Angle">angle(Yokko_Scooter.ImagePointX(&quot;Gun&quot;), Yokko_Scooter.ImagePointY(&quot;Gun&quot;), Crosshair.X, Crosshair.Y)</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

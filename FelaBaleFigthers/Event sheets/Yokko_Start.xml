@@ -9,6 +9,48 @@
                 <condition id="-2" name="On start of layout" sid="348639763199461" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="596802474640349" type="Function">
+                    <param id="0" name="Name">&quot;Fade_FadeIn&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="489392782853791" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;yokko_0&quot;</param>
+                </action>
+                <action id="2" name="Stop" sid="990375494404323" type="Yokko_Cutscene" />
+                <action id="-16" name="Wait" sid="101816121172071" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="0" name="Call function" sid="276195513039161" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Yokko_Strand&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="904804434202211" type="System">
+                    <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
+                </action>
+                <action id="3" name="Start" sid="848910961629052" type="Yokko_Cutscene">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="728718845201318">
+            <conditions>
+                <condition id="4" name="On finished" sid="354509080906247" type="Yokko_Cutscene">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="362569830483175" type="Function">
+                    <param id="0" name="Name">&quot;Fade_FadeOut&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="162843398682931" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;yokko_1&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="405157916006675" type="System">
+                    <param id="0" name="Tag">&quot;FadedOut&quot;</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="286665949929656" type="System">
                     <param id="0" name="Layout">Yokko_WaterScooter</param>
                 </action>

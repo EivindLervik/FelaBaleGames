@@ -154,7 +154,7 @@
                     <actions>
                         <action id="-18" name="Set layer opacity" sid="305318657605937" type="System">
                             <param id="0" name="Layer">&quot;Fader&quot;</param>
-                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;Fader&quot;), 0, 0.05)</param>
+                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;Fader&quot;), 0, 0.04)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -187,7 +187,7 @@
                     <actions>
                         <action id="-18" name="Set layer opacity" sid="350065026328890" type="System">
                             <param id="0" name="Layer">&quot;Fader&quot;</param>
-                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;Fader&quot;), 100, 0.05)</param>
+                            <param id="1" name="Opacity">lerp(LayerOpacity(&quot;Fader&quot;), 100, 0.04)</param>
                         </action>
                     </actions>
                     <sub-events>

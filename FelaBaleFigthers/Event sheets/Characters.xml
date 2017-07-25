@@ -5,6 +5,27 @@
     <events>
         <event-group description="" sid="712122722258706" title="General">
             <sub-events>
+                <event-block sid="229994176833527">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="353832070198402" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="619066035580019">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="378832801368649" type="System">
+                                    <param id="0" name="Object">Fighters</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="736630636869873" type="Fighters">
+                                    <param id="0" name="Instance variable">Deceleration</param>
+                                    <param id="1" name="Value">Fighters.Platform.Deceleration</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="661914396101226">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="247008000716747" type="Fighters">
@@ -746,7 +767,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="3" name="Set deceleration" sid="247489838177347" type="Fighters">
-                            <param id="0" name="Deceleration">1000</param>
+                            <param id="0" name="Deceleration">Fighters.Deceleration</param>
                         </action>
                     </actions>
                 </event-block>

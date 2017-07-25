@@ -9,20 +9,32 @@
                 <condition id="-2" name="On start of layout" sid="586810337763441" type="System" />
             </conditions>
             <actions>
-                <action behavior="Platform" id="5" name="Set gravity" sid="793761609007524" type="Fighters">
-                    <param id="0" name="Gravity">500</param>
+                <action id="0" name="Call function" sid="470758631487305" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;raudskjegg_1&quot;</param>
                 </action>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="615858450583723" type="Fighters">
-                    <param id="0" name="Jump strength">150</param>
+            </actions>
+        </event-block>
+        <event-block sid="732780894071565">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="734612771636978" type="Keyboard">
+                    <param id="0" name="Key">69</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="854691663724505" type="Function">
+                    <param id="0" name="Name">&quot;Fade_FadeOut&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action behavior="Platform" id="1" name="Set max speed" sid="967869381712967" type="Fighters">
-                    <param id="0" name="Max Speed">100</param>
+                <action id="0" name="Call function" sid="558053721642720" type="Function">
+                    <param id="0" name="Name">&quot;Music_FadeOut&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action behavior="Platform" id="2" name="Set acceleration" sid="643812343471218" type="Fighters">
-                    <param id="0" name="Acceleration">100</param>
+                <action id="-41" name="Wait for signal" sid="631788043898130" type="System">
+                    <param id="0" name="Tag">&quot;FadedOut&quot;</param>
                 </action>
-                <action behavior="Platform" id="3" name="Set deceleration" sid="299643124136606" type="Fighters">
-                    <param id="0" name="Deceleration">100</param>
+                <action id="-2" name="Go to layout" sid="851549862733181" type="System">
+                    <param id="0" name="Layout">Raudskjegg_SpaceShooter</param>
                 </action>
             </actions>
         </event-block>

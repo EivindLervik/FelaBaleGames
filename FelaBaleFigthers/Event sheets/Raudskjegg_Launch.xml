@@ -9,6 +9,10 @@
                 <condition id="-2" name="On start of layout" sid="396660509463135" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="438129695023896" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;raudskjegg_intro&quot;</param>
+                </action>
                 <action id="0" name="Call function" sid="686088670724150" type="Function">
                     <param id="0" name="Name">&quot;Fade_FadeIn&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
