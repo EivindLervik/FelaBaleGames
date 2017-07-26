@@ -52,15 +52,15 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="157012592270503" type="System">
                                     <param id="0" name="Variable">LoopTimer</param>
-                                    <param id="1" name="Value">131.95</param>
+                                    <param id="1" name="Value">30.67</param>
                                 </action>
                                 <action id="11" name="Add filter effect" sid="743640255918441" type="Audio">
                                     <param id="0" name="Tag">&quot;a&quot;</param>
                                     <param id="1" name="Type">2</param>
-                                    <param id="2" name="Frequency">8000</param>
-                                    <param id="3" name="Detune">1000</param>
+                                    <param id="2" name="Frequency">5000</param>
+                                    <param id="3" name="Detune">0</param>
                                     <param id="4" name="Q">1</param>
-                                    <param id="5" name="Gain">-10</param>
+                                    <param id="5" name="Gain">-5</param>
                                     <param id="6" name="Mix">100</param>
                                 </action>
                             </actions>

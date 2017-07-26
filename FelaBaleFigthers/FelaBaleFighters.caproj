@@ -194,15 +194,15 @@
                 </object-type>
                 <object-type name="Yokko_Mountain" sid="373991389978139">
                     <plugin id="TiledBg" />
-                    <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Himmel\Mountain.png" />
+                    <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2FjellBG.png" />
                 </object-type>
                 <object-type name="Yokko_Mountain2" sid="584465288436326">
                     <plugin id="TiledBg" />
-                    <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Backgrounds\Himmel\Mountain.png" />
+                    <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2FjellBG2.png" />
                 </object-type>
                 <object-type name="Yokko_Sea" sid="990692340786789">
                     <plugin id="TiledBg" />
-                    <texture />
+                    <texture original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\Yokko_Sea.png" />
                 </object-type>
             </object-folder>
             <object-type name="Black" sid="3206956448522659">
@@ -1191,6 +1191,26 @@
             <object-type name="MenuCharacter" sid="962324554129754">
                 <plugin id="Sprite" />
                 <animation-folder>
+                    <animation-folder name="Yokko">
+                        <animation framecount="2" loop="1" name="Yokko_normal" pingpong="0" repeatcount="1" repeatto="0" sid="366342897572207" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="Yokko_lei" pingpong="0" repeatcount="1" repeatto="0" sid="682933043758812" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                    <animation-folder name="Skuterdama">
+                        <animation framecount="2" loop="1" name="Skuterdama_sint" pingpong="0" repeatcount="1" repeatto="0" sid="984457504004323" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="2" loop="1" name="Skuterdama_skremt" pingpong="0" repeatcount="1" repeatto="0" sid="380880233703978" speed="10">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
                     <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722690280719079" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\FelaBale.png">
                             <collision-poly>
@@ -2018,12 +2038,14 @@
             <object-type name="Yokko_Scooter" sid="588335835663231">
                 <plugin id="Sprite" />
                 <instance-variables>
+                    <instance-variable name="Health" sid="414118464385874" type="number" />
                     <instance-variable name="TurnSpeed" sid="177753286979251" type="number" />
                     <instance-variable name="StartHeight" sid="130805532479659" type="number" />
                     <instance-variable name="Enabled" sid="166935220093103" type="boolean" />
                     <instance-variable name="CurrentTileset" sid="764528064199284" type="number" />
                     <instance-variable name="Transformed" sid="542868059694027" type="boolean" />
                     <instance-variable name="MoveUp" sid="858473304970664" type="boolean" />
+                    <instance-variable name="Landed" sid="529737629036375" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="408832353201075">
@@ -2037,126 +2059,245 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="294394553027563" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirl.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirl2.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="2" loop="1" name="TurnLeft" pingpong="0" repeatcount="1" repeatto="0" sid="256369489086700" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeft1.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeft2.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="2" loop="1" name="TurnRight" pingpong="0" repeatcount="1" repeatto="0" sid="884418232483405" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRight1.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRight2.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="2" loop="1" name="Jump_Run" pingpong="0" repeatcount="1" repeatto="0" sid="531506180594106" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlJump.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlJump2.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="2" loop="1" name="Jump_TurnLeft" pingpong="0" repeatcount="1" repeatto="0" sid="728211536940870" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeftJump1.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeftJump2.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="2" loop="1" name="Jump_TurnRight" pingpong="0" repeatcount="1" repeatto="0" sid="642077758097956" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRightJump1.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRightJump2.png">
-                            <image-point name="Gun" x="0.5" y="0.53125" />
-                            <collision-poly>
-                                <point x="0.28125" y="0.5625" />
-                                <point x="0.71875" y="0.5625" />
-                                <point x="0.71875" y="0.96875" />
-                                <point x="0.28125" y="0.96875" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
+                    <animation-folder name="Normal">
+                        <animation framecount="1" loop="1" name="SoloRun" pingpong="0" repeatcount="1" repeatto="0" sid="493764018631686" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\Scooter.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="294394553027563" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirl.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirl2.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="TurnLeft" pingpong="0" repeatcount="1" repeatto="0" sid="256369489086700" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeft1.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeft2.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="TurnRight" pingpong="0" repeatcount="1" repeatto="0" sid="884418232483405" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRight1.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRight2.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Jump_Run" pingpong="0" repeatcount="1" repeatto="0" sid="531506180594106" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlJump.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlJump2.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Jump_TurnLeft" pingpong="0" repeatcount="1" repeatto="0" sid="728211536940870" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeftJump1.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlLeftJump2.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="1" name="Jump_TurnRight" pingpong="0" repeatcount="1" repeatto="0" sid="642077758097956" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRightJump1.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\ScooterWithGirlRightJump2.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                    <animation-folder name="Fly">
+                        <animation framecount="4" loop="0" name="Transform" pingpong="0" repeatcount="1" repeatto="0" sid="589899080195684" speed="2">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\Scooter1.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\Scooter2.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\Scooter3.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\Scooter4.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="Fly" pingpong="0" repeatcount="1" repeatto="0" sid="588721937742966" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\Scooter4.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="FlyLeft" pingpong="0" repeatcount="1" repeatto="0" sid="440993097490089" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\ScooterLeft.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="FlyRight" pingpong="0" repeatcount="1" repeatto="0" sid="730168824616334" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\ScooterRight.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="Fly2" pingpong="0" repeatcount="1" repeatto="0" sid="880195009631231" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\ScooterDown.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="FlyLeft2" pingpong="0" repeatcount="1" repeatto="0" sid="378949317838427" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\ScooterDownLeft.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="1" name="FlyRight2" pingpong="0" repeatcount="1" repeatto="0" sid="249568747321797" speed="20">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.8125" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\YokkoTransform\ScooterDownRight.png">
+                                <image-point name="Gun" x="0.5" y="0.71875" />
+                                <collision-poly>
+                                    <point x="0.28125" y="0.5625" />
+                                    <point x="0.71875" y="0.5625" />
+                                    <point x="0.71875" y="0.96875" />
+                                    <point x="0.28125" y="0.96875" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
                 </animation-folder>
             </object-type>
             <object-type name="Raudskjegg_Vehicle" sid="734091676242692">
@@ -2364,13 +2505,56 @@
             <object-type name="Yokko_Cutscene" sid="600061241749859">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="257943428005406" speed="20">
-                        <frame duration="100" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene1.png" />
+                    <animation framecount="19" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="257943428005406" speed="20">
+                        <frame duration="40" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene1.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene2.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene3.png" />
                         <frame duration="40" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene4.png" />
-                        <frame duration="40" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2-2.png" />
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene5.png" />
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene6.png" />
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene7.png" />
+                        <frame duration="40" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\CutScene8.png" />
+                        <frame duration="10" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2.png">
+                            <collision-poly>
+                                <point x="0.153125" y="0.255208" />
+                                <point x="0.5" y="0.588542" />
+                                <point x="0.840625" y="0.265625" />
+                                <point x="0.925" y="0.5" />
+                                <point x="0.903125" y="0.838542" />
+                                <point x="0.5" y="0.630208" />
+                                <point x="0.09375" y="0.84375" />
+                                <point x="0.078125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="10" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2-2.png" />
+                        <frame duration="10" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.153125" y="0.255208" />
+                                <point x="0.5" y="0.588542" />
+                                <point x="0.840625" y="0.265625" />
+                                <point x="0.925" y="0.5" />
+                                <point x="0.903125" y="0.838542" />
+                                <point x="0.5" y="0.630208" />
+                                <point x="0.09375" y="0.84375" />
+                                <point x="0.078125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="10" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="40" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="40" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="6" loop="1" name="BG" pingpong="0" repeatcount="1" repeatto="0" sid="636393516806406" speed="5">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2BG.png" />
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2BG-2.png" />
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2BG-3.png" />
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2BG-4.png" />
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2BG-3.png" />
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\StrandCutscene\AngryGuysV2BG-2.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2392,6 +2576,73 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="Yokko_FlyLady" sid="754924225006066">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="210312544859294">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="847525973450291">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="691968633739378" speed="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\DameAv1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Produksjoner\Spill\FelaBaleGames\FelaBaleFigthers\_ASSETS_\Graphix\Sprites\Yokko\Scooter\DameAv2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Yokko_MovingWaves" sid="517197533799311">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MoveSpeed" sid="505055673529063" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="930903172936596">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238013077397932" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScooterHealth_Frame" sid="927038649933091">
+            <plugin id="Sprite" />
+            <container>
+                <type>ScooterHealth_Bar</type>
+                <type>ScooterHealth_Frame</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="389582154396338" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.953125" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScooterHealth_Bar" sid="183338003014156">
+            <plugin id="Sprite" />
+            <container>
+                <type>ScooterHealth_Bar</type>
+                <type>ScooterHealth_Frame</type>
+            </container>
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="415396786682780" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Ground" plugin-id="Sprite" sid="125361228845125">

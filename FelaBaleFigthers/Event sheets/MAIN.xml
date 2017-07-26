@@ -241,5 +241,62 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="340000395892110" title="HUD">
+            <sub-events>
+                <event-block sid="252392842785789">
+                    <conditions>
+                        <condition id="0" name="On function" sid="736073763553762" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Show_VerticalLifebar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="208082461785878" type="ScooterHealth_Frame">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="823874416136777" type="ScooterHealth_Bar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741732474107670">
+                    <conditions>
+                        <condition id="0" name="On function" sid="269227424405462" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Hide_VerticalLifebar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="545417295807233" type="ScooterHealth_Frame">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="370344238044185" type="ScooterHealth_Bar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="501733670377449">
+                    <conditions>
+                        <condition id="0" name="On function" sid="457290633016218" type="Function">
+                            <param id="0" name="Name">&quot;HUD_SetVLPercent&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="159454853121548">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="456068185887443" type="ScooterHealth_Bar" />
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="975460066959536" type="ScooterHealth_Bar">
+                                    <param id="0" name="Height">clamp(58 * (Function.Param(0) / 100), 0, 100)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="718159841708551" type="ScooterHealth_Bar">
+                                    <param id="0" name="Frame number">clamp(floor(Function.Param(0) / 10), 0, 10)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

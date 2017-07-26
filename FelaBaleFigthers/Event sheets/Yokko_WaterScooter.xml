@@ -28,43 +28,63 @@
                 <action id="-16" name="Wait" sid="244406354639734" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="903747686874569" type="Function">
+                <action id="0" name="Call function" sid="903747686874569" type="Function">
                     <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Yokko_Start&quot;</param>
                 </action>
-                <action disabled="1" id="-41" name="Wait for signal" sid="694155392023653" type="System">
+                <action id="-41" name="Wait for signal" sid="694155392023653" type="System">
                     <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
                 </action>
-                <action disabled="1" id="-13" name="Set boolean" sid="323306367838348" type="Yokko_Scooter">
+                <action id="-13" name="Set boolean" sid="323306367838348" type="Yokko_Scooter">
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action disabled="1" id="-16" name="Wait" sid="985562586367397" type="System">
+                <action id="0" name="Call function" sid="890970207246262" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Show_VerticalLifebar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="985562586367397" type="System">
                     <param id="0" name="Seconds">11</param>
                 </action>
-                <action disabled="1" id="-13" name="Set boolean" sid="127546821991033" type="Yokko_Scooter">
+                <action id="0" name="Call function" sid="879387012697285" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Hide_VerticalLifebar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-13" name="Set boolean" sid="127546821991033" type="Yokko_Scooter">
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="200690072939134" type="Function">
+                <action id="0" name="Call function" sid="200690072939134" type="Function">
                     <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Yokko_Fjellvegg&quot;</param>
                 </action>
-                <action disabled="1" id="-41" name="Wait for signal" sid="141421648635904" type="System">
+                <action id="-41" name="Wait for signal" sid="141421648635904" type="System">
                     <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
                 </action>
-                <action disabled="1" id="-13" name="Set boolean" sid="833724611804506" type="Yokko_Scooter">
+                <action id="0" name="Call function" sid="186892618221940" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Show_VerticalLifebar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-13" name="Set boolean" sid="833724611804506" type="Yokko_Scooter">
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action disabled="1" id="-16" name="Wait" sid="528327309217273" type="System">
-                    <param id="0" name="Seconds">4.0</param>
+                <action id="-16" name="Wait" sid="528327309217273" type="System">
+                    <param id="0" name="Seconds">3.0</param>
                 </action>
-                <action disabled="1" id="0" name="Call function" sid="557947030202616" type="Function">
+                <action id="0" name="Call function" sid="413682878870001" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Hide_VerticalLifebar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-13" name="Set boolean" sid="325472516143564" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">Enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="557947030202616" type="Function">
                     <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Yokko_Midway&quot;</param>
                 </action>
-                <action disabled="1" id="-41" name="Wait for signal" sid="317718079160631" type="System">
+                <action id="-41" name="Wait for signal" sid="317718079160631" type="System">
                     <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="112780985287703" type="Function">
@@ -87,6 +107,9 @@
                 <action id="-3" name="Set position" sid="960718181022217" type="Crosshair">
                     <param id="0" name="X">160 + ((Yokko_Scooter.ImagePointX(&quot;Gun&quot;) - 160) / 2)</param>
                     <param id="1" name="Y">96 + ((Yokko_Scooter.ImagePointY(&quot;Gun&quot;) - 96) / 2)</param>
+                </action>
+                <action id="-8" name="Set angle" sid="718783332966249" type="Yokko_FlyLady">
+                    <param id="0" name="Angle">lerp(Yokko_FlyLady.Angle, 180, 0.1)</param>
                 </action>
             </actions>
             <sub-events>
@@ -388,25 +411,55 @@
         </event-block>
         <event-block sid="691992214851723">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="949562226518441" type="Yokko_Scooter">
-                    <param id="0" name="Object">Ramp</param>
+                <condition id="-8" name="Is boolean instance variable set" sid="418754328037105" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">Landed</param>
                 </condition>
-                <condition behavior="Sine" id="0" name="Is active" sid="418754328037105" type="Yokko_Scooter" />
             </conditions>
-            <actions>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="886882738212508" type="Yokko_Scooter">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="395731698483231" type="Yokko_Scooter">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="382145091717914" type="Yokko_Scooter">
-                    <param id="0" name="Angle">270</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="236008888059380" type="Yokko_Scooter">
-                    <param id="0" name="Speed">200</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="674714121593369">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="380700355521804" type="Yokko_Scooter">
+                            <param id="0" name="Object">Ramp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="181969240772534" type="Yokko_Scooter">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="581852137040208" type="Yokko_Scooter">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="381677229752020" type="Yokko_Scooter">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="240313838860461" type="Yokko_Scooter">
+                            <param id="0" name="Speed">200</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="137244908006491" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="697830558725056">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="894383360186537" type="Yokko_Scooter">
+                            <param id="0" name="Object">Mine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="378280959197707" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="0" name="Call function" sid="985996396458526" type="Function">
+                            <param id="0" name="Name">&quot;HUD_SetVLPercent&quot;</param>
+                            <param id="1" name="Parameter {n}">Yokko_Scooter.Health</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="409558229756020">
             <conditions>
@@ -422,8 +475,15 @@
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Y co-ordinate">Yokko_Scooter.StartHeight</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="515604642577020" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Landed</param>
+                        </condition>
                     </conditions>
                     <actions>
+                        <action id="-13" name="Set boolean" sid="474681810174050" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-2" name="Set Y" sid="990911694774375" type="Yokko_Scooter">
                             <param id="0" name="Y">Yokko_Scooter.StartHeight</param>
                         </action>
@@ -609,45 +669,162 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="777341862588586">
+                        <event-block sid="265869658692194">
                             <conditions>
-                                <condition id="-1" name="Compare X" sid="803811659027958" type="Yokko_Scooter">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">160 - 64</param>
+                                <condition id="-8" name="Is boolean instance variable set" sid="895334751012257" type="Yokko_Scooter">
+                                    <param id="0" name="Instance variable">Transformed</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="794081156358383" type="Yokko_Scooter">
-                                    <param id="0" name="Animation">&quot;TurnRight&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="396688019993066">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="842601022069500" type="Yokko_Scooter">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Yokko_Sea.Y - 8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="863994344865418">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="400088462778285" type="Yokko_Scooter">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">160 - 64</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="571122947993062" type="Yokko_Scooter">
+                                                    <param id="0" name="Animation">&quot;FlyRight2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="186307205053046">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="214807668646426" type="System" />
+                                                <condition id="-1" name="Compare X" sid="118168112840396" type="Yokko_Scooter">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">160 + 64</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="142989928419813" type="Yokko_Scooter">
+                                                    <param id="0" name="Animation">&quot;FlyLeft2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="719525216216378">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="578038847836144" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="825184958086377" type="Yokko_Scooter">
+                                                    <param id="0" name="Animation">&quot;Fly2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="170122772690619">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="335403311141127" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="418420141275614">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="957083875715415" type="Yokko_Scooter">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">160 - 64</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="175261306008931" type="Yokko_Scooter">
+                                                    <param id="0" name="Animation">&quot;FlyRight&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="677148354769198">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="433669974111161" type="System" />
+                                                <condition id="-1" name="Compare X" sid="391921213824714" type="Yokko_Scooter">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">160 + 64</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="676116281678870" type="Yokko_Scooter">
+                                                    <param id="0" name="Animation">&quot;FlyLeft&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="732157948011547">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="992608619575672" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="912583570691728" type="Yokko_Scooter">
+                                                    <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="456268619347627">
+                        <event-block sid="766344077886488">
                             <conditions>
-                                <condition id="-22" name="Else" sid="418432760473845" type="System" />
-                                <condition id="-1" name="Compare X" sid="409542103492380" type="Yokko_Scooter">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">160 + 64</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="102993493049002" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="812813931216245" type="Yokko_Scooter">
-                                    <param id="0" name="Animation">&quot;TurnLeft&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="145688216929865">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="520154934675182" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="667777681863607" type="Yokko_Scooter">
-                                    <param id="0" name="Animation">&quot;Run&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="777341862588586">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="803811659027958" type="Yokko_Scooter">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">160 - 64</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="794081156358383" type="Yokko_Scooter">
+                                            <param id="0" name="Animation">&quot;TurnRight&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="456268619347627">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="418432760473845" type="System" />
+                                        <condition id="-1" name="Compare X" sid="409542103492380" type="Yokko_Scooter">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">160 + 64</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="812813931216245" type="Yokko_Scooter">
+                                            <param id="0" name="Animation">&quot;TurnLeft&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="145688216929865">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="520154934675182" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="667777681863607" type="Yokko_Scooter">
+                                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -885,37 +1062,59 @@
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="4" name="Set animation" sid="377668078906881" type="Yokko_Scooter">
+                    <param id="0" name="Animation">&quot;SoloRun&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="582372116106088" type="Yokko_Scooter">
+                    <param id="0" name="Object">Yokko_FlyLady</param>
+                    <param id="1" name="Layer">&quot;Yokko&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="257646272138703" type="Yokko_FlyLady">
+                    <param id="0" name="Angle">270</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="743189782325662" type="Yokko_FlyLady">
+                    <param id="0" name="Speed">400</param>
+                </action>
+                <action id="-16" name="Wait" sid="119331028793149" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="0" name="Call function" sid="250251833540223" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Yokko_KvaKnapp&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="947812257794155" type="System">
+                    <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="812784575269063" type="Yokko_Scooter">
+                    <param id="0" name="Animation">&quot;Transform&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="965697483277591" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="312408487762768" type="Yokko_CourseEdges">
+                    <param id="0" name="Instance variable">UseWrap</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="249646408725879" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
                 <action id="0" name="Call function" sid="799481586930470" type="Function">
                     <param id="0" name="Name">&quot;Music_Play&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;yokko_2&quot;</param>
                 </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="782200479452228" type="Yokko_Scooter">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="388417728349749" type="Yokko_Scooter">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="417335743314400" type="Yokko_Scooter">
-                    <param id="0" name="Angle">270</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="871903792792723" type="Yokko_Scooter">
-                    <param id="0" name="Speed">500</param>
+                <action id="-13" name="Set boolean" sid="793701726897407" type="Yokko_Scooter">
+                    <param id="0" name="Instance variable">MoveUp</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="178367198614741" type="System">
                     <param id="0" name="Seconds">2.0</param>
                 </action>
-                <action id="-2" name="Set Y" sid="991643665939876" type="Yokko_Scooter">
-                    <param id="0" name="Y">320</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="127195879511807" type="Yokko_Scooter">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="287180430097159" type="Yokko_Scooter">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="793701726897407" type="Yokko_Scooter">
-                    <param id="0" name="Instance variable">MoveUp</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-3" name="Set position" sid="991643665939876" type="Yokko_Scooter">
+                    <param id="0" name="X">160</param>
+                    <param id="1" name="Y">400</param>
                 </action>
                 <action id="-15" name="Set visible" sid="211722038066828" type="Yokko_Clouds">
                     <param id="0" name="Visibility">1</param>
@@ -1006,12 +1205,23 @@
                         <condition id="-4" name="Trigger once while true" sid="416076557495648" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="565760046915091" type="System">
+                        <action id="-16" name="Wait" sid="603527806788512" type="System">
                             <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="896267904684092" type="Yokko_Scooter">
+                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="823374767804607" type="Yokko_Scooter">
                             <param id="0" name="Instance variable">MoveUp</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="645426690480108" type="Function">
+                            <param id="0" name="Name">&quot;Dialogue_Prompt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Yokko_Fly&quot;</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="453445355696635" type="System">
+                            <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="916211228902644" type="Yokko_Scooter">
                             <param id="0" name="Instance variable">Enabled</param>
