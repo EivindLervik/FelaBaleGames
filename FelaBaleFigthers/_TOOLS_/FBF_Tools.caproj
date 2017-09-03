@@ -130,7 +130,8 @@
                 <instance-variable name="PositionY" sid="299034904508790" type="number" />
             </instance-variables>
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747617809105820" speed="0">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747617809105820" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -189,6 +190,15 @@
         <object-type global="1" name="Entries" sid="362747559543238">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="MGS_Button" sid="384690455889545">
+            <plugin id="Button" />
+            <instance-variables>
+                <instance-variable name="Choice" sid="931001834070341" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="MGS_Levels" sid="680575717149530">
+            <plugin id="List" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -198,11 +208,15 @@
         <layout>Dialogue_EditDialogue.xml</layout>
         <layout>Dialogue_EditEntry.xml</layout>
         <layout>_BASE_.xml</layout>
+        <layout>MGS.xml</layout>
+        <layout>MGS_Editor.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Menu.xml</event-sheet>
         <event-sheet>SLE.xml</event-sheet>
         <event-sheet>Dialogue.xml</event-sheet>
+        <event-sheet>MGS.xml</event-sheet>
+        <event-sheet>MGS_Editor.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

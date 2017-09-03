@@ -243,6 +243,72 @@
         </event-group>
         <event-group description="" sid="340000395892110" title="HUD">
             <sub-events>
+                <event-block sid="804573499286254">
+                    <conditions>
+                        <condition id="0" name="On function" sid="164141110023384" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Show_Stealth&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="569263552038070" type="HiddenStatus_Statusbar">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="586155393018896" type="HiddenStatus_Frame">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="180596459369605" type="Playboy_Minimap">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="864191046503823">
+                    <conditions>
+                        <condition id="0" name="On function" sid="833155492991986" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Hide_Stealth&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="271370156771155" type="HiddenStatus_Statusbar">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="462909466653645" type="HiddenStatus_Frame">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="951744722784668" type="Playboy_Minimap">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="957338062232041">
+                    <conditions>
+                        <condition id="0" name="On function" sid="115986773489211" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Show_HorizontalLifebar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="821874213976441" type="HealthBar_Horizontal_Frame">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="931872558874921" type="HealthBar_Horizontal">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="148086766079450">
+                    <conditions>
+                        <condition id="0" name="On function" sid="960373135654580" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Hide_HorizontalLifebar&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="721762247041631" type="HealthBar_Horizontal_Frame">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="786869545618991" type="HealthBar_Horizontal">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="252392842785789">
                     <conditions>
                         <condition id="0" name="On function" sid="736073763553762" type="Function">
@@ -250,10 +316,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="208082461785878" type="ScooterHealth_Frame">
+                        <action id="-15" name="Set visible" sid="208082461785878" type="HealthBar_Vertical_Frame">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="823874416136777" type="ScooterHealth_Bar">
+                        <action id="-15" name="Set visible" sid="823874416136777" type="HealthBar_Vertical">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
@@ -265,10 +331,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="545417295807233" type="ScooterHealth_Frame">
+                        <action id="-15" name="Set visible" sid="545417295807233" type="HealthBar_Vertical_Frame">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="370344238044185" type="ScooterHealth_Bar">
+                        <action id="-15" name="Set visible" sid="370344238044185" type="HealthBar_Vertical">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -283,16 +349,185 @@
                     <sub-events>
                         <event-block sid="159454853121548">
                             <conditions>
-                                <condition id="-9" name="Is visible" sid="456068185887443" type="ScooterHealth_Bar" />
+                                <condition id="-9" name="Is visible" sid="456068185887443" type="HealthBar_Vertical" />
                             </conditions>
                             <actions>
-                                <action id="-6" name="Set height" sid="975460066959536" type="ScooterHealth_Bar">
+                                <action id="-6" name="Set height" sid="975460066959536" type="HealthBar_Vertical">
                                     <param id="0" name="Height">clamp(58 * (Function.Param(0) / 100), 0, 100)</param>
                                 </action>
-                                <action id="5" name="Set frame" sid="718159841708551" type="ScooterHealth_Bar">
+                                <action id="5" name="Set frame" sid="718159841708551" type="HealthBar_Vertical">
                                     <param id="0" name="Frame number">clamp(floor(Function.Param(0) / 10), 0, 10)</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="410603226772159">
+                    <conditions>
+                        <condition id="0" name="On function" sid="779682097203995" type="Function">
+                            <param id="0" name="Name">&quot;HUD_SetHLPercent&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="250627417012310">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="264840157888732" type="HealthBar_Horizontal" />
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="765420882118142" type="HealthBar_Horizontal">
+                                    <param id="0" name="Width">clamp(58 * (Function.Param(0) / 100), 0, 100)</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="236704827001794" type="HealthBar_Horizontal">
+                                    <param id="0" name="Frame number">clamp(floor(Function.Param(0) / 10), 0, 10)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="443001761224977">
+                    <conditions>
+                        <condition id="0" name="On function" sid="314134255931350" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Update_Hidden&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="218457025048257">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="504327995221555" type="HiddenStatus_Statusbar" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="623877498486450" type="HiddenStatus_Statusbar">
+                                    <param id="0" name="Frame number">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="834289965007818" title="Electronics_Game">
+            <sub-events>
+                <event-block sid="790295851745278">
+                    <conditions>
+                        <condition id="0" name="On function" sid="574251844976897" type="Function">
+                            <param id="0" name="Name">&quot;Menu_Show_ElectronicsGame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="640809371413288" type="System">
+                            <param id="0" name="Layer">&quot;Electronics_Game&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="155755234460935">
+                    <conditions>
+                        <condition id="0" name="On function" sid="422995822697937" type="Function">
+                            <param id="0" name="Name">&quot;Menu_Hide_ElectronicsGame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="920755312964127" type="System">
+                            <param id="0" name="Layer">&quot;Electronics_Game&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="337406076059829">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="873520842478036" type="System">
+                            <param id="0" name="Layer">&quot;Electronics_Game&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="859298909736475">
+                            <conditions>
+                                <condition id="0" name="On function" sid="864621216983663" type="Function">
+                                    <param id="0" name="Name">&quot;controller_a&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="761542341482985">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="930382157976835" type="Playboy_Switches">
+                                            <param id="0" name="Animation">&quot;A&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="361774326616984">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="761393206484076" type="Playboy_Switches">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="594310687946752" type="Playboy_Switches">
+                                                    <param id="0" name="Frame number">Playboy_Switches.AnimationFrameCount - 1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="360760244268776">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="611464534797278" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="762145465036667" type="Playboy_Switches">
+                                                    <param id="0" name="Frame number">Playboy_Switches.AnimationFrame - 1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="434175511674602">
+                            <conditions>
+                                <condition id="0" name="On function" sid="333219220148948" type="Function">
+                                    <param id="0" name="Name">&quot;controller_b&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="124302956748223">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="408505029852002" type="Playboy_Switches">
+                                            <param id="0" name="Animation">&quot;B&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="139851116006594">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="701369873800262" type="Playboy_Switches">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="907707499299284" type="Playboy_Switches">
+                                                    <param id="0" name="Frame number">Playboy_Switches.AnimationFrameCount - 1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="777895628952237">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="947978795139369" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" sid="524912192478031" type="Playboy_Switches">
+                                                    <param id="0" name="Frame number">Playboy_Switches.AnimationFrame - 1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

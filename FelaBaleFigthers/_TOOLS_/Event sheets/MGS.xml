@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MGS</name>
+    <events>
+        <variable constant="0" name="MGS_Current" sid="640348198579134" static="0" type="number">0</variable>
+        <event-block sid="706677257130809">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="412888087971844" type="System" />
+            </conditions>
+            <actions>
+                <action id="18" name="Maximize" sid="197327421583571" type="NWjs" />
+            </actions>
+        </event-block>
+        <event-block sid="247932283553613">
+            <conditions>
+                <condition id="1" name="Is checked" sid="993069908639285" type="MGS_Button" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="253863069029680">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="346087046402198" type="MGS_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;New&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="359254738469465" type="Function">
+                            <param id="0" name="Name">&quot;MGS_Clear&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="883756482974742" type="Start_TB">
+                            <param id="0" name="Text">&quot;1&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="197701750726014" type="End_TB">
+                            <param id="0" name="Text">&quot;1&quot;</param>
+                        </action>
+                        <action id="8" name="Show save dialog" sid="713096860831808" type="NWjs">
+                            <param id="0" name="Accept">&quot;.tdmap&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="671634032741382">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="510638725730690" type="MGS_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Back&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="819087464143277" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="953142508777930">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="733742247442823" type="MGS_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Save&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="996260812307188" type="Function">
+                            <param id="0" name="Name">&quot;MGS_Save&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="172881146904960">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="478026657585079" type="MGS_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Load&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Show open dialog" sid="530232417651168" type="NWjs">
+                            <param id="0" name="Accept">&quot;.tdmap&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891720131353048">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="458109097501963" type="MGS_Button">
+                            <param id="0" name="Instance variable">Choice</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Edit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="819530532242717" type="System">
+                            <param id="0" name="Variable">MGS_Current</param>
+                            <param id="1" name="Value">MGS_Levels.SelectedIndex</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="782827962271138" type="System">
+                            <param id="0" name="Layout">MGS_Editor</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="138775093447536">
+            <conditions>
+                <condition id="0" name="On function" sid="886611113965174" type="Function">
+                    <param id="0" name="Name">&quot;MGS_Clear&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="411556120313485">
+            <conditions>
+                <condition id="0" name="On function" sid="747966893228702" type="Function">
+                    <param id="0" name="Name">&quot;MGS_Save&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

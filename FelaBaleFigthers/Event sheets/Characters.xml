@@ -1416,5 +1416,152 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="525102042754477" title="Raudskjegg_Vehicle">
+            <sub-events>
+                <event-block sid="546167199035761">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="627357340274754" type="Raudskjegg_Vehicle">
+                            <param id="0" name="Instance variable">Enabled</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="FireSpeed" sid="537882125822116" static="1" type="number">0.3</variable>
+                        <event-block sid="376476522832856">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="236976633168335" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="Object">Raudskjegg_PowerUp</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="139485893857566">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="944295135719519" type="Raudskjegg_PowerUp">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="824916413181459" type="System">
+                                            <param id="0" name="Variable">FireSpeed</param>
+                                            <param id="1" name="Value">FireSpeed * 0.5</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="990673543331066" type="Raudskjegg_PowerUp" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="831529708475460">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="377622495640962" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;up&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="842461870387662" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;up&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="153536101266863" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="744811051798171">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="738211034934260" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;down&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="127773375666825" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;down&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="664416183423725" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="306430990967085">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="476388850371075" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;left&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="447563020793764" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;left&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="974449633997075" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="610746525179084">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="661767128074528" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;right&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="125238471789051" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;right&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="693836222389057" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="312251913445589">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="852732225075379" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;a&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="415019458355839" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;a&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="201321997724902">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="828923593697354" type="System">
+                                            <param id="0" name="Interval (seconds)">FireSpeed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="104938139719832" type="Raudskjegg_Vehicle">
+                                            <param id="0" name="Object">Raudskjegg_Shot</param>
+                                            <param id="1" name="Layer">&quot;Projectiles&quot;</param>
+                                            <param id="2" name="Image point">&quot;Gun&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

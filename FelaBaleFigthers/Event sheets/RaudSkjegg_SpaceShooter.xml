@@ -17,6 +17,10 @@
                     <param id="0" name="Instance variable">Enabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Call function" sid="289188766589151" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Show_HorizontalLifebar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="789150487078477">
@@ -40,15 +44,28 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="712660765743440" type="System" />
             </conditions>
-            <actions>
-                <action id="-17" name="Move forward" sid="907874667970172" type="Raudskjegg_Vehicle">
-                    <param id="0" name="Distance">1</param>
-                </action>
-                <action id="-17" name="Move forward" sid="388148091906556" type="CameraFollower">
-                    <param id="0" name="Distance">1</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
+                <event-block any="1" sid="168580219018141">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="973155679409309" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action1</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;none&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="319894343104607" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action2</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;none&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="208554692661015" type="SpaceShooterObjects">
+                            <param id="0" name="Angle">0</param>
+                            <param id="1" name="Distance">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="285427078832152">
                     <conditions>
                         <condition id="-11" name="For Each" sid="773560384374353" type="System">
@@ -61,144 +78,87 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="260230043818007">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="266128301115709" type="Raudskjegg_Vehicle">
-                    <param id="0" name="Instance variable">Enabled</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <variable constant="0" name="FireSpeed" sid="164367835555546" static="1" type="number">0.3</variable>
-                <event-block sid="660264149447429">
+                <event-block sid="101604606132755">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="568513691620553" type="Raudskjegg_Vehicle">
-                            <param id="0" name="Object">Raudskjegg_PowerUp</param>
+                        <condition id="-1" name="Compare X" sid="730026750780142" type="CameraFollower">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">LayoutWidth - 160</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-17" name="Move forward" sid="388148091906556" type="CameraFollower">
+                            <param id="0" name="Distance">1</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="907874667970172" type="Raudskjegg_Vehicle">
+                            <param id="0" name="Distance">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="472323192948635" type="Raudskjegg_BossHead_Cinematic">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="940789481206279">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="352917536043783" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="610921656797294" type="CameraFollower">
+                            <param id="0" name="X">LayoutWidth - 160</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="672305012327247" type="Raudskjegg_BossHead_Cinematic">
+                            <param id="0" name="Opacity">lerp(Raudskjegg_BossHead_Cinematic.Opacity, 100, 0.05)</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="526294562050523">
+                        <variable constant="0" name="Lerping" sid="269471791081909" static="1" type="number">0</variable>
+                        <event-block sid="844161098006309">
                             <conditions>
-                                <condition id="3" name="Compare frame" sid="306058456979354" type="Raudskjegg_PowerUp">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">0</param>
-                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="339453014059123" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="975615711014571" type="System">
-                                    <param id="0" name="Variable">FireSpeed</param>
-                                    <param id="1" name="Value">FireSpeed * 0.5</param>
+                                <action id="-13" name="Set boolean" sid="160939219685558" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="Instance variable">Enabled</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="892939139079846" type="Raudskjegg_PowerUp" />
+                                <action id="-16" name="Wait" sid="852927103997039" type="System">
+                                    <param id="0" name="Seconds">4.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="587362467851579" type="System">
+                                    <param id="0" name="Variable">Lerping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="166030764863730" type="Function">
+                                    <param id="0" name="Name">&quot;Music_FadeOut&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="307652148020174" type="Function">
+                                    <param id="0" name="Name">&quot;Fade_FadeOut&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-41" name="Wait for signal" sid="490325934740420" type="System">
+                                    <param id="0" name="Tag">&quot;FadedOut&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="242862551295154" type="System">
+                                    <param id="0" name="Layout">Raudskjegg_Boss</param>
+                                </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block any="1" sid="750282012915363">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="921542165270875" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;up&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="443215749061393" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;up&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="456785765436890" type="Raudskjegg_Vehicle">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="813305819266720">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="882728355748983" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;down&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="722644615498000" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;down&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="653857151282043" type="Raudskjegg_Vehicle">
-                            <param id="0" name="Control">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="634321971451657">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="572766980485338" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;left&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="683684581719998" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;left&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="403316672314083" type="Raudskjegg_Vehicle">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="236023471670583">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="387106176695291" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;right&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="109982395280371" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;right&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="377195232482291" type="Raudskjegg_Vehicle">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="194388518276859">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="527380527132036" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, 0, &quot;a&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="154285458780226" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;IsKeyDown&quot;, -1, &quot;a&quot;)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="891077893591981">
+                        <event-block sid="338241157806071">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="163034301942538" type="System">
-                                    <param id="0" name="Interval (seconds)">FireSpeed</param>
+                                <condition id="-14" name="Compare variable" sid="156286237634002" type="System">
+                                    <param id="0" name="Variable">Lerping</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="813006945517520" type="Raudskjegg_Vehicle">
-                                    <param id="0" name="Object">Raudskjegg_Shot</param>
-                                    <param id="1" name="Layer">&quot;Projectiles&quot;</param>
-                                    <param id="2" name="Image point">&quot;Gun&quot;</param>
+                                <action id="-3" name="Set position" sid="740954497948804" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="X">lerp(Raudskjegg_Vehicle.X, CameraFollower.X, 0.01)</param>
+                                    <param id="1" name="Y">lerp(Raudskjegg_Vehicle.Y, CameraFollower.Y, 0.01)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="711254217725915" type="Raudskjegg_Vehicle">
+                                    <param id="0" name="Width">Raudskjegg_Vehicle.Width * 0.95</param>
+                                    <param id="1" name="Height">Raudskjegg_Vehicle.Height * 0.95</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -283,5 +243,243 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="182315938551353" title="Enemies">
+            <sub-events>
+                <event-block sid="431887537166113">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="490154697769227" type="SpaceShooterObjects">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">CameraFollower.X + 176</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="678324176941341" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Active</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="696875962835940">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="280769017939953" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="519336263276844" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="679061481477756" type="SpaceShooterObjects">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="827763907914670">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="351806809666786" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="795079009321660" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="418193106265527" type="SpaceShooterObjects">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="609714640211851">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="380280860202908" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;up&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="208172870377828" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="358629565331044" type="SpaceShooterObjects">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="601423212421332">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="734055766789327" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;down&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="596400135138500" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Action2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="159572858043538" type="SpaceShooterObjects">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="334826885124403">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="616036359751971" type="Raudskjegg_Shot">
+                            <param id="0" name="Object">SpaceShooterObjects</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="576254950467611" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Raudskjegg_Shot.Damage</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="221006993234826" type="Raudskjegg_Shot" />
+                    </actions>
+                </event-block>
+                <event-block sid="626656425722600">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="858161052771063" type="Raudskjegg_EnemyShot">
+                            <param id="0" name="Object">Raudskjegg_Vehicle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="404352106701423" type="Raudskjegg_Vehicle">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Raudskjegg_EnemyShot.Damage</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="791949290660771" type="Raudskjegg_EnemyShot" />
+                        <action id="0" name="Call function" sid="913844430566004" type="Function">
+                            <param id="0" name="Name">&quot;HUD_SetHLPercent&quot;</param>
+                            <param id="1" name="Parameter {n}">Raudskjegg_Vehicle.Health</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="457466562830725">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="142276562405125" type="SpaceShooterObjects">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="992875232339520" type="SpaceShooterObjects" />
+                    </actions>
+                </event-block>
+                <event-group description="" sid="791775407813941" title="Common">
+                    <sub-events>
+                        <event-block sid="487395457864191">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="208383149779722" type="Raudskjegg_Enemy_Common">
+                                    <param id="0" name="Instance variable">Active</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="107953868834376">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="679288809094773" type="System">
+                                            <param id="0" name="Object">Raudskjegg_Enemy_Common</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="595441249266903">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="540242387713527" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;none&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="484134722332834" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action1</param>
+                                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="645835710440289" type="System">
+                                                    <param id="0" name="Seconds">2.0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="339709391126069" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action1</param>
+                                                    <param id="1" name="Value">&quot;wait&quot;</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="761483314805661" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="692729112565645" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action1</param>
+                                                    <param id="1" name="Value">&quot;shoot&quot;</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="124470437700930" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="109976322298917" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action1</param>
+                                                    <param id="1" name="Value">&quot;up&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="662272982549568" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action2</param>
+                                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="479781684186285">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="776438057487007" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;shoot&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="874376456907456" type="Raudskjegg_Enemy_Common">
+                                                    <param id="0" name="Instance variable">Action1</param>
+                                                    <param id="1" name="Value">&quot;wait&quot;</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="693995993079454">
+                                                    <conditions>
+                                                        <condition id="-10" name="For" sid="561391562170646" type="System">
+                                                            <param id="0" name="Name">&quot;s&quot;</param>
+                                                            <param id="1" name="Start index">0</param>
+                                                            <param id="2" name="End index">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="282593977331227" type="Raudskjegg_Enemy_Common">
+                                                            <param id="0" name="Object">Raudskjegg_EnemyShot</param>
+                                                            <param id="1" name="Layer">&quot;Projectiles&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="960056620799891" type="Raudskjegg_EnemyShot">
+                                                            <param id="0" name="Angle">(40 * loopindex(&quot;s&quot;)) + 90</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

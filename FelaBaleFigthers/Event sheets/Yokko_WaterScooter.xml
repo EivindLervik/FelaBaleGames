@@ -285,7 +285,7 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="656556990059027" type="Yokko_CourseEdges">
                             <param id="0" name="Instance variable">Disposable</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-3" name="Create object" sid="621336461210398" type="System">
                             <param id="0" name="Object to create">Yokko_CourseEdges</param>
@@ -308,7 +308,7 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="627203015252954" type="Yokko_CourseEdges">
                             <param id="0" name="Instance variable">Disposable</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -353,8 +353,63 @@
                 <action id="9" name="Set scale" sid="923073682228476" type="Yokko_CourseEdges">
                     <param id="0" name="Scale">0.5</param>
                 </action>
+                <action id="-25" name="Move to bottom" sid="494821665614418" type="Yokko_CourseEdges" />
             </actions>
             <sub-events>
+                <event-block sid="937624799874906">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="202646425013979" type="Yokko_CourseEdges">
+                            <param id="0" name="Instance variable">IsFlight</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="466186949498932">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="410628649263014" type="Yokko_CourseEdges">
+                                    <param id="0" name="Instance variable">Disposable</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="241634892286828" type="Yokko_CourseEdges" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="782699908197439">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="289386139543776" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="704511231555985">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="775468407447601" type="Yokko_CourseEdges">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="680619626118404" type="Yokko_CourseEdges">
+                                            <param id="0" name="Frame number">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="323068108394610">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="702727447826907" type="Yokko_CourseEdges">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="389311758646298" type="Yokko_CourseEdges">
+                                            <param id="0" name="Frame number">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block any="1" sid="182256446512009">
                     <conditions>
                         <condition id="3" name="Compare frame" sid="295883634955816" type="Yokko_CourseEdges">
@@ -442,10 +497,13 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="697830558725056">
+                <event-block any="1" sid="697830558725056">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="894383360186537" type="Yokko_Scooter">
                             <param id="0" name="Object">Mine</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="453214042324714" type="Yokko_Scooter">
+                            <param id="0" name="Object">Yokko_Stake</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -573,7 +631,7 @@
                                 <event-block sid="930200421145180">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="725802651539176" type="System">
-                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                            <param id="0" name="Interval (seconds)">0.1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -973,6 +1031,28 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="939845177473528">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="664822985456114" type="Yokko_1">
+                                            <param id="0" name="X">loopindex(&quot;element&quot;)</param>
+                                            <param id="1" name="Y">Yokko_Scooter.CurrentTileset</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">&quot;4&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="503343414546352" type="System">
+                                            <param id="0" name="Object to create">Yokko_Stake</param>
+                                            <param id="1" name="Layer">&quot;Object&quot;</param>
+                                            <param id="2" name="X">160 + ((loopindex(&quot;element&quot;) - 4) * 16)</param>
+                                            <param id="3" name="Y">YOKKO_HORIZON</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="293055184384788" type="System">
+                                            <param id="0" name="Variable">UID</param>
+                                            <param id="1" name="Value">Yokko_Stake.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="177184135420025">
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="868361465913091" type="System" />
@@ -1091,6 +1171,10 @@
                     <param id="0" name="Animation">&quot;Transform&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="318578750654968" type="Yokko_CourseEdges">
+                    <param id="0" name="Instance variable">IsFlight</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-16" name="Wait" sid="965697483277591" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
@@ -1146,60 +1230,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="667173726397266">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="986288768749478" type="System">
-                            <param id="0" name="Object">Yokko_CourseEdges</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="866271608419060">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="389368309959323" type="Yokko_CourseEdges">
-                                    <param id="0" name="Instance variable">Disposable</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="125297821746056" type="Yokko_CourseEdges" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="567802641263713">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="321426664179676" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="883175711292380">
-                                    <conditions>
-                                        <condition id="3" name="Compare frame" sid="754003937586476" type="Yokko_CourseEdges">
-                                            <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Number">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set frame" sid="179322880066353" type="Yokko_CourseEdges">
-                                            <param id="0" name="Frame number">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="758285362067196">
-                                    <conditions>
-                                        <condition id="3" name="Compare frame" sid="783794480190238" type="Yokko_CourseEdges">
-                                            <param id="0" name="Comparison">0</param>
-                                            <param id="1" name="Number">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Set frame" sid="253997937775144" type="Yokko_CourseEdges">
-                                            <param id="0" name="Frame number">3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="443776508017738">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="416076557495648" type="System" />
@@ -1222,6 +1252,18 @@
                         </action>
                         <action id="-41" name="Wait for signal" sid="453445355696635" type="System">
                             <param id="0" name="Tag">&quot;dialogue_done&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="865114043405222" type="Yokko_Scooter">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="0" name="Call function" sid="976575135570663" type="Function">
+                            <param id="0" name="Name">&quot;HUD_Show_VerticalLifebar&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="233660249380292" type="Function">
+                            <param id="0" name="Name">&quot;HUD_SetVLPercent&quot;</param>
+                            <param id="1" name="Parameter {n}">Yokko_Scooter.Health</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="916211228902644" type="Yokko_Scooter">
                             <param id="0" name="Instance variable">Enabled</param>

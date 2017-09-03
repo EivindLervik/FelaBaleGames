@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Playboy_Outside</name>
+    <events>
+        <include>MAIN</include>
+        <event-block sid="145985537434081">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="944485412016076" type="System" />
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="144425800597634" type="CameraFollower">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="417415039241255" type="Yokko_Small">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Playboy_Stage</name>
+    <events>
+        <include>Course</include>
+        <event-block sid="664478633542484">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="744978308808718" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="0" name="Call function" sid="700031386909293" type="Function">
+                    <param id="0" name="Name">&quot;Menu_Show_ElectronicsGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="886003113217336" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Show_Stealth&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="1" name="Set size" sid="518569147069672" type="Playboy_Map">
+                    <param id="0" name="Width">int(LayoutWidth / 16)</param>
+                    <param id="1" name="Height">int(LayoutHeight / 16)</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="921963131275739">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="540648244011307" type="System">
+                            <param id="0" name="Object">TD_Dynamic</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="700778763459168" type="TD_Dynamic">
+                            <param id="0" name="Instance variable">StartX</param>
+                            <param id="1" name="Value">TD_Dynamic.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="900534548452803" type="TD_Dynamic">
+                            <param id="0" name="Instance variable">StartY</param>
+                            <param id="1" name="Value">TD_Dynamic.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="797022265892850">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="367841531762863" type="System">
+                            <param id="0" name="Object">Playboy_Object</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="448458947877825" type="Playboy_Map">
+                            <param id="0" name="X">int(Playboy_Object.X / 16)</param>
+                            <param id="1" name="Y">int(Playboy_Object.Y / 16) - 1</param>
+                            <param id="2" name="Value">Playboy_Object.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="349931453056294">
+                    <conditions>
+                        <condition id="-10" name="For" sid="257310472890933" type="System">
+                            <param id="0" name="Name">&quot;Y&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">Playboy_Map.Height-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="216943875940305">
+                            <conditions>
+                                <condition id="-10" name="For" sid="889514714628048" type="System">
+                                    <param id="0" name="Name">&quot;X&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Playboy_Map.Width-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="815587668929258">
+                                    <conditions>
+                                        <condition id="1" name="Compare at XY" sid="293616690992761" type="Playboy_Map">
+                                            <param id="0" name="X">loopindex(&quot;X&quot;)</param>
+                                            <param id="1" name="Y">loopindex(&quot;Y&quot;)</param>
+                                            <param id="2" name="Comparison">1</param>
+                                            <param id="3" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="496708511243699" type="Playboy_Object">
+                                            <param id="0" name="Unique ID">Playboy_Map.At(loopindex(&quot;X&quot;), loopindex(&quot;Y&quot;))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="734814572540540">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="240479700203317" type="Playboy_Object">
+                                                    <param id="0" name="Instance variable">Object</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;BasicWall&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="132092494675689" type="Playboy_Object">
+                                                    <param id="0" name="Object">Playboy_BasicWall</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="621727188177218">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="754832017997223" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="611955273991986" type="Playboy_TD">
+                    <param id="0" name="Object">Playboy_TD_Feet</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="872328344161679" type="CharacterLight">
+                    <param id="0" name="Object">Playboy_TD</param>
+                    <param id="1" name="Image point (optional)">&quot;Center&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="536003365242741" type="RoombaSearchLight">
+                    <param id="0" name="Object">Playboy_Roomba</param>
+                    <param id="1" name="Image point (optional)">&quot;Center&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="927384673350553">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="171396308232693" type="Playboy_Roomba" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="580886318413035" type="RoombaSearchLight">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="733202279378262">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="760041514784296" type="Playboy_Roomba" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="281444088443340" type="RoombaSearchLight">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="607418609450898">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="386992616736768" type="TD_Dynamic">
+                    <param id="0" name="Object">TD_Static</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="822693296361360">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="552082465321940" type="System">
+                            <param id="0" name="Object">TD_Dynamic</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="560718737302481">
+                            <conditions>
+                                <condition id="-17" name="Pick top/bottom" sid="292713518826083" type="TD_Static">
+                                    <param id="0" name="Which">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="858398204322460">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="812395275702569" type="TD_Static">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">TD_Dynamic.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-29" name="Move to object" sid="684288816637520" type="TD_Dynamic">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Object">TD_Static</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="128078364944125">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="855296915051330" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="299892790708396">
+                                            <conditions>
+                                                <condition id="-19" name="Pick all" sid="555508220178925" type="System">
+                                                    <param id="0" name="Object">TD_Static</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="244191543640095">
+                                                    <conditions>
+                                                        <condition id="1" name="Is overlapping another object" sid="315051433602456" type="TD_Dynamic">
+                                                            <param id="0" name="Object">TD_Static</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="236298530195337">
+                                                            <conditions>
+                                                                <condition id="-2" name="Compare Y" sid="109940473687718" type="TD_Static">
+                                                                    <param id="0" name="Comparison">5</param>
+                                                                    <param id="1" name="Y co-ordinate">TD_Dynamic.Y</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="443017091600410">
+                                                                    <conditions>
+                                                                        <condition id="-17" name="Pick top/bottom" sid="410364723487894" type="TD_Static">
+                                                                            <param id="0" name="Which">1</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-29" name="Move to object" sid="912583726754493" type="TD_Dynamic">
+                                                                            <param id="0" name="Where">1</param>
+                                                                            <param id="1" name="Object">TD_Static</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="421668335016454" title="Playboy_Enemies">
+            <sub-events>
+                <event-group description="" inactive="1" sid="685618358908519" title="PB_Encounter">
+                    <sub-events>
+                        <event-block sid="248260144917875">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="543928797994144" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="704665703319771" type="Function">
+                                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;playboy_encounter&quot;{###}&quot;Direct&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="241788768725727" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_Update_Hidden&quot;</param>
+                                    <param id="1" name="Parameter {n}">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="847334943778993">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="769404546995009" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="237561734408494">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="487760490508187" type="System">
+                                            <param id="0" name="Object">TD_Dynamic</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="721213628152058" type="TD_Dynamic">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;PLAYER&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="796159811237461" type="TD_Dynamic">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Value">&quot;chase&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="810481988494587">
+                            <conditions>
+                                <condition behavior="Pathfinding" id="0" name="On path found" sid="741581414174490" type="TD_Dynamic" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="1" name="Move along path" sid="834966194713133" type="TD_Dynamic" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="976325759394496">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="189449741134329" type="Playboy_TD">
+                                    <param id="0" name="Tag">&quot;hidden&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="497700220043322" type="System">
+                                    <param id="0" name="Group name">&quot;PB_Encounter&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="684517301235697" type="System">
+                                    <param id="0" name="Group name">&quot;PB_Normal&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="Found" sid="627144204020576" static="1" type="text">No</variable>
+                        <event-block sid="590583386198657">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="914315161386750" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="516946671347104">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="427403377705127" type="System">
+                                            <param id="0" name="Object">TD_Dynamic</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="562234462823917" type="TD_Dynamic">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;PLAYER&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="747087475379248">
+                                            <conditions>
+                                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="880813867398987" type="TD_Dynamic">
+                                                    <param id="0" name="Object">Playboy_TD_Feet</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="578255719461194" type="System">
+                                                    <param id="0" name="Variable">Found</param>
+                                                    <param id="1" name="Value">&quot;Yes&quot;</param>
+                                                </action>
+                                                <action behavior="Pathfinding" id="0" name="Find path" sid="966135920618413" type="TD_Dynamic">
+                                                    <param id="0" name="X">Playboy_TD.X</param>
+                                                    <param id="1" name="Y">Playboy_TD.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="200200388735656">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="960660787337425" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="193018987011559" type="System">
+                                                    <param id="0" name="Variable">Found</param>
+                                                    <param id="1" name="Value">&quot;No&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="849167116853491">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="965665892592248" type="System">
+                                    <param id="0" name="Variable">Found</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;No&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="361926634350077" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_Update_Hidden&quot;</param>
+                                    <param id="1" name="Parameter {n}">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="291484882935639">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="334642095680293" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="735905492870858" type="Playboy_TD">
+                                            <param id="0" name="Duration">5.0</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;hidden&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="512272700004300">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="438940855068084" type="System">
+                                    <param id="0" name="Variable">Found</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Yes&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="387699806511118" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_Update_Hidden&quot;</param>
+                                    <param id="1" name="Parameter {n}">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="501912730449895">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="478108692442899" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Timer" id="1" name="Stop timer" sid="108051201503109" type="Playboy_TD">
+                                            <param id="0" name="Tag">&quot;hidden&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="849731191213013" title="PB_Normal">
+                    <sub-events>
+                        <event-block sid="818645053142539">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="369775626614033" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="573478661432032" type="Function">
+                                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;playboy_1&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="698426283997714" type="Function">
+                                    <param id="0" name="Name">&quot;HUD_Update_Hidden&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="723939044253813">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="375124908515366" type="System">
+                                            <param id="0" name="Object">TD_Dynamic</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="216110517895679" type="TD_Dynamic">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;PLAYER&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="687964118142277" type="TD_Dynamic">
+                                            <param id="0" name="Instance variable">Action</param>
+                                            <param id="1" name="Value">&quot;goToStart&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="712831800665214">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="917054432993509" type="RoombaSearchLight">
+                                    <param id="0" name="Object">Playboy_TD_Feet</param>
+                                </condition>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="115961237792128" type="Playboy_Roomba">
+                                    <param id="0" name="Object">Playboy_TD_Feet</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="126623776240584" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="523655039499184" type="System">
+                                    <param id="0" name="Group name">&quot;PB_Encounter&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="865345539297214" type="System">
+                                    <param id="0" name="Group name">&quot;PB_Normal&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="942609907119434">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="968785309314529" type="Playboy_Roomba">
+                                    <param id="0" name="Tag">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="592349131354463" type="Playboy_Roomba">
+                                    <param id="0" name="Instance variable">Action</param>
+                                    <param id="1" name="Value">&quot;idle&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="895723303025419" type="System">
+                                    <param id="0" name="Seconds">2.0</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="817301397504230" type="Playboy_Roomba">
+                                    <param id="0" name="Duration">4.0</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;right&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="396066542773600" type="Playboy_Roomba">
+                                    <param id="0" name="Instance variable">Action</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="398318343360143">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="853795829988665" type="Playboy_Roomba">
+                                    <param id="0" name="Tag">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="800873247783281" type="Playboy_Roomba">
+                                    <param id="0" name="Instance variable">Action</param>
+                                    <param id="1" name="Value">&quot;idle&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="348901088498245" type="System">
+                                    <param id="0" name="Seconds">2.0</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="873686667310837" type="Playboy_Roomba">
+                                    <param id="0" name="Duration">4.0</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;left&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="271556557202510" type="Playboy_Roomba">
+                                    <param id="0" name="Instance variable">Action</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="293306721499473">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="894507092473096" type="TD_Dynamic">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="985868281453650" type="TD_Dynamic">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="168997813293010" type="Playboy_Roomba">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="663566584472191">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="738699429024078" type="TD_Dynamic">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;goToStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="299998600970356">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="917741427715730" type="System">
+                                    <param id="0" name="First value">distance(TD_Dynamic.X, TD_Dynamic.Y, TD_Dynamic.StartX, TD_Dynamic.StartY)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="178179898667662" type="TD_Dynamic">
+                                    <param id="0" name="Instance variable">Action</param>
+                                    <param id="1" name="Value">&quot;back&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="742211170720744">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="553637684450590" type="TD_Dynamic">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="326895674814479" type="TD_Dynamic">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="322403856706904" type="Playboy_Roomba">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="815707169855112">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="416519469773988" type="TD_Dynamic">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="948542048631805" type="TD_Dynamic">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="328236944443916">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="713109545086254" type="TD_Dynamic">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="915628450186353" type="TD_Dynamic">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="299066782115215">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="982566061554110" type="Playboy_Roomba">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;back&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="652736898786170" type="Playboy_Roomba">
+                            <param id="0" name="Instance variable">Action</param>
+                            <param id="1" name="Value">&quot;left&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="462309698877236" type="Playboy_Roomba">
+                            <param id="0" name="Duration">2.0</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;left&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

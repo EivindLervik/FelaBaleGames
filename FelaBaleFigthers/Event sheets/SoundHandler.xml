@@ -9,6 +9,8 @@
                 <variable constant="0" name="Action" sid="530039411152890" static="1" type="text"></variable>
                 <variable constant="0" name="NextToPlay" sid="457158089837377" static="1" type="text"></variable>
                 <variable constant="0" name="LoopTimer" sid="425193944886099" static="1" type="number">9999</variable>
+                <variable constant="0" name="EventTimer" sid="338105563629279" static="1" type="number">9999</variable>
+                <variable constant="0" name="EventTimer2" sid="433374772984351" static="1" type="number">9999</variable>
                 <variable constant="1" name="LoopTimerNoLoop" sid="966708115992482" static="1" type="number">9999</variable>
                 <event-block sid="784863922163161">
                     <conditions>
@@ -16,7 +18,16 @@
                             <param id="0" name="Name">&quot;Music_Play&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="301831605815943" type="System">
+                            <param id="0" name="Variable">LoopTimer</param>
+                            <param id="1" name="Value">LOOPTIMERNOLOOP</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="508427322562210" type="System">
+                            <param id="0" name="Variable">EventTimer</param>
+                            <param id="1" name="Value">LOOPTIMERNOLOOP</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="892678195649380">
                             <conditions>
@@ -56,6 +67,15 @@
                                 </action>
                                 <action id="11" name="Add filter effect" sid="743640255918441" type="Audio">
                                     <param id="0" name="Tag">&quot;a&quot;</param>
+                                    <param id="1" name="Type">2</param>
+                                    <param id="2" name="Frequency">5000</param>
+                                    <param id="3" name="Detune">0</param>
+                                    <param id="4" name="Q">1</param>
+                                    <param id="5" name="Gain">-5</param>
+                                    <param id="6" name="Mix">100</param>
+                                </action>
+                                <action id="11" name="Add filter effect" sid="725007119754249" type="Audio">
+                                    <param id="0" name="Tag">&quot;b&quot;</param>
                                     <param id="1" name="Type">2</param>
                                     <param id="2" name="Frequency">5000</param>
                                     <param id="3" name="Detune">0</param>
@@ -112,10 +132,6 @@
                                     <param id="0" name="Variable">NextToPlay</param>
                                     <param id="1" name="Value">&quot;Raudskjegg_0&quot;</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="365162856239484" type="System">
-                                    <param id="0" name="Variable">LoopTimer</param>
-                                    <param id="1" name="Value">LOOPTIMERNOLOOP</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="294068655405838">
@@ -156,27 +172,108 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="356206737836211">
+                        <event-block sid="715476820925341">
                             <conditions>
-                                <condition id="5" name="Is tag playing" sid="982247901799241" type="Audio">
-                                    <param id="0" name="Tag">&quot;a&quot;</param>
-                                </condition>
-                                <condition id="5" name="Is tag playing" sid="718170406207168" type="Audio">
-                                    <param id="0" name="Tag">&quot;b&quot;</param>
+                                <condition id="1" name="Compare parameter" sid="641859348007397" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;raudskjegg_3&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="832526467499218" type="Function">
-                                    <param id="0" name="Name">&quot;Music_FadeOut&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;Next&quot;</param>
+                                <action id="-9" name="Set value" sid="744740274873722" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Raudskjegg_3&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="672431730992165" type="System">
+                                    <param id="0" name="Variable">LoopTimer</param>
+                                    <param id="1" name="Value">66.62</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="114366754874153" type="System">
+                                    <param id="0" name="Variable">EventTimer</param>
+                                    <param id="1" name="Value">43.3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="484812625971678" type="System">
+                                    <param id="0" name="Variable">EventTimer2</param>
+                                    <param id="1" name="Value">64.6</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="758571310024899">
+                        <event-block sid="239352709467159">
                             <conditions>
-                                <condition id="-22" name="Else" sid="606873128560180" type="System" />
+                                <condition id="1" name="Compare parameter" sid="365857405738974" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;raudskjegg_4&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="801859085313008" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Raudskjegg_4&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="713755049430875">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="745043519665428" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;playboy_0&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="816605841693061" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Playboy_0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="358827928572680">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="766285296321939" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;playboy_1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="611419436680821" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Playboy_1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="509225151262372">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="819227807689479" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;playboy_encounter&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="800481794002102" type="System">
+                                    <param id="0" name="Variable">NextToPlay</param>
+                                    <param id="1" name="Value">&quot;Playboy_2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="237687436334752">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="565533873885952" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Direct&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="646533097339224" type="Audio">
+                                    <param id="0" name="Tag">&quot;a&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="591068758190003" type="Audio">
+                                    <param id="0" name="Tag">&quot;b&quot;</param>
+                                </action>
                                 <action id="7" name="Play (by name)" sid="106348781989164" type="Audio">
                                     <param id="0" name="Folder">1</param>
                                     <param id="1" name="Audio file name">NextToPlay</param>
@@ -189,6 +286,52 @@
                                     <param id="1" name="Value">NextToPlay</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="687631708946346">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="252494789404958" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="356206737836211">
+                                    <conditions>
+                                        <condition id="5" name="Is tag playing" sid="982247901799241" type="Audio">
+                                            <param id="0" name="Tag">&quot;a&quot;</param>
+                                        </condition>
+                                        <condition id="5" name="Is tag playing" sid="718170406207168" type="Audio">
+                                            <param id="0" name="Tag">&quot;b&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="832526467499218" type="Function">
+                                            <param id="0" name="Name">&quot;Music_FadeOut&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Next&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="758571310024899">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="606873128560180" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Play (by name)" sid="236047855172062" type="Audio">
+                                            <param id="0" name="Folder">1</param>
+                                            <param id="1" name="Audio file name">NextToPlay</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">0</param>
+                                            <param id="2" name="Tag (optional)">&quot;a&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="875957034092854" type="System">
+                                            <param id="0" name="Variable">CurrentClip</param>
+                                            <param id="1" name="Value">NextToPlay</param>
+                                        </action>
+                                        <action disabled="1" id="23" name="Seek to" sid="840454977161540" type="Audio">
+                                            <param id="0" name="Tag">&quot;a&quot;</param>
+                                            <param id="1" name="Position">40</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -244,6 +387,68 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block any="1" sid="323825072576415">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="797940160764443" type="System">
+                            <param id="0" name="First value">Audio.PlaybackTime(&quot;a&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">EventTimer</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="138781005321557" type="System">
+                            <param id="0" name="First value">Audio.PlaybackTime(&quot;b&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">EventTimer</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="815563176383524">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="645140697939340" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-42" name="Signal" sid="494266610739684" type="System">
+                                    <param id="0" name="Tag">&quot;music_event&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="540997738673654" type="Function">
+                                    <param id="0" name="Name">&quot;Music_Event&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="212271109691110">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="655691284824930" type="System">
+                            <param id="0" name="First value">Audio.PlaybackTime(&quot;a&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">EventTimer2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="766253606039342" type="System">
+                            <param id="0" name="First value">Audio.PlaybackTime(&quot;b&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">EventTimer2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="994683113264871">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="104633775697096" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-42" name="Signal" sid="849893470218799" type="System">
+                                    <param id="0" name="Tag">&quot;music_event2&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="897493288914132" type="Function">
+                                    <param id="0" name="Name">&quot;Music_Event2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="418418834611933">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="986659436569617" type="System">
@@ -259,6 +464,9 @@
                             <param id="3" name="Loop">0</param>
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;b&quot;</param>
+                        </action>
+                        <action id="-42" name="Signal" sid="970832679010634" type="System">
+                            <param id="0" name="Tag">&quot;music_loop&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -277,6 +485,9 @@
                             <param id="3" name="Loop">0</param>
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;a&quot;</param>
+                        </action>
+                        <action id="-42" name="Signal" sid="993452092321531" type="System">
+                            <param id="0" name="Tag">&quot;music_loop&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -316,6 +527,9 @@
                                     <actions>
                                         <action id="12" name="Remove all effects" sid="221663692290455" type="Audio">
                                             <param id="0" name="Tag">&quot;a&quot;</param>
+                                        </action>
+                                        <action id="12" name="Remove all effects" sid="983789061561813" type="Audio">
+                                            <param id="0" name="Tag">&quot;b&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -399,6 +613,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="12" name="Remove all effects" sid="583977107913906" type="Audio">
+                                            <param id="0" name="Tag">&quot;a&quot;</param>
+                                        </action>
                                         <action id="12" name="Remove all effects" sid="285068697023028" type="Audio">
                                             <param id="0" name="Tag">&quot;b&quot;</param>
                                         </action>

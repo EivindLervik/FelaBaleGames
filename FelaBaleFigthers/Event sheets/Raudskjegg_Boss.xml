@@ -1,0 +1,1885 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Raudskjegg_Boss</name>
+    <events>
+        <include>Course</include>
+        <event-block sid="678526059341568">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="130064185721945" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="564633104748515" type="Function">
+                    <param id="0" name="Name">&quot;Music_Play&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;raudskjegg_3&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="426624589226665" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Boss_ChangeState&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Idle_Back&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="111171165838431" type="RS_DiscoShield" />
+                <action id="-3" name="Set position" sid="881711384890676" type="Raudskjegg_Vehicle">
+                    <param id="0" name="X">-16</param>
+                    <param id="1" name="Y">-16</param>
+                </action>
+                <action id="0" name="Call function" sid="640609777837498" type="Function">
+                    <param id="0" name="Name">&quot;HUD_Show_HorizontalLifebar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="677488262659771" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="782810904510890" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Instance variable">Enabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="488326146919768">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="330393464099687" type="System" />
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="138046345283845" type="Raudskjegg_Space">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">Raudskjegg_Space.Speed</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="265471246362449" type="Raudskjegg_SunSurface">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">6</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="527765461601878" type="Raudskjegg_HallSurface">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">Raudskjegg_HallSurface.Speed</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="653267865399557" type="Raudskjegg_HallWindows">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">Raudskjegg_HallWindows.Speed</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="397551487972342" type="Raudskjegg_Transition">
+                    <param id="0" name="Angle">180</param>
+                    <param id="1" name="Distance">10</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="668664370851641">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="552973324284714" type="Raudskjegg_Vehicle">
+                            <param id="0" name="Instance variable">Enabled</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="645259518201316" type="Raudskjegg_Vehicle">
+                            <param id="0" name="X">lerp(Raudskjegg_Vehicle.X, 64, 0.05)</param>
+                            <param id="1" name="Y">lerp(Raudskjegg_Vehicle.Y, 112, 0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="520346504577650">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="377413998157845" type="Raudskjegg_Space">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-320</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="550785866713070" type="Raudskjegg_Space">
+                    <param id="0" name="X">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="535031927366076">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="650031512437600" type="Raudskjegg_Transition">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-Raudskjegg_Transition.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="196630784963922" type="Raudskjegg_Transition" />
+            </actions>
+        </event-block>
+        <event-block sid="570446733705694">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="130820477377283" type="System">
+                    <param id="0" name="First value">Raudskjegg_Transition.Count</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="728428909757730">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="568012822450658" type="Raudskjegg_SpaceSunEffect">
+                            <param id="0" name="Instance variable">FollowFront</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="648688774018670" type="Raudskjegg_SpaceSunEffect">
+                            <param id="0" name="X">Raudskjegg_Transition.X - 320</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="673970534129992">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="594281090935557" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="491194279741935" type="Raudskjegg_SpaceSunEffect">
+                            <param id="0" name="X">Raudskjegg_Transition.X + Raudskjegg_Transition.Width</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="615409147554780">
+            <conditions>
+                <condition id="-22" name="Else" sid="847007222537829" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="940195476745661" type="Raudskjegg_SpaceSunEffect">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="253522926272084">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="610583782847654" type="Raudskjegg_SunSurface">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-320</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="989407492421616" type="Raudskjegg_SunSurface">
+                    <param id="0" name="X">320 + Raudskjegg_SunSurface.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="718254534801104">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="319197263885545" type="Raudskjegg_HallSurface">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-320</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="958130330571553" type="Raudskjegg_HallSurface">
+                    <param id="0" name="X">320 + Raudskjegg_HallSurface.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="280790519448966">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="279199083224834" type="Raudskjegg_HallWindows">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-320</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="325385688686783" type="Raudskjegg_HallWindows">
+                    <param id="0" name="X">320 + Raudskjegg_HallWindows.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="560552922815448">
+            <conditions>
+                <condition id="0" name="On function" sid="191451509857278" type="Function">
+                    <param id="0" name="Name">&quot;Music_Event&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="606805415759390" type="DiscoBall">
+                    <param id="0" name="Instance variable">Way</param>
+                    <param id="1" name="Value">&quot;down&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="980651951209308" type="Raudskjegg_SpaceSunEffect">
+                    <param id="0" name="Instance variable">FollowFront</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="641938942298326" type="System">
+                    <param id="0" name="Object to create">Raudskjegg_Transition</param>
+                    <param id="1" name="Layer">&quot;Projectiles&quot;</param>
+                    <param id="2" name="X">320</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="232894974642894" type="Raudskjegg_Transition">
+                    <param id="0" name="Width">1024</param>
+                    <param id="1" name="Height">192</param>
+                </action>
+                <action id="-16" name="Wait" sid="811918412504996" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Call function" sid="489903313941835" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Boss_ChangeState&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Stationary&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="702252782220664" type="System">
+                    <param id="0" name="Layer">&quot;Inside&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="433555183004276" type="System">
+                    <param id="0" name="Layer">&quot;SunSurface&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="355130097796046" type="Raudskjegg_SpaceSunEffect">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Call function" sid="306861754154137" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Discoball_SpawnShield&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="756567852964166" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="489937260645217" type="System">
+                    <param id="0" name="Group name">&quot;DiscoBallShoot&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="421117519905202" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Animation">&quot;Disco1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Call function" sid="831714472295414" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Boss_ChangeState&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Dance&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="540532812204222" type="System">
+                    <param id="0" name="Layer">&quot;Disco&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="576797119305247" type="System">
+                    <param id="0" name="Layer">&quot;Darkness&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="965387420260759" type="System">
+                    <param id="0" name="Tag">&quot;music_event2&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="113517123472375" type="DiscoBall">
+                    <param id="0" name="Instance variable">Way</param>
+                    <param id="1" name="Value">&quot;up&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="493883768218391" type="System">
+                    <param id="0" name="Layer">&quot;Disco&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="601371029187799" type="System">
+                    <param id="0" name="Layer">&quot;Darkness&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="488420350376098" type="System">
+                    <param id="0" name="Object to create">Raudskjegg_Transition</param>
+                    <param id="1" name="Layer">&quot;Projectiles&quot;</param>
+                    <param id="2" name="X">320</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="692634871160359" type="Raudskjegg_Transition">
+                    <param id="0" name="Width">1024</param>
+                    <param id="1" name="Height">192</param>
+                </action>
+                <action id="-12" name="Set group active" sid="646815355725471" type="System">
+                    <param id="0" name="Group name">&quot;DiscoBallShoot&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="531009847465086" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="635948786437802" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Call function" sid="402117825578236" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Discoball_RemoveShield&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="431231455797502" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Boss_ChangeState&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Idle_Back&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="841061851726392" type="Raudskjegg_SpaceSunEffect">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="349071819224430" type="Raudskjegg_SpaceSunEffect">
+                    <param id="0" name="Instance variable">FollowFront</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="412986794447567" type="System">
+                    <param id="0" name="Layer">&quot;SunSurface&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="755614744206355" type="System">
+                    <param id="0" name="Layer">&quot;Inside&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="129782833157507">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="699835786026779" type="System">
+                    <param id="0" name="Layer">&quot;Disco&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="571066758647213">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="473997861311468" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-34" name="Set layer background color" sid="952556053764162" type="System">
+                            <param id="0" name="Layer">&quot;Disco&quot;</param>
+                            <param id="1" name="Color">rgb(255, 0, 0)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="260358785221835" type="System">
+                            <param id="0" name="Seconds">0.333</param>
+                        </action>
+                        <action id="-34" name="Set layer background color" sid="103809405877906" type="System">
+                            <param id="0" name="Layer">&quot;Disco&quot;</param>
+                            <param id="1" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="640236877657533" type="System">
+                            <param id="0" name="Seconds">0.333</param>
+                        </action>
+                        <action id="-34" name="Set layer background color" sid="851272727975497" type="System">
+                            <param id="0" name="Layer">&quot;Disco&quot;</param>
+                            <param id="1" name="Color">rgb(0, 0, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="848130645886650">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="698700792573027" type="DiscoBall">
+                    <param id="0" name="Instance variable">Way</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;down&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="621227794885110" type="DiscoBall">
+                    <param id="0" name="Y">lerp(DiscoBall.Y, DiscoBall.Height, 0.05)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="862203574607265">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="121173210089503" type="DiscoBall">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">DiscoBall.Height</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="416507513967903">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="104697581609934" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="622751529277888" type="DiscoBall">
+                            <param id="0" name="Y">DiscoBall.Height</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="351199146253825" type="DiscoBall">
+                            <param id="0" name="Instance variable">Way</param>
+                            <param id="1" name="Value">&quot;none&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="396023886940269">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="934259274310125" type="DiscoBall">
+                    <param id="0" name="Instance variable">Way</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;up&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="654298943709742" type="DiscoBall">
+                    <param id="0" name="Y">lerp(DiscoBall.Y, 0,  0.05)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="513430234992177">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="568252658649700" type="DiscoBall">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="104101341676029">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="469854439465887" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="321559365290689" type="DiscoBall">
+                            <param id="0" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="937936378056677" type="DiscoBall">
+                            <param id="0" name="Instance variable">Way</param>
+                            <param id="1" name="Value">&quot;none&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="731717028726453">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="220295418181272" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">Raudskjegg_Vehicle.Height / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="896308605578202" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Vector Y">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="710472769233062" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Y">Raudskjegg_Vehicle.Height / 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="356434369322064">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="584458203440325" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">192 - (Raudskjegg_Vehicle.Height / 2)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="571107924401970" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Vector Y">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="584078040919521" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Y">192 - (Raudskjegg_Vehicle.Height / 2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="804026001997168">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="594383879468554" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Raudskjegg_Vehicle.Width/ 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="169259886045260" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Vector X">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="423964646219659" type="Raudskjegg_Vehicle">
+                    <param id="0" name="X">Raudskjegg_Vehicle.Width/ 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="802313764739523">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="139632198199052" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">320 - (Raudskjegg_Vehicle.Width/ 2)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="598770388652886" type="Raudskjegg_Vehicle">
+                    <param id="0" name="Vector X">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="388358319699615" type="Raudskjegg_Vehicle">
+                    <param id="0" name="X">320 - (Raudskjegg_Vehicle.Width/ 2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="209332692505297">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="865034452149568" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="603740527633146" type="System">
+                    <param id="0" name="Object to create">Raudskjegg_SunSurface_Items</param>
+                    <param id="1" name="Layer">&quot;SunSurface&quot;</param>
+                    <param id="2" name="X">320 + Raudskjegg_SunSurface_Items.Width</param>
+                    <param id="3" name="Y">random(96, 192)</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="950397734919901" type="Raudskjegg_SunSurface_Items">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="9" name="Set scale" sid="299256334771765" type="Raudskjegg_SunSurface_Items">
+                    <param id="0" name="Scale">Raudskjegg_SunSurface_Items.Y / 192</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="235641686756531" type="Raudskjegg_SunSurface_Items">
+                    <param id="0" name="Speed">750* (Raudskjegg_SunSurface_Items.Y / 192)</param>
+                </action>
+                <action id="4" name="Set animation" sid="812426448837784" type="Raudskjegg_SunSurface_Items">
+                    <param id="0" name="Animation">&quot;A_&quot; &amp; str(clamp(int(float(random(-3,3))), 0, 3))</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="362188880638599">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="521331016614665" type="Raudskjegg_SunSurface_Items">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="700257163259797" type="Raudskjegg_SunSurface_Items" />
+            </actions>
+        </event-block>
+        <event-block sid="894691618049745">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="190343124330859" type="Keyboard">
+                    <param id="0" name="Key">81</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="966045168312255" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Boss_ChangeState&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Shoot&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="635351928713440" title="RaudskjeggBoss">
+            <sub-events>
+                <event-block sid="641453604433894">
+                    <conditions>
+                        <condition id="0" name="On function" sid="616299511219538" type="Function">
+                            <param id="0" name="Name">&quot;Raudskjegg_Boss_ChangeState&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="891510673544865" type="System">
+                            <param id="0" name="Group name">&quot;RS_Idle&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="999989997063593" type="System">
+                            <param id="0" name="Group name">&quot;RS_Dance&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="821396911697807" type="System">
+                            <param id="0" name="Group name">&quot;RS_Stationary&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="348905298557907" type="System">
+                            <param id="0" name="Group name">&quot;Shoot&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="877389694019130">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="478263562116592" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Idle_Back&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="441138471081436" type="System">
+                                    <param id="0" name="Group name">&quot;RS_Idle&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="236618267821250">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="734186722815243" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Dance&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="270522242294737" type="System">
+                                    <param id="0" name="Group name">&quot;RS_Dance&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action behavior="Horizontal" id="5" name="Set cycle position" sid="223881437261767" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Cycle position">0</param>
+                                </action>
+                                <action behavior="Vertical" id="5" name="Set cycle position" sid="162020664819553" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Cycle position">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="274742827756224">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="645267800694328" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Stationary&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="393021805778978" type="System">
+                                    <param id="0" name="Group name">&quot;RS_Stationary&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="356231541630185">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="774556367185874" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Shoot&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="873863938787702" type="System">
+                                    <param id="0" name="Group name">&quot;Shoot&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action behavior="Horizontal" id="5" name="Set cycle position" sid="531660488459462" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Cycle position">0</param>
+                                </action>
+                                <action behavior="Vertical" id="5" name="Set cycle position" sid="117699096663527" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Cycle position">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group description="" inactive="1" sid="114543978566729" title="RS_Idle">
+                    <sub-events>
+                        <event-block sid="672954129777727">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="737091440641154" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Horizontal" id="5" name="Set cycle position" sid="704951100459860" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Cycle position">0</param>
+                                </action>
+                                <action behavior="Vertical" id="5" name="Set cycle position" sid="677923301340371" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Cycle position">0</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="170725711968405" type="Raudskjegg_Boss_Back_Head">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="446343430498082" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="X">160</param>
+                                    <param id="1" name="Y">64</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="691919108753760" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="806488304027099" type="Raudskjegg_Boss_Back_Hand">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Horizontal" id="0" name="Set active" sid="388651416595272" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Vertical" id="0" name="Set active" sid="362095110035681" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="640550475502502" type="Raudskjegg_Boss_Back_Head">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="900572472110625">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="853564008734376" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="797790044096501" type="Raudskjegg_Boss_Back_Head">
+                                    <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                    <param id="1" name="Image point (optional)">&quot;Head&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="727526735127485">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="188163890670934" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="498406876120159" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                            <param id="1" name="Image point (optional)">&quot;Right&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="845830112903163" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="X">Raudskjegg_Boss_Back_Hand.X + Raudskjegg_Boss_Back_Hand.Horizontal.Value</param>
+                                            <param id="1" name="Y">Raudskjegg_Boss_Back_Hand.Y + Raudskjegg_Boss_Back_Hand.Vertical.Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="834136090858463">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="777082354529458" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="817697420636083" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                            <param id="1" name="Image point (optional)">&quot;Left&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="931591250376833" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="X">Raudskjegg_Boss_Back_Hand.X + Raudskjegg_Boss_Back_Hand.Horizontal.Value</param>
+                                            <param id="1" name="Y">Raudskjegg_Boss_Back_Hand.Y + Raudskjegg_Boss_Back_Hand.Vertical.Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="953953046890061" title="Shoot">
+                    <sub-events>
+                        <variable constant="0" name="Shoot" sid="560779312085481" static="1" type="text">&quot;No&quot;</variable>
+                        <event-block sid="922027658206452">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="913947287965265" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="181621573011289" type="Raudskjegg_Boss_Back_Head">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="303137225345461" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action behavior="Horizontal" id="0" name="Set active" sid="764380318874799" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Vertical" id="0" name="Set active" sid="455220202857907" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="838252678406109" type="System">
+                                    <param id="0" name="Variable">Shoot</param>
+                                    <param id="1" name="Value">&quot;No&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="346405898939777">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="515239971241194" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="723509776267937" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="Animation">&quot;Shoot&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="615628227759869">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="732931795596363" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="283561519849209" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="Animation">&quot;Shoot2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="168220548538502">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="364326772634084" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="489053134725867" type="System">
+                                            <param id="0" name="Seconds">2.0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="579212737563240" type="System">
+                                            <param id="0" name="Variable">Shoot</param>
+                                            <param id="1" name="Value">&quot;Yes&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="474516033295753" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="807722923467716" type="System">
+                                            <param id="0" name="Variable">Shoot</param>
+                                            <param id="1" name="Value">&quot;Back&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="925028794650254" type="System">
+                                            <param id="0" name="Seconds">1.5</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="527786878673709" type="System">
+                                            <param id="0" name="Variable">Shoot</param>
+                                            <param id="1" name="Value">&quot;No&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="745104298907875" type="Function">
+                                            <param id="0" name="Name">&quot;Raudskjegg_Boss_ChangeState&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Idle_Back&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="698691596317698" type="Function">
+                                            <param id="0" name="Name">&quot;Raudskjegg_Boss_SpawnRocket&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="100886334512627">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="298956508232449" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="710203130259274" type="Raudskjegg_Boss_Back_Head">
+                                    <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                    <param id="1" name="Image point (optional)">&quot;Head&quot;</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="482312509098708" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Body.X, 160, 0.1)</param>
+                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Body.Y, 64, 0.1)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="560836955049599">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="526810105603711" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="357482751483451" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                            <param id="1" name="Image point (optional)">&quot;Left&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="753669937143416" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="X">Raudskjegg_Boss_Back_Hand.X - 48</param>
+                                            <param id="1" name="Y">Raudskjegg_Boss_Back_Hand.Y - 32</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="165787065927935">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="866009042478600" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="666038828359855">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="146229307517984" type="System">
+                                                    <param id="0" name="Variable">Shoot</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Yes&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="392185276778936" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X,  Raudskjegg_Boss_Back_Body.ImagePointX(&quot;Left&quot;) - 64, 0.1)</param>
+                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y,  Raudskjegg_Boss_Back_Body.ImagePointY(&quot;Left&quot;) + 8, 0.1)</param>
+                                                </action>
+                                                <action id="-19" name="Rotate counter-clockwise" sid="408052808209031" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="Degrees">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="623709039364667">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="297164259013713" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="183210835942584" type="System">
+                                                    <param id="0" name="Variable">Shoot</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Back&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="395355538172293" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X,  Raudskjegg_Boss_Back_Body.ImagePointX(&quot;Left&quot;), 0.05)</param>
+                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y,  Raudskjegg_Boss_Back_Body.ImagePointY(&quot;Left&quot;), 0.05)</param>
+                                                </action>
+                                                <action id="-21" name="Rotate toward position" sid="403490896040021" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="Degrees">1</param>
+                                                    <param id="1" name="X">320</param>
+                                                    <param id="2" name="Y">Raudskjegg_Boss_Back_Hand.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="310007993614742">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="500488862127439" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="358850752290463" type="System">
+                                                    <param id="0" name="Variable">Shoot</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;No&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-4" name="Set position to another object" sid="885844811024904" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                                    <param id="1" name="Image point (optional)">&quot;Left&quot;</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="149451870551511" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="X">Raudskjegg_Boss_Back_Hand.X + Raudskjegg_Boss_Back_Hand.Horizontal.Value</param>
+                                                    <param id="1" name="Y">Raudskjegg_Boss_Back_Hand.Y + Raudskjegg_Boss_Back_Hand.Vertical.Value</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="401288436915524" title="RS_Dance">
+                    <sub-events>
+                        <variable constant="0" name="HandState" sid="846434013328239" static="1" type="number">0</variable>
+                        <variable constant="0" name="HandSwitch" sid="599258349594714" static="1" type="number">0</variable>
+                        <event-block sid="261384505857227">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="543918137244205" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="311173552579657" type="Raudskjegg_Boss_Back_Head">
+                                    <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                    <param id="1" name="Image point (optional)">&quot;Head&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="504103686338510" type="System">
+                                    <param id="0" name="Variable">HandState</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="770507700466393" type="System">
+                                    <param id="0" name="Variable">HandSwitch</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="438745785046234">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="459848667348718" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="623463301463766" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="Animation">&quot;Dance&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="154509808134318">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="483941302087031" type="Raudskjegg_Boss_Back_Hand" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="940201227469312" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="Animation">&quot;Dance2&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="857350811526981" type="Raudskjegg_Boss_Back_Hand">
+                                            <param id="0" name="X">186</param>
+                                            <param id="1" name="Y">160</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="549672150489493">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="312112935464327" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="312686810231937" type="System">
+                                            <param id="0" name="Seconds">5.3333</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="245123396447091" type="System">
+                                            <param id="0" name="Variable">HandSwitch</param>
+                                            <param id="1" name="Value">abs(HandSwitch - 1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="787406418407078">
+                                            <conditions>
+                                                <condition id="7" name="Is mirrored" sid="209569768203539" type="Raudskjegg_Boss_Back_Hand" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="815020284436726" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="Animation">&quot;Dance2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="916994978364839" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="X">134</param>
+                                                    <param id="1" name="Y">160</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="669462348185495">
+                                            <conditions>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="344666751373433" type="Raudskjegg_Boss_Back_Hand" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="210618999265223" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="Animation">&quot;Dance&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="290623361330980">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="685865837950063" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="600737052294321" type="System">
+                                                    <param id="0" name="Seconds">5.3333</param>
+                                                </action>
+                                                <action id="-29" name="Move to object" sid="990850368536521" type="Raudskjegg_Boss_Back_Head">
+                                                    <param id="0" name="Where">1</param>
+                                                    <param id="1" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="484003026921430" type="System">
+                                                    <param id="0" name="Variable">HandSwitch</param>
+                                                    <param id="1" name="Value">abs(HandSwitch - 1)</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="335489851545241" type="Raudskjegg_Boss_Back_Hand">
+                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="244177146326922" type="Raudskjegg_Boss_Back_Body">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action behavior="Sine" id="0" name="Set active" sid="776592631425520" type="Raudskjegg_Boss_Back_Head">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="773680122772845" type="Raudskjegg_Vehicle">
+                                                    <param id="0" name="Animation">&quot;Disco2&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="798650885667590">
+                                                    <conditions>
+                                                        <condition id="7" name="Is mirrored" sid="268146418411377" type="Raudskjegg_Boss_Back_Hand" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Set frame" sid="221812707941598" type="Raudskjegg_Boss_Back_Hand">
+                                                            <param id="0" name="Frame number">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="658080705668335">
+                                                    <conditions>
+                                                        <condition id="7" inverted="1" name="Is mirrored" sid="379615273352936" type="Raudskjegg_Boss_Back_Hand" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Set frame" sid="254285982471635" type="Raudskjegg_Boss_Back_Hand">
+                                                            <param id="0" name="Frame number">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="452357326053583">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="239533125127364" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-16" name="Wait" sid="551492674695023" type="System">
+                                                            <param id="0" name="Seconds">5.3333</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="955575386554116" type="System">
+                                                            <param id="0" name="Variable">HandSwitch</param>
+                                                            <param id="1" name="Value">abs(HandSwitch - 1)</param>
+                                                        </action>
+                                                        <action id="5" name="Set frame" sid="492786809580360" type="Raudskjegg_Boss_Back_Body">
+                                                            <param id="0" name="Frame number">2</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="796678033343874">
+                                                            <conditions>
+                                                                <condition id="7" name="Is mirrored" sid="736140977570243" type="Raudskjegg_Boss_Back_Hand" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="5" name="Set frame" sid="862673580630786" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Frame number">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="833070750785006">
+                                                            <conditions>
+                                                                <condition id="7" inverted="1" name="Is mirrored" sid="658790330380014" type="Raudskjegg_Boss_Back_Hand" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="5" name="Set frame" sid="901643185780798" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Frame number">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="112995446861830">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="895867025072337" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="488244068143153">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="382410870102748" type="System">
+                                            <param id="0" name="Variable">HandSwitch</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="741724779469139">
+                                            <conditions>
+                                                <condition id="7" name="Is mirrored" sid="939520832157004" type="Raudskjegg_Boss_Back_Hand" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="215619163661770">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="227232680196863" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="775127074099856">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="275278143083265" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="775055246080595" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 104, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 168, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="750800911194361">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="726888169481117" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="996038722975505" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 176, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 160, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="601232869854164">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="318743632522501" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="663018729300739">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="690511570574477" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="811094066918488" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 104, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 72, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="831625271496239">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="158597665665391" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="246101029997638" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 64, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 80, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="702966669120902">
+                                            <conditions>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="166718076165788" type="Raudskjegg_Boss_Back_Hand" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-24" name="Move to top" sid="569703045352605" type="Raudskjegg_Boss_Back_Hand" />
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="833060468230609">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="340278219167926" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="727753235281492">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="168811085595217" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="156458089236915" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 96, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 80, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="695846283295122">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="175092799147893" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="541559300744958">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="742714213999917" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="937165196174862" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 96, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 160, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="805929101201713">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="576171693799478" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="229125596360283">
+                                            <conditions>
+                                                <condition id="7" inverted="1" name="Is mirrored" sid="463783615820879" type="Raudskjegg_Boss_Back_Hand" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="504236258838870">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="138668633439243" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="154919333044812">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="159461047792722" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="407579678500493" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 216, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 168, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="306949040583482">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="613267364392012" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="471628034022327" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 146, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 160, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="746351710457471">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="275090614362064" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="358269113264719">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="190250519238129" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="466913076123835" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 216, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 72, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="605307482004202">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="826367141431587" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="778684888388399" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 256, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 80, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="604066015209812">
+                                            <conditions>
+                                                <condition id="7" name="Is mirrored" sid="278533600917311" type="Raudskjegg_Boss_Back_Hand" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-24" name="Move to top" sid="946527528960830" type="Raudskjegg_Boss_Back_Hand" />
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="842900425666058">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="998888025305465" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="173951207541322">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="968249499342281" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="154902795343755" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 224, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 80, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="450062401842677">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="229414464448079" type="System">
+                                                            <param id="0" name="Variable">HandState</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="134529521441891">
+                                                            <conditions>
+                                                                <condition id="2" name="Is playing" sid="626155568018601" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="Animation">&quot;Dance3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Set position" sid="148321193311191" type="Raudskjegg_Boss_Back_Hand">
+                                                                    <param id="0" name="X">lerp(Raudskjegg_Boss_Back_Hand.X, 224, 0.1)</param>
+                                                                    <param id="1" name="Y">lerp(Raudskjegg_Boss_Back_Hand.Y, 160, 0.1)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="736783059489130">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="400077749379201" type="System">
+                                    <param id="0" name="Interval (seconds)">2.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="803835949572876" type="System">
+                                    <param id="0" name="Variable">HandState</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="748979201909105" type="System">
+                                    <param id="0" name="Seconds">0.33</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="934781617305789" type="System">
+                                    <param id="0" name="Variable">HandState</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="785389541459973" type="System">
+                                    <param id="0" name="Seconds">0.33</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="117174481722612" type="System">
+                                    <param id="0" name="Variable">HandState</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="870799226518846" type="System">
+                                    <param id="0" name="Seconds">0.33</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="935382297434681" type="System">
+                                    <param id="0" name="Variable">HandState</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="238033921147086" type="System">
+                                    <param id="0" name="Seconds">0.33</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="959994510146462" type="System">
+                                    <param id="0" name="Variable">HandState</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="780581864518162" type="System">
+                                    <param id="0" name="Seconds">0.33</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="156267543799752" type="System">
+                                    <param id="0" name="Variable">HandState</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="806441227630543" type="System">
+                                    <param id="0" name="Seconds">0.33</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" inactive="1" sid="220440766348601" title="RS_Stationary">
+                    <sub-events>
+                        <event-block sid="325061531267011">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="854682785752584" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="405204621547038" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="X">160</param>
+                                    <param id="1" name="Y">128</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="866151450640540" type="Raudskjegg_Boss_Back_Head">
+                                    <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                    <param id="1" name="Image point (optional)">&quot;Head&quot;</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="837577203154979" type="Raudskjegg_Boss_Back_Hand">
+                                    <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                    <param id="1" name="Image point (optional)">&quot;Right&quot;</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="449221617024518" type="Raudskjegg_Boss_Back_Hand">
+                                    <param id="0" name="Object">Raudskjegg_Boss_Back_Body</param>
+                                    <param id="1" name="Image point (optional)">&quot;Left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="345096716863898">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="615050664693694" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Horizontal" id="0" name="Set active" sid="863781747345568" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Vertical" id="0" name="Set active" sid="974048213332103" type="Raudskjegg_Boss_Back_Body">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="321630323890890">
+            <conditions>
+                <condition id="0" name="On function" sid="372978000410109" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Discoball_SpawnShield&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="543399641726667">
+                    <conditions>
+                        <condition id="-10" name="For" sid="129035363932132" type="System">
+                            <param id="0" name="Name">&quot;s&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="786689087611516" type="System">
+                            <param id="0" name="Object to create">RS_DiscoShield</param>
+                            <param id="1" name="Layer">&quot;Projectiles&quot;</param>
+                            <param id="2" name="X">DiscoBall.ImagePointX(&quot;Center&quot;)</param>
+                            <param id="3" name="Y">DiscoBall.ImagePointY(&quot;Center&quot;)</param>
+                        </action>
+                        <action behavior="Horizontal" id="5" name="Set cycle position" sid="697027619108349" type="RS_DiscoShield">
+                            <param id="0" name="Cycle position">(loopindex(&quot;s&quot;) * 10) / 100</param>
+                        </action>
+                        <action behavior="Vertical" id="5" name="Set cycle position" sid="575892919986553" type="RS_DiscoShield">
+                            <param id="0" name="Cycle position">((loopindex(&quot;s&quot;) * 10) / 100) + 0.25</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="888865376875743" type="RS_DiscoShield" />
+                        <action id="4" name="Set animation" sid="618635530699159" type="RS_DiscoShield">
+                            <param id="0" name="Animation">&quot;Green&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="420393981375654" type="RS_DiscoShield">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="400608051461905">
+                    <conditions>
+                        <condition id="-10" name="For" sid="932478493420079" type="System">
+                            <param id="0" name="Name">&quot;s&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="977779677020916" type="System">
+                            <param id="0" name="Object to create">RS_DiscoShield</param>
+                            <param id="1" name="Layer">&quot;Projectiles&quot;</param>
+                            <param id="2" name="X">DiscoBall.ImagePointX(&quot;Center&quot;)</param>
+                            <param id="3" name="Y">DiscoBall.ImagePointY(&quot;Center&quot;)</param>
+                        </action>
+                        <action behavior="Horizontal" id="5" name="Set cycle position" sid="676564323395599" type="RS_DiscoShield">
+                            <param id="0" name="Cycle position">((loopindex(&quot;s&quot;) * 10) / 100 ) + 0.5</param>
+                        </action>
+                        <action behavior="Vertical" id="5" name="Set cycle position" sid="107597505368582" type="RS_DiscoShield">
+                            <param id="0" name="Cycle position">((loopindex(&quot;s&quot;) * 10) / 100) + 0.25</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="639454880329908" type="RS_DiscoShield" />
+                        <action behavior="Horizontal" id="2" name="Set magnitude" sid="155153314716508" type="RS_DiscoShield">
+                            <param id="0" name="Magnitude">32</param>
+                        </action>
+                        <action behavior="Vertical" id="2" name="Set magnitude" sid="589989479539082" type="RS_DiscoShield">
+                            <param id="0" name="Magnitude">32</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="983533275942149" type="RS_DiscoShield">
+                            <param id="0" name="Animation">&quot;Red&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="766823913197685" type="RS_DiscoShield">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="189684851609893">
+            <conditions>
+                <condition id="0" name="On function" sid="715886970793451" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Discoball_RemoveShield&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="657400707744619">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="431182978494407" type="System">
+                            <param id="0" name="Object">RS_DiscoShield</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="923100385349440" type="RS_DiscoShield" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="582897587581050">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="946554370288355" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="730860148742844">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="141895662265431" type="System">
+                            <param id="0" name="Object">RS_DiscoShield</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="821922008125192" type="RS_DiscoShield">
+                            <param id="0" name="X">DiscoBall.ImagePointX(&quot;Center&quot;) + RS_DiscoShield.Horizontal.Value</param>
+                            <param id="1" name="Y">DiscoBall.ImagePointY(&quot;Center&quot;)+ RS_DiscoShield.Vertical.Value</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="855299422508120">
+            <conditions>
+                <condition id="-15" name="Is group active" sid="438697363806139" type="System">
+                    <param id="0" name="Group name">&quot;DiscoBallShoot&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="860653447450600">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="537507049835105" type="Raudskjegg_Shot">
+                            <param id="0" name="Object">RS_DiscoShield</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="773123617515463" type="Raudskjegg_Shot" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="979302596864748">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="328149239582413" type="RS_DiscoShield">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="950289595711918" type="RS_DiscoShield">
+                                    <param id="0" name="Frame number">RS_DiscoShield.AnimationFrame -1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="841306736475907">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="981045213943580" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="622216054923913" type="RS_DiscoShield" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" inactive="1" sid="104859218742388" title="DiscoBallShoot">
+            <sub-events>
+                <variable constant="0" name="RandomNumber" sid="109524296468761" static="0" type="number">0</variable>
+                <event-block sid="866649971452183">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="403628201062688" type="System">
+                            <param id="0" name="Interval (seconds)">2.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="788029286389620" type="System">
+                            <param id="0" name="Variable">RandomNumber</param>
+                            <param id="1" name="Value">floor(random(0, 90))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="990312741383457">
+                            <conditions>
+                                <condition id="-10" name="For" sid="526302444675636" type="System">
+                                    <param id="0" name="Name">&quot;s&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="575495409229913" type="DiscoBall">
+                                    <param id="0" name="Object">Raudskjegg_EnemyShot</param>
+                                    <param id="1" name="Layer">&quot;Projectiles&quot;</param>
+                                    <param id="2" name="Image point">&quot;Center&quot;</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="957537439410787" type="Raudskjegg_EnemyShot">
+                                    <param id="0" name="Angle">(40 * loopindex(&quot;s&quot;) + RandomNumber)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="550860319206690">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="373136041932449" type="Raudskjegg_Boss_Missile">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">-Raudskjegg_Boss_Missile.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="899572493696027" type="Raudskjegg_Boss_Missile" />
+            </actions>
+        </event-block>
+        <event-block sid="282955404104412">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="207748759547228" type="Raudskjegg_Boss_Missile">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="235149894018405" type="Raudskjegg_Boss_Missile">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="506336131003596" type="Raudskjegg_Boss_Missile">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="331701797847992">
+            <conditions>
+                <condition id="0" name="On function" sid="636605538617009" type="Function">
+                    <param id="0" name="Name">&quot;Raudskjegg_Boss_SpawnRocket&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="312965740738849">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="172295795297143" type="Raudskjegg_Boss_Back_Body">
+                            <param id="0" name="Instance variable">Lives</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="426274581108782" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="378244576988992" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="914882034767856" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="169665559074001" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="316826170967241" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="157751682931710">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="292209263386249" type="Raudskjegg_Boss_Back_Body">
+                            <param id="0" name="Instance variable">Lives</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="971625025838546" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="890295630195455" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="814558486790926" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="744322282675669" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="185912587881801" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="254731161797916" type="System">
+                            <param id="0" name="Seconds">0.25</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="833505134068646" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="737198719789969">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="731384033807127" type="Raudskjegg_Boss_Back_Body">
+                            <param id="0" name="Instance variable">Lives</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="979692410855186" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="543460480536030" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="653492490082448" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="460313292670346" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="154625976042962" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="984769411186746" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="635944767483658" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="662056482380398" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="940081998801523" type="System">
+                            <param id="0" name="Object to create">Raudskjegg_Boss_Missile</param>
+                            <param id="1" name="Layer">&quot;Action&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">random(16, 176)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
