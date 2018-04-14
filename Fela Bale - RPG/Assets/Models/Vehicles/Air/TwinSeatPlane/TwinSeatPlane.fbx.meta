@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 88c39d174878cd447a0e95b09820afda
+timeCreated: 1506257878
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Body
+    100002: Dashboard
+    100004: Dashboard1
+    100006: Dashboard2
+    100008: Exhaust
+    100010: Exhaust1
+    100012: FelaBaleCharacters:pCube1
+    100014: FelaBaleCharacters:polySurface1
+    100016: FelaBaleCharacters:polySurface2
+    100018: FelaBaleCharacters:transform1
+    100020: FelaBaleCharacters:transform2
+    100022: FelaBaleCharacters:transform3
+    100024: Frame
+    100026: Joystick
+    100028: Muzzle
+    100030: pCylinder2
+    100032: pCylinder3
+    100034: pCylinder7
+    100036: pCylinder9
+    100038: pPipe2
+    100040: Propeller
+    100042: Propeller1
+    100044: Seat
+    100046: Seat1
+    100048: transform1
+    100050: transform2
+    100052: transform3
+    100054: Turret
+    100056: //RootNode
+    100058: polySurface1
+    100060: polySurface2
+    100062: polySurface2 1
+    100064: polySurface2 2
+    100066: polySurface3
+    100068: polySurface4
+    100070: transform4
+    100072: TresureChest
+    400000: Body
+    400002: Dashboard
+    400004: Dashboard1
+    400006: Dashboard2
+    400008: Exhaust
+    400010: Exhaust1
+    400012: FelaBaleCharacters:pCube1
+    400014: FelaBaleCharacters:polySurface1
+    400016: FelaBaleCharacters:polySurface2
+    400018: FelaBaleCharacters:transform1
+    400020: FelaBaleCharacters:transform2
+    400022: FelaBaleCharacters:transform3
+    400024: Frame
+    400026: Joystick
+    400028: Muzzle
+    400030: pCylinder2
+    400032: pCylinder3
+    400034: pCylinder7
+    400036: pCylinder9
+    400038: pPipe2
+    400040: Propeller
+    400042: Propeller1
+    400044: Seat
+    400046: Seat1
+    400048: transform1
+    400050: transform2
+    400052: transform3
+    400054: Turret
+    400056: //RootNode
+    400058: polySurface1
+    400060: polySurface2
+    400062: polySurface2 1
+    400064: polySurface2 2
+    400066: polySurface3
+    400068: polySurface4
+    400070: transform4
+    400072: TresureChest
+    2300000: Body
+    2300002: Dashboard
+    2300004: Dashboard1
+    2300006: Dashboard2
+    2300008: Exhaust
+    2300010: Exhaust1
+    2300012: Frame
+    2300014: Joystick
+    2300016: Muzzle
+    2300018: pCylinder9
+    2300020: pPipe2
+    2300022: Propeller
+    2300024: Propeller1
+    2300026: Seat
+    2300028: Seat1
+    2300030: Turret
+    2300032: polySurface1
+    2300034: polySurface2
+    2300036: polySurface2 1
+    2300038: polySurface2 2
+    2300040: polySurface3
+    2300042: polySurface4
+    3300000: Body
+    3300002: Dashboard
+    3300004: Dashboard1
+    3300006: Dashboard2
+    3300008: Exhaust
+    3300010: Exhaust1
+    3300012: Frame
+    3300014: Joystick
+    3300016: Muzzle
+    3300018: pCylinder9
+    3300020: pPipe2
+    3300022: Propeller
+    3300024: Propeller1
+    3300026: Seat
+    3300028: Seat1
+    3300030: Turret
+    3300032: polySurface1
+    3300034: polySurface2
+    3300036: polySurface2 1
+    3300038: polySurface2 2
+    3300040: polySurface3
+    3300042: polySurface4
+    4300000: Body
+    4300002: Frame
+    4300004: Seat
+    4300006: Seat1
+    4300008: Dashboard1
+    4300010: Dashboard
+    4300012: Dashboard2
+    4300014: pCylinder9
+    4300016: Joystick
+    4300018: Propeller1
+    4300020: Propeller
+    4300022: Exhaust
+    4300024: pPipe2
+    4300026: Exhaust1
+    4300028: Turret
+    4300030: Muzzle
+    4300032: polySurface4
+    4300034: polySurface2
+    4300036: polySurface3
+    4300038: polySurface2
+    4300040: polySurface1
+    4300042: polySurface2
+    6400000: Body
+    6400002: Dashboard
+    6400004: Dashboard1
+    6400006: Dashboard2
+    6400008: Exhaust
+    6400010: Exhaust1
+    6400012: Frame
+    6400014: Joystick
+    6400016: Muzzle
+    6400018: pCylinder9
+    6400020: pPipe2
+    6400022: Propeller
+    6400024: Propeller1
+    6400026: Seat
+    6400028: Seat1
+    6400030: Turret
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

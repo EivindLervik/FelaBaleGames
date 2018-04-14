@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: bd9c33dc9e9cfac4f8cabb3a3f109247
+timeCreated: 1506250803
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Grass
+    100004: Person
+    100006: polySurface2
+    100008: Road
+    100010: Sidewalk
+    100012: Street
+    100014: transform1
+    100016: transform2
+    100018: Door
+    100020: House
+    100022: pCube1
+    100024: polySurface3
+    100026: polySurface4
+    100028: polySurface5
+    100030: polySurface6
+    100032: Roof
+    100034: transform3
+    100036: transform4
+    100038: transform5
+    100040: transform6
+    100042: transform7
+    100044: Windows
+    100046: Door 1
+    100048: Door 10
+    100050: Door 2
+    100052: Door 3
+    100054: Door 4
+    100056: Door 5
+    100058: Door 6
+    100060: Door 7
+    100062: Door 8
+    100064: Door 9
+    100066: Grass1
+    100068: House1
+    100070: House10
+    100072: House2
+    100074: House3
+    100076: House4
+    100078: House5
+    100080: House6
+    100082: House7
+    100084: House8
+    100086: House9
+    100088: Roof 1
+    100090: Roof 10
+    100092: Roof 2
+    100094: Roof 3
+    100096: Roof 4
+    100098: Roof 5
+    100100: Roof 6
+    100102: Roof 7
+    100104: Roof 8
+    100106: Roof 9
+    100108: Windows 1
+    100110: Windows 10
+    100112: Windows 2
+    100114: Windows 3
+    100116: Windows 4
+    100118: Windows 5
+    100120: Windows 6
+    100122: Windows 7
+    100124: Windows 8
+    100126: Windows 9
+    400000: //RootNode
+    400002: Grass
+    400004: Person
+    400006: polySurface2
+    400008: Road
+    400010: Sidewalk
+    400012: Street
+    400014: transform1
+    400016: transform2
+    400018: Door
+    400020: House
+    400022: pCube1
+    400024: polySurface3
+    400026: polySurface4
+    400028: polySurface5
+    400030: polySurface6
+    400032: Roof
+    400034: transform3
+    400036: transform4
+    400038: transform5
+    400040: transform6
+    400042: transform7
+    400044: Windows
+    400046: Door 1
+    400048: Door 10
+    400050: Door 2
+    400052: Door 3
+    400054: Door 4
+    400056: Door 5
+    400058: Door 6
+    400060: Door 7
+    400062: Door 8
+    400064: Door 9
+    400066: Grass1
+    400068: House1
+    400070: House10
+    400072: House2
+    400074: House3
+    400076: House4
+    400078: House5
+    400080: House6
+    400082: House7
+    400084: House8
+    400086: House9
+    400088: Roof 1
+    400090: Roof 10
+    400092: Roof 2
+    400094: Roof 3
+    400096: Roof 4
+    400098: Roof 5
+    400100: Roof 6
+    400102: Roof 7
+    400104: Roof 8
+    400106: Roof 9
+    400108: Windows 1
+    400110: Windows 10
+    400112: Windows 2
+    400114: Windows 3
+    400116: Windows 4
+    400118: Windows 5
+    400120: Windows 6
+    400122: Windows 7
+    400124: Windows 8
+    400126: Windows 9
+    2300000: Grass
+    2300002: Person
+    2300004: Road
+    2300006: Sidewalk
+    2300008: Door
+    2300010: House
+    2300012: Roof
+    2300014: Windows
+    2300016: Door 1
+    2300018: Door 10
+    2300020: Door 2
+    2300022: Door 3
+    2300024: Door 4
+    2300026: Door 5
+    2300028: Door 6
+    2300030: Door 7
+    2300032: Door 8
+    2300034: Door 9
+    2300036: Grass1
+    2300038: House1
+    2300040: House10
+    2300042: House2
+    2300044: House3
+    2300046: House4
+    2300048: House5
+    2300050: House6
+    2300052: House7
+    2300054: House8
+    2300056: House9
+    2300058: Roof 1
+    2300060: Roof 10
+    2300062: Roof 2
+    2300064: Roof 3
+    2300066: Roof 4
+    2300068: Roof 5
+    2300070: Roof 6
+    2300072: Roof 7
+    2300074: Roof 8
+    2300076: Roof 9
+    2300078: Windows 1
+    2300080: Windows 10
+    2300082: Windows 2
+    2300084: Windows 3
+    2300086: Windows 4
+    2300088: Windows 5
+    2300090: Windows 6
+    2300092: Windows 7
+    2300094: Windows 8
+    2300096: Windows 9
+    3300000: Grass
+    3300002: Person
+    3300004: Road
+    3300006: Sidewalk
+    3300008: Door
+    3300010: House
+    3300012: Roof
+    3300014: Windows
+    3300016: Door 1
+    3300018: Door 10
+    3300020: Door 2
+    3300022: Door 3
+    3300024: Door 4
+    3300026: Door 5
+    3300028: Door 6
+    3300030: Door 7
+    3300032: Door 8
+    3300034: Door 9
+    3300036: Grass1
+    3300038: House1
+    3300040: House10
+    3300042: House2
+    3300044: House3
+    3300046: House4
+    3300048: House5
+    3300050: House6
+    3300052: House7
+    3300054: House8
+    3300056: House9
+    3300058: Roof 1
+    3300060: Roof 10
+    3300062: Roof 2
+    3300064: Roof 3
+    3300066: Roof 4
+    3300068: Roof 5
+    3300070: Roof 6
+    3300072: Roof 7
+    3300074: Roof 8
+    3300076: Roof 9
+    3300078: Windows 1
+    3300080: Windows 10
+    3300082: Windows 2
+    3300084: Windows 3
+    3300086: Windows 4
+    3300088: Windows 5
+    3300090: Windows 6
+    3300092: Windows 7
+    3300094: Windows 8
+    3300096: Windows 9
+    4300000: Road
+    4300002: Grass
+    4300004: Sidewalk
+    4300006: Person
+    4300008: House
+    4300010: Door
+    4300012: Windows
+    4300014: Roof
+    4300016: Grass1
+    4300018: House1
+    4300020: Door
+    4300022: Windows
+    4300024: Roof
+    4300026: House2
+    4300028: Door
+    4300030: Windows
+    4300032: Roof
+    4300034: House3
+    4300036: Door
+    4300038: Windows
+    4300040: Roof
+    4300042: House4
+    4300044: Door
+    4300046: Windows
+    4300048: Roof
+    4300050: House5
+    4300052: Door
+    4300054: Windows
+    4300056: Roof
+    4300058: House6
+    4300060: Door
+    4300062: Windows
+    4300064: Roof
+    4300066: House7
+    4300068: Door
+    4300070: Windows
+    4300072: Roof
+    4300074: House8
+    4300076: Door
+    4300078: Windows
+    4300080: Roof
+    4300082: House9
+    4300084: Door
+    4300086: Windows
+    4300088: Roof
+    4300090: House10
+    4300092: Door
+    4300094: Windows
+    4300096: Roof
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: 11c5b4a09ee10d74da5cdc3c0179a2df
+timeCreated: 1506884721
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Armature_001
+    100002: //RootNode
+    100004: Dieselsatan
+    100006: Head
+    100008: L_Biceps
+    100010: L_Foot
+    100012: L_Krage
+    100014: L_Laar
+    100016: L_Legg
+    100018: L_Littlefinger
+    100020: L_Littlefinger1
+    100022: L_Littlefinger2
+    100024: L_Littlefinger3
+    100026: L_Middlefinger
+    100028: L_Middlefinger1
+    100030: L_Middlefinger2
+    100032: L_Middlefinger3
+    100034: L_Pelvis
+    100036: L_Pointerfinger
+    100038: L_Pointerfinger1
+    100040: L_Pointerfinger2
+    100042: L_Pointerfinger3
+    100044: L_Ringfinger
+    100046: L_Ringfinger1
+    100048: L_Ringfinger2
+    100050: L_Ringfinger3
+    100052: L_Thumb
+    100054: L_Thumb1
+    100056: L_Thumb2
+    100058: L_Toes
+    100060: L_Wanker
+    100062: Lower
+    100064: Main
+    100066: Mid
+    100068: R_Biceps
+    100070: R_Foot
+    100072: R_Krage
+    100074: R_Laar
+    100076: R_Legg
+    100078: R_Littlefinger
+    100080: R_Littlefinger1
+    100082: R_Littlefinger2
+    100084: R_Littlefinger3
+    100086: R_Middlefinger
+    100088: R_Middlefinger1
+    100090: R_Middlefinger2
+    100092: R_Middlefinger3
+    100094: R_Pelvis
+    100096: R_Pointerfinger
+    100098: R_Pointerfinger1
+    100100: R_Pointerfinger2
+    100102: R_Pointerfinger3
+    100104: R_Ringfinger
+    100106: R_Ringfinger1
+    100108: R_Ringfinger2
+    100110: R_Ringfinger3
+    100112: R_Thumb
+    100114: R_Thumb1
+    100116: R_Thumb2
+    100118: R_Toes
+    100120: R_Wanker
+    100122: Upper
+    400000: Armature_001
+    400002: //RootNode
+    400004: Dieselsatan
+    400006: Head
+    400008: L_Biceps
+    400010: L_Foot
+    400012: L_Krage
+    400014: L_Laar
+    400016: L_Legg
+    400018: L_Littlefinger
+    400020: L_Littlefinger1
+    400022: L_Littlefinger2
+    400024: L_Littlefinger3
+    400026: L_Middlefinger
+    400028: L_Middlefinger1
+    400030: L_Middlefinger2
+    400032: L_Middlefinger3
+    400034: L_Pelvis
+    400036: L_Pointerfinger
+    400038: L_Pointerfinger1
+    400040: L_Pointerfinger2
+    400042: L_Pointerfinger3
+    400044: L_Ringfinger
+    400046: L_Ringfinger1
+    400048: L_Ringfinger2
+    400050: L_Ringfinger3
+    400052: L_Thumb
+    400054: L_Thumb1
+    400056: L_Thumb2
+    400058: L_Toes
+    400060: L_Wanker
+    400062: Lower
+    400064: Main
+    400066: Mid
+    400068: R_Biceps
+    400070: R_Foot
+    400072: R_Krage
+    400074: R_Laar
+    400076: R_Legg
+    400078: R_Littlefinger
+    400080: R_Littlefinger1
+    400082: R_Littlefinger2
+    400084: R_Littlefinger3
+    400086: R_Middlefinger
+    400088: R_Middlefinger1
+    400090: R_Middlefinger2
+    400092: R_Middlefinger3
+    400094: R_Pelvis
+    400096: R_Pointerfinger
+    400098: R_Pointerfinger1
+    400100: R_Pointerfinger2
+    400102: R_Pointerfinger3
+    400104: R_Ringfinger
+    400106: R_Ringfinger1
+    400108: R_Ringfinger2
+    400110: R_Ringfinger3
+    400112: R_Thumb
+    400114: R_Thumb1
+    400116: R_Thumb2
+    400118: R_Toes
+    400120: R_Wanker
+    400122: Upper
+    4300000: Dieselsatan
+    7400000: Default Take
+    7400002: _POSE
+    7400004: _POSE_001
+    7400006: ButtonPress
+    7400008: FallStraight
+    7400010: FallStraight_001
+    7400012: Idle_001
+    7400014: JumpRun
+    7400016: JumpSprint
+    7400018: JumpStraight
+    7400020: Run_001
+    7400022: Sit
+    7400024: Sprint
+    7400026: Walk
+    7400028: YES
+    9500000: //RootNode
+    13700000: Dieselsatan
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
